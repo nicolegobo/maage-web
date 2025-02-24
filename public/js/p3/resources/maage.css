@@ -24,7 +24,7 @@ div#bv-brc-header-container>div.HideWithAuth.authLinks.showOnLoad {
 }
 
 div.HideWithAuth.authLinks.showOnLoad>a.LoginButton.navigationLink:nth-child(1) {
-  background-color: #F7F4ED;
+  background-color: #F8F6F2;
   border: 1px solid #1c1f21 !important;
   border-radius: 20px;
   color: #1C1F21;
@@ -42,7 +42,7 @@ div.HideWithAuth.authLinks.showOnLoad>a.LoginButton.navigationLink:nth-child(1):
 }
 
 div.HideWithAuth.authLinks.showOnLoad>a.LoginButton.navigationLink:nth-child(2) {
-  background-color: #F7F4ED;
+  background-color: #F8F6F2;
   border: 1px solid #1C1F21 !important;
   border-radius: 20px;
   border-style: initial;
@@ -1473,61 +1473,61 @@ div#uniqName_18_0 {
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(1) {
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(2) {
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div.ActionButtonWrapper:nth-child(2) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(1) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(3) {
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div.ActionButtonWrapper:nth-child(3) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.ActionButtonWrapper:nth-child(4) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.dijitHidden.ActionButtonWrapper:nth-child(5) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.dijitHidden.ActionButtonWrapper:nth-child(6) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.dijitHidden.ActionButtonWrapper:nth-child(7) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
@@ -1536,7 +1536,7 @@ div.dijitHidden.ActionButtonWrapper:nth-child(7) > div.ActionButtonText {
 div.ActionButtonWrapper:nth-child(2) > div.ActionButton.fa.icon-info-circle.fa-2x {
   -webkit-font-smoothing: antialiased;
   speak: none;
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div#uniqName_18_0 {
@@ -1547,61 +1547,61 @@ div#uniqName_18_0 {
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(1) {
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(2) {
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div.ActionButtonWrapper:nth-child(2) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(1) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div#uniqName_18_0 > div.ActionButtonWrapper:nth-child(3) {
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 div.ActionButtonWrapper:nth-child(3) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.ActionButtonWrapper:nth-child(4) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.dijitHidden.ActionButtonWrapper:nth-child(5) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.dijitHidden.ActionButtonWrapper:nth-child(6) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
 }
 
 div.dijitHidden.ActionButtonWrapper:nth-child(7) > div.ActionButtonText {
-  color: #F7F4ED;
+  color: #F8F6F2;
   font-size: .6em;
   margin: 0;
   text-align: center;
@@ -1610,7 +1610,7 @@ div.dijitHidden.ActionButtonWrapper:nth-child(7) > div.ActionButtonText {
 div.ActionButtonWrapper:nth-child(2) > div.ActionButton.fa.icon-info-circle.fa-2x {
   -webkit-font-smoothing: antialiased;
   speak: none;
-  color: #F7F4ED;
+  color: #F8F6F2;
 }
 
 #maage-header span#maage-logo-link {
