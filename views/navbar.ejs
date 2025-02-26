@@ -7,8 +7,8 @@
             <div class="nav-logo min-x-225">
                 <a class="nav-logo-link min-x-50" href="/">
                     <img class="h-[50px] mt-[5px] text-[var(--maage-secondary-500)] pr-2" src="/patric/images/maage/maage-logo.png" alt="Midwest Alliance for Applied Genomic Epidemiology (MAAGE) Logo">
-                    <span class="font-poppins font-light text-[42px] text-[var(--maage-secondary-700)]">MA</span>
-                    <span class="font-poppins font-semibold text-[42px] text-[var(--maage-secondary-500)]">AGE</span>
+                    <span class="font-poppins font-medium text-[42px] text-[var(--maage-secondary-500)]">MA</span>
+                    <span class="font-poppins font-light text-[42px] text-[var(--maage-secondary-700)]">AGE</span>
                     <span><i style="color: #fafafa; font-size: 12px; padding-left: 2px;" class="text-[var(--maage-tertiary-500)]"><i>v.</i><%- request.package.version %><%- request.applicationOptions.appLabel || " " %></i></i></span>
                     <span><i style="font-size: 14px; padding-left: 6px;"><%- request.applicationOptions.appLabel || " " %></i></i></span>
                 </a>
@@ -18,7 +18,7 @@
             <div class="ml-6 pl-6" style="min-width: 435px; flex: 1">
               <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton"></div>
               <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
-                <span class="font-poppins hover:opacity-75 font-normal text-[16px]">Organisms</span>
+                <span class="font-poppins hover:opacity-75 font-normal text-[16px]">Organisms <i class="fa-solid fa-caret-down"></i></span>
                 <div data-dojo-type="p3/widget/TooltipDialog">
                   <div class="menuHeader mb-1 p-0.5 font-poppins text-[15px] text-[var(--maage-light-text)] bg-[var(--maage-primary-600)]">Bacterial Pathogens</div>
                     <div>
@@ -237,58 +237,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
-                    <span>Help</span>
-
-                    <div data-dojo-type="p3/widget/TooltipDialog">
-                        <div style="font-weight: bold; font-size: 14px; color: #50886e;"><a style="color: #50886e;"
-                                class="navigationLink navbar-menu-linkOut" href="https://www.bv-brc.org/docs/">Documentation Website</a>
-                        </div>
-
-                        <div style="margin-top: 5px; margin-bottom: 5px; background-color: #a6c9b8; color: #26292c; margin-bottom: 4px;"
-                            class="menuHeader">Updates and Reports</div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/news/index.html">News and Announcements</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/reports_and_analysis/index.html">Reports and Analysis</a>
-                        </div>
-
-                        <div style="margin-top: 5px; margin-bottom: 5px; background-color: #a6c9b8; color: #26292c; margin-bottom: 4px;"
-                            class="menuHeader">Help Resources</div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/overview.html">Overview</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/quick_start/index.html">Quick Start</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/data_protocols/index.html">Data Sources &amp;
-                                Protocols</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/quick_references/index.html">Quick Reference Guides</a>
-                        </div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/tutorial/index.html">Tutorials</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/common_tasks/index.html">Common Tasks</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/cli_tutorial/index.html">Command Line Interface</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/videos/index.html">Instructional Videos</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/webinar/index.html">Webinars</a></div>
-
-                        <div style="margin-bottom: 5px; background-color: #a6c9b8; color: #26292c; margin-bottom: 4px;"
-                            class="menuHeader">System Documentation</div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/system_documentation/system_architecture.html">System
-                                Architecture</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/test_procedures/index.html">Test Procedures</a></div>
-                        <div style="margin-left: 10px;"><a style="color: #50886e;" class="navigationLinkOut"
-                                href="https://www.bv-brc.org/docs/usage_metrics.html">Usage Metrics</a></div>
-
-                    </div>
-                </div> -->
 
                 <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
                     <span class="font-poppins hover:text-[var(--maage-primary-800)] font-normal text-[16px]">About</span>

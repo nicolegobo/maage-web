@@ -1,0 +1,317 @@
+<div data-dojo-type="dijit/layout/ContentPane" class="HeaderBar maage-navbar" data-dojo-props="region:'top'">
+    <div id="maage-navbar">
+        <div class="P3Header" role="heading" aria-level="1">
+
+
+
+            <nav class="bg-[#9cc2af] shadow-md w-full">
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-1 w-full">
+                    <div class="flex items-center justify-between h-16">
+                        <!-- Left side: Logo and nav items -->
+                        <div class="flex items-center">
+                            <div class="nav-logo min-x-225">
+                                <a class="nav-logo-link min-x-50" href="/">
+                                    <img class="h-[50px] mt-[5px] text-[var(--maage-secondary-500)] pr-2" src="/patric/images/maage/maage-logo.png" alt="Midwest Alliance for Applied Genomic Epidemiology (MAAGE) Logo">
+                                    <span class="font-poppins font-medium text-[42px] text-[var(--maage-secondary-500)]">MA</span>
+                                    <span class="font-poppins font-light text-[42px] text-[var(--maage-secondary-700)]">AGE</span>
+                                    <span><i style="color: #fafafa; font-size: 12px; padding-left: 2px;" class="text-[var(--maage-tertiary-500)]"><i>v.</i><%- request.package.version %><%- request.applicationOptions.appLabel || " " %></i></i></span>
+                                    <span><i style="font-size: 14px; padding-left: 6px;"><%- request.applicationOptions.appLabel || " " %></i></i></span>
+                                </a>
+                            </div>
+
+
+
+
+                            <div class="hidden md:block ml-4">
+                                <div class="flex items-baseline space-x-1">
+                                    <div class="relative group">
+                                        <button class="dropdown-toggle text-gray-800 hover:bg-[#8ab39e] hover:text-white px-2 py-1 rounded-md text-lg font-medium transition-colors duration-200 flex items-center font-poppins" data-dropdown="organisms">
+                                            Pathogens
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <div id="organisms-dropdown" class="dropdown-menu absolute z-10 left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-100 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                                            <div class="py-0.5" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                                <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Bacterial Pathogens</h3>
+                                                <a href="/view/Taxonomy/194#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Campylobacter</a>
+                                                <a href="/view/Taxonomy/1637#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Listeria</a>
+                                                <a href="/view/Taxonomy/561#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Escherichia</a>
+                                                <a href="/view/Taxonomy/590#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Salmonella</a>
+                                                <a href="#" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">All Bacteria</a>
+                                                <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Featured Viruses</h3>
+                                                <a href="/view/Taxonomy/11320#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Influenza A virus</a>
+                                                <a href="/view/Taxonomy/2697049#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">SARS-CoV-2</a>
+                                                <a href="/view/Taxonomy/10244#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Monkeypox virus</a>
+                                                <a href="#" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">All Viruses</a>
+                                                <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Metagenomes</h3>
+                                                <a href="/view/Taxonomy/1637#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">SARS-CoV-2 Wastewater</a>
+                                                <a href="#" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">H5N1 Wastewater</a>
+                                                <a href="#" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">All Metagenomes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group">
+                                        <button class="dropdown-toggle text-gray-800 hover:bg-[#8ab39e] hover:text-white px-2 py-1 rounded-md text-lg font-medium transition-colors duration-200 flex items-center font-poppins" data-dropdown="searches">
+                                            Searches
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <div id="searches-dropdown" class="dropdown-menu absolute z-10 left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-100 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                                            <div class="py-0.5" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                                <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Advanced Search</h3>
+                                                <a href="/searches/TaxaSearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Taxa</a>
+                                                <a href="/searches/GenomeSearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Genomes</a>
+                                                <a href="/searches/FeatureSearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Features</a>
+                                                <a href="/searches/ProteinSearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Proteins</a>
+                                                <a href="/searches/SpecialtyGeneSearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Specialty Genes</a>
+                                                <a href="/searches/PathwaySearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Pathways</a>
+                                                <a href="/searches/SubsystemSearch" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Subsystems</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group">
+                                        <button class="dropdown-toggle text-gray-800 hover:bg-[#8ab39e] hover:text-white px-2 py-1 rounded-md text-lg font-medium transition-colors duration-200 flex items-center font-poppins" data-dropdown="tools">
+                                            Tools
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <div id="tools-dropdown" class="dropdown-menu absolute z-10 left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-[50rem] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                                            <div class="py-0.5 flex" role="menu" aria-orientation="horizontal" aria-labelledby="options-menu">
+                                                <div class="w-1/2 pr-2">
+                                                    <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Genomics</h3>
+                                                    <a href="/app/Assembly2" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Genome Assembly</a>
+                                                    <a href="/app/Annotation" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Genome Annotation</a>
+                                                    <a href="/app/ComprehensiveGenomeAnalysis" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Comprehensive Genome Analysis (B)</a>
+                                                    <a href="/app/Homology" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">BLAST</a>
+                                                    <a href="/app/GenomeDistance" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Similar Genome Finder</a>
+
+                                                    <h3 class="mt-4 px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Phylogenomics</h3>
+                                                    <a href="/app/PhylogeneticTree" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Bacterial Genome Tree</a>
+                                                    <a href="/app/ViralGenomeTree" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Viral Genome Tree</a>
+                                                    <a href="/app/GeneTree" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Gene Protein Tree</a>
+
+                                                    <h3 class="mt-4 px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Protein Tools</h3>
+                                                    <a href="/app/MSA" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">MSA and SNP Analysis</a>
+                                                    <a href="/app/SeqComparison" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Proteome Comparison</a>
+                                                    <a href="/app/ComparativeSystems" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Comparative Systems</a>
+                                                </div>
+                                                <div class="w-1/2 pl-2 border-l border-gray-200">
+                                                    <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Metagenomics</h3>
+                                                    <a href="/app/TaxonomicClassification" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Taxonomic Classification</a>
+                                                    <a href="/app/MetagenomicBinning" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Metagenomic Binning</a>
+                                                    <a href="/app/MetagenomicReadMapping" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Metagenomic Read Mapping</a>
+
+                                                    <h3 class="mt-4 px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Viral Tools</h3>
+                                                    <a href="/app/ComprehensiveSARS2Analysis" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">SARS-COV-2 Genome Analysis</a>
+                                                    <a href="/app/SARS2Wastewater" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">SARS-CoV-2 Wastewater Analysis</a>
+                                                    <a href="/app/SubspeciesClassification" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Subspecies Classification</a>
+
+                                                    <h3 class="mt-4 px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Outbreak Tracker</h3>
+                                                    <a href="/outbreaks/Mpox/#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Mpox 2024</a>
+                                                    <a href="/outbreaks/H5N1/#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Influenza H5N1 2024</a>
+                                                    <a href="/outbreaks/SARSCoV2/#view_tab=overview" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">SARS-COV-2</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group">
+                                        <button class="dropdown-toggle text-gray-800 hover:bg-[#8ab39e] hover:text-white px-2 py-1 rounded-md text-lg font-medium transition-colors duration-200 flex items-center font-poppins" data-dropdown="about">
+                                            About
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <div id="about-dropdown" class="dropdown-menu absolute z-10 left-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                                            <div class="py-0.5" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                                <h3 class="px-4 py-2 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">About MAAGE</h3>
+                                                <a href="/about" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">About MAAGE</a>
+                                                <a href="/team" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Team Members</a>
+                                                <a href="/advisory-boards" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Advisory Boards</a>
+                                                <a href="#" class="block px-4 py-1.5 text-sm text-gray-700 hover:bg-[#e8f2ee] hover:text-gray-900 font-inter" role="menuitem">Contact Us</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right side: Search, Register and Login buttons (desktop) -->
+                        <div class="hidden md:flex items-center space-x-3">
+                            <button id="search-button" class="p-1.5 text-gray-800 hover:bg-[#8ab39e] hover:text-white rounded-md transition-colors duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                            <a href="/register" class="px-4 py-1.5 bg-white text-[#8ab39e] border border-[#8ab39e] hover:bg-[#8ab39e] hover:text-white rounded-md text-sm font-medium transition-colors duration-200">Register</a>
+                            <a href="/login" class="px-4 py-1.5 bg-[#8ab39e] text-white hover:bg-[#7ca290] rounded-md text-sm font-medium transition-colors duration-200">Login</a>
+                        </div>
+
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden flex items-center space-x-2">
+                            <button id="mobile-search-button" class="p-1.5 text-gray-800 hover:bg-[#8ab39e] hover:text-white rounded-md transition-colors duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                            <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-white hover:bg-[#8ab39e] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <span class="sr-only">Open main menu</span>
+                                <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
+                                <svg id="menu-open-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                                <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
+                                <svg id="menu-close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu (hidden by default) -->
+                <div id="mobile-menu" class="md:hidden hidden">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#e8f2ee]">
+                        <!-- Mobile Organisms Dropdown -->
+                        <div class="mobile-dropdown">
+                            <button class="mobile-dropdown-toggle w-full text-left text-gray-800 hover:bg-[#8ab39e] hover:text-white px-3 py-2 rounded-md text-base font-medium flex justify-between items-center" data-mobile-dropdown="organisms">
+                                Pathogens
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="mobile-organisms-dropdown" class="mobile-dropdown-content hidden pl-4 py-2 space-y-1">
+                                <h3 class="px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider">Bacterial Pathogens</h3>
+                                <a href="/view/Taxonomy/194#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Campylobacter</a>
+                                <a href="/view/Taxonomy/1637#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Listeria</a>
+                                <a href="/view/Taxonomy/561#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Escherichia</a>
+                                <a href="/view/Taxonomy/590#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Salmonella</a>
+                                <a href="#" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md">All Bacteria</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Featured Viruses</h3>
+                                <a href="/view/Taxonomy/11320#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Influenza A virus</a>
+                                <a href="/view/Taxonomy/2697049#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">SARS-CoV-2</a>
+                                <a href="/view/Taxonomy/10244#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Monkeypox virus</a>
+                                <a href="#" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">All Viruses</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Metagenomes</h3>
+                                <a href="/view/Taxonomy/1637#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">SARS-CoV-2 Wastewater</a>
+                                <a href="#" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">H5N1 Wastewater</a>
+                                <a href="#" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">All Metagenomes</a>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Searches Dropdown -->
+                        <div class="mobile-dropdown">
+                            <button class="mobile-dropdown-toggle w-full text-left text-gray-800 hover:bg-[#8ab39e] hover:text-white px-3 py-2 rounded-md text-base font-medium flex justify-between items-center" data-mobile-dropdown="searches">
+                                Searches
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="mobile-searches-dropdown" class="mobile-dropdown-content hidden pl-4 py-2 space-y-1">
+                                <h3 class="px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Advanced Search</h3>
+                                <a href="/searches/TaxaSearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Taxa</a>
+                                <a href="/searches/GenomeSearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Genomes</a>
+                                <a href="/searches/FeatureSearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Features</a>
+                                <a href="/searches/ProteinSearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Proteins</a>
+                                <a href="/searches/SpecialtyGeneSearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Specialty Genes</a>
+                                <a href="/searches/PathwaySearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Pathways</a>
+                                <a href="/searches/SubsystemSearch" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Subsystems</a>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Tools Dropdown -->
+                        <div class="mobile-dropdown">
+                            <button class="mobile-dropdown-toggle w-full text-left text-gray-800 hover:bg-[#8ab39e] hover:text-white px-3 py-2 rounded-md text-base font-medium flex justify-between items-center" data-mobile-dropdown="tools">
+                                Tools
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="mobile-tools-dropdown" class="mobile-dropdown-content hidden pl-4 py-2 space-y-1">
+                                <h3 class="px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Genomics</h3>
+                                <a href="/app/Assembly2" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Genome Assembly</a>
+                                <a href="/app/Annotation" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Genome Annotation</a>
+                                <a href="/app/ComprehensiveGenomeAnalysis" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Comprehensive Genome Analysis (B)</a>
+                                <a href="/app/Homology" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">BLAST</a>
+                                <a href="/app/GenomeDistance" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Similar Genome Finder</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Phylogenomics</h3>
+                                <a href="/app/PhylogeneticTree" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Bacterial Genome Tree</a>
+                                <a href="/app/ViralGenomeTree" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Viral Genome Tree</a>
+                                <a href="/app/GeneTree" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Gene Protein Tree</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Protein Tools</h3>
+                                <a href="/app/MSA" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">MSA and SNP Analysis</a>
+                                <a href="/app/SeqComparison" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Proteome Comparison</a>
+                                <a href="/app/ComparativeSystems" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Comparative Systems</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Metagenomics</h3>
+                                <a href="/app/TaxonomicClassification" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Taxonomic Classification</a>
+                                <a href="/app/MetagenomicBinning" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Metagenomic Binning</a>
+                                <a href="/app/MetagenomicReadMapping" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Metagenomic Read Mapping</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Viral Tools</h3>
+                                <a href="/app/ComprehensiveSARS2Analysis" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">SARS-COV-2 Genome Analysis</a>
+                                <a href="/app/SARS2Wastewater" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">SARS-CoV-2 Wastewater Analysis</a>
+                                <a href="/app/SubspeciesClassification" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Subspecies Classification</a>
+
+                                <h3 class="mt-2 px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">Outbreak Tracker</h3>
+                                <a href="/outbreaks/Mpox/#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Mpox 2024</a>
+                                <a href="/outbreaks/H5N1/#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Influenza H5N1 2024</a>
+                                <a href="/outbreaks/SARSCoV2/#view_tab=overview" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">SARS-COV-2</a>
+                            </div>
+                        </div>
+
+                        <!-- Mobile About Dropdown -->
+                        <div class="mobile-dropdown">
+                            <button class="mobile-dropdown-toggle w-full text-left text-gray-800 hover:bg-[#8ab39e] hover:text-white px-3 py-2 rounded-md text-base font-medium flex justify-between items-center" data-mobile-dropdown="about">
+                                About
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div id="mobile-about-dropdown" class="mobile-dropdown-content hidden pl-4 py-2 space-y-1">
+                                <h3 class="px-3 py-1 text-sm font-bold text-white bg-[#9cc2af] uppercase tracking-wider font-poppins">About MAAGE</h3>
+                                <a href="/about" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">About MAAGE</a>
+                                <a href="/team" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Team Members</a>
+                                <a href="/advisory-boards" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Advisory Boards</a>
+                                <a href="#" class="block px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 rounded-md font-inter">Contact Us</a>
+                            </div>
+                        </div>
+
+                        <!-- Register & Login buttons (mobile) -->
+                        <div class="flex flex-col space-y-2 mt-3 mb-2 px-3">
+                            <a href="/register" class="w-full px-4 py-2 bg-white text-[#8ab39e] border border-[#8ab39e] hover:bg-[#8ab39e] hover:text-white rounded-md text-sm font-medium text-center transition-colors duration-200">Register</a>
+                            <a href="/login" class="w-full px-4 py-2 bg-[#8ab39e] text-white hover:bg-[#7ca290] rounded-md text-sm font-medium text-center transition-colors duration-200">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Search Bar (below navbar) -->
+            <div id="search-bar" class="w-full bg-white shadow-md py-3 hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search organisms, genomes, pathways..." class="w-full py-2 pl-10 pr-4 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8ab39e] focus:border-transparent">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div><!-- bv-brc-header-container -->
+    </div><!-- bv-brc-header -->
+</div><!-- HeaderBar -->
