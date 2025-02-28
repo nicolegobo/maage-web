@@ -1010,7 +1010,20 @@
 
 		<script src="https://kit.fontawesome.com/0e956380ff.js" crossorigin="anonymous"></script>
 		<script src="https://cdn.tailwindcss.com"></script>
-
+		<style>
+			body {
+				font-family: 'Poppins', sans-serif;
+			}
+			.dropdown-menu h3 {
+				font-family: 'Poppins', sans-serif;
+			}
+			.dropdown-menu a, .mobile-dropdown-content a {
+				font-family: 'Inter', sans-serif;
+			}
+			.mobile-dropdown-content h3 {
+				font-family: 'Poppins', sans-serif;
+			}
+		</style>
 		<script>
 			tailwind.config = {
 				theme: {
@@ -1024,10 +1037,9 @@
 							'noto-mono': ['Noto Mono', 'monospace'],
 							'jetbrains-mono': ['JetBrains Mono', 'monospace'],
 						},
-						colors: {
-
-
-						},
+						width: {
+                        '100': '25rem',
+                    }
 
 					},
 				},
