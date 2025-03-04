@@ -2,24 +2,19 @@
     <div id="bv-brc-header" class="P3Header" role="heading" aria-level="1">
         <div>
             <div id="maage-navbar">
+                <!-- Navbar -->
                 <div class="navbar">
                     <div class="navbar-left">
-                    <div class="logo hover:curser-pointer">
-                            <a href="/">
-                                <img src="/patric/images/maage/maage-logo.png" alt="MAAGE Logo" style="width: 45px; height: auto; margin-right: 10px;" />
-                            </a>
-                            <a href="/">
-                            <span class="mt-[10px]">
-                                <span class="font-poppins font-semibold text-[40px] text-[var(--maage-secondary-500)]">MA</span>
-                                <span class="font-poppins font-light text-[40px] ml-[-2px] text-[var(--maage-secondary-700)]">AGE</span>
-                                <span class="text-[10px] ml-[4px] mt-[18px] logo-version"><i class="text-[10px]">v.<%- request.package.version %><%- request.applicationOptions.appLabel || " " %></i></span>
-                            </span>
-                        </a>
-
+                        <div class="logo">
+                            <img src="/patric/images/maage/maage-logo.png" alt="MAAGE Logo" style="width: 45px; height: auto; margin-right: 10px;" />
+                            <span class="font-poppins font-semibold text-[40px] text-[var(--maage-secondary-500)]">MA</span>
+                            <span class="font-poppins font-light text-[40px] ml-[-2px] text-[var(--maage-secondary-700)]">AGE</span>
+                            <span class="text-[10px] ml-[4px] mt-[18px] logo-version"><i class="text-[10px]">v.<%- request.package.version %><%- request.applicationOptions.appLabel || " " %></i></span>
+                        </div>
                     </div>
                     <div class="nav-items" id="nav-items">
-                                <div class="nav-item">
-                                    <a href="#">Organisms <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="nav-item">
+                            <a href="#">Organisms <i class="fas fa-chevron-down dropdown-icon"></i></a>
                                     <div class="dropdown-content">
                                         <div class="dropdown-section">
                                             <h3>Bacteria</h3>
@@ -110,10 +105,16 @@
                                     <a href="#">Workspaces <i class="fas fa-chevron-down dropdown-icon"></i></a>
                                     <div class="dropdown-content">
                                         <div class="dropdown-section">
-                                            <a href="#">Workspaces</a>
-                                            <a href="#">My Jobs</a>
-                                            <a href="#">My Genomes</a>
-                                            <a href="#">My BioProjects</a>
+
+                                            <a href="/workspace/public">Public Workspaces</a>
+
+                                            <a href="/workspace/">My Workspaces</a>
+                                            <a href="/job/">My Jobs</a>
+                                            <a href="/view/GenomeList/?eq(public,false)">My Genomes</a>
+                                            <a href="/">My BioProjects</a>
+                                            <hr>
+                                            <a href="/workspace/public">Public Workspaces</a>
+                                            <a href="/workspace/public/maage@bvbrc/MAAGE%20Workshop">MAAGE Workshop</a>
                                         </div>
                                     </div>
                                 </div>
@@ -121,15 +122,16 @@
                                     <a href="#">About <i class="fas fa-chevron-down dropdown-icon"></i></a>
                                     <div class="dropdown-content">
                                         <div class="dropdown-section">
-                                            <h3>About MAAGE</h3>
-                                            <a href="#">About MAAGE</a>
-                                            <a href="#">Team Members</a>
-                                            <a href="#">Contact Us</a>
+                                            <h3>MAAGE</h3>
+                                            <a href="/about">About Us</a>
+                                            <a href="/team">Team Members</a>
+                                            <a href="/advisory-boards">Advisory Boards</a>
+                                            <a href="mailto:help@maage-brc.org">Contact MAAGE</a>
                                         </div>
                                     </div>
                                 </div>
                         </div>
-                    </div>
+
 
                     <div class="navbar-right">
                         <button class="search-icon">
