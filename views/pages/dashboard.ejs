@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Dashboard | Midwest Alliance for Applied Epidemiology</title>
-        <%- include('../head') %>
 
-    </head>
-    <body class="claro patric <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>"></body>
-		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
-			<%- include('../navbar') %>
-            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px solid #ddd;background:inherit;">
 
 
 
@@ -981,7 +971,18 @@
     <div class="bw-bubble-m7z6y5q4-container" style="all: initial; box-sizing: border-box; contain: content;">
       <div class="dashboard bw-bubble-m7z6y5q4" data-bw-bubble-m7z6y5q4="">
         <!-- Header included here -->
-        ${include:header.html}
+        <header class="maage-dash-header">
+            <div class="maage-dash-logo">
+              Maage Dash
+            </div>
+            <nav class="maage-dash-nav">
+              <ul class="maage-dash-nav-list">
+                <li class="maage-dash-nav-item"><a href="#" class="maage-dash-nav-link">Home</a></li>
+                <li class="maage-dash-nav-item"><a href="#" class="maage-dash-nav-link">About</a></li>
+                <li class="maage-dash-nav-item"><a href="#" class="maage-dash-nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
 
         <!-- Sidebar -->
         <div class="sidebar" data-bw-bubble-m7z6y5q4="">
@@ -1706,7 +1707,9 @@
       </div>
 
       <!-- Footer included here -->
-      ${include:footer.html}
+      <footer class="maage-dash-footer">
+        <p>&copy; 2025 Maage Dash</p>
+      </footer>
 
     </div>
 
@@ -3345,10 +3348,3 @@
 
 
 
-
-
-            </div>
-        </div>
-    <%- include('../javascript') %>
-    </body>
-</html>
