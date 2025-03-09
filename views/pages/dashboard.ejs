@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en" data-theme="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Outbreak Tracker | Midwest Alliance for Applied Genomic Epidemiology
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../../public/css/maage/dashboard.css" />
+    <div id="dashboard-wrapper" class="dashboard">
+
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="platform-header">
+
+                <h1 class="text-3xl inline">Outbreak Observer<span class="text-sm font-medium text-gray-600""> by MAAGE</span></h2>
+                            <span>
+                            <button id="disclaimer-toggle" class="disclaimer-toggle text-[var(--secondary-600)]" title="View disclaimer"><i class="fas fa-info-circle"></i></button>
+                        <br>
+                        <div id="disclaimer-container" class="disclaimer-container hidden">
+                            <p class="pb-2">The Outbreak Observer real-time monitoring application provides "intelligent" surveillance data for infectious
+                                disease outbreaks around the world</p>
+                                <p>Demo data is not real-time nor official</p>
+                        </div>
+                    </span>
+
+            </div>
+
+            <!-- Overview Section -->
+            <section id="overview" class="section active">
+                <h2 class="text-xl font-semibold">Surveillance Monitor</h2>
+                <div class="map-container">
+
+                    <div class="global-stats-container">
+                        <h3 class="global-stats-title">World Health Report</h3>
+                        <div class="global-stats-grid">
+                            <div class="global-stat-panel">
+                                <div class="global-stat-header">
+                                    <h4>Overview</h4>
+                                </div>
+                                <div class="global-stat-content">
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Active Outbreaks</span>
+                                        <span class="global-stat-value">6</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Countries Affected</span>
+                                        <span class="global-stat-value">181</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Sequences Analyzed</span>
+                                        <span class="global-stat-value">219,847</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Hospitalization Rate</span>
+                                        <span class="global-stat-value">14.3%</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">ICU Utilization</span>
+                                        <span class="global-stat-value">54.3%</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Economic Impact</span>
+                                        <span class="global-stat-value">$2.7 Trillion</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="global-stat-panel">
+                                <div class="global-stat-header">
+                                    <h4>New Cases</h4>
+                                </div>
+                                <div class="global-stat-content">
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Last 24 hours</span>
+                                        <span class="global-stat-value">4,217</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Week</span>
+                                        <span class="global-stat-value">28,645</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Month</span>
+                                        <span class="global-stat-value">118,392</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">YTD</span>
+                                        <span class="global-stat-value">1,247,382</span>
+                                    </div>
+                                    <hr class="mt-2 mb-2">
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Deaths This Year</span>
+                                        <span class="global-stat-value">214,392</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="global-stat-panel">
+                                <div class="global-stat-header">
+                                    <h4>Vaccination Status</h4>
+                                </div>
+                                <div class="global-stat-content">
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Global Vaccination Rate</span>
+                                        <span class="global-stat-value">73.8%</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Low-Income Countries</span>
+                                        <span class="global-stat-value">38.5%</span>
+                                    </div>
+                                    <div class="global-stat-item">
+                                        <span class="global-stat-label">Doses Administered</span>
+                                        <span class="global-stat-value">14.3B</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="global-stat-panel">
+                                <div class="global-stat-header">
+                                    <h4>Latest Alerts</h4>
+                                </div>
+                                <div class="global-stat-alerts">
+                                    <div class="global-alert-item">
+                                        <span class="alert-badge high">High</span>
+                                        <span class="alert-text">H5N1 spread to new mammalian hosts detected</span>
+                                    </div>
+                                    <div class="global-alert-item">
+                                        <span class="alert-badge moderate">Moderate</span>
+                                        <span class="alert-text">Dengue expanding in previously unaffected regions</span>
+                                    </div>
+                                    <div class="global-alert-item">
+                                        <span class="alert-badge low">Low</span>
+                                        <span class="alert-text">Measles outbreaks in under-vaccinated areas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-unified-container">
+                        <div class="map-unified-header">
+                            <h3 class="map-section-title">Global Distribution Map</h3>
+                        </div>
+
+                        <div class="map-controls">
+                            <div class="map-diseases-selector">
+                                <div class="disease-selection-title">Pathogens:</div>
+                                <div id="map-disease-checkboxes" class="disease-checkboxes"></div>
+                            </div>
+                        </div>
+
+                        <div class="map-visualization-container">
+                            <div id="world-map"></div>
+                        </div>
+                    </div>
+
+                    <div class="outbreak-summary-container">
+                        <h3 class="outbreak-section-title">Active Pathogens</h3>
+                        <div class="outbreak-cards">
+                            <div class="outbreak-card" data-disease="mpox-2024">
+                                <div class="outbreak-header">
+                                    <h4>Monkeypox virus</h4>
+                                    <span class="severity high">High Concern</span>
+                                </div>
+                                <div class="outbreak-stats">
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Cases</span>
+                                        <span class="stat-value">8,743</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Fatalities</span>
+                                        <span class="stat-value">276</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Countries</span>
+                                        <span class="stat-value">43</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn-details">View Details</button>
+                            </div>
+
+                            <div class="outbreak-card" data-disease="h5n1-2024">
+                                <div class="outbreak-header">
+                                    <h4>Influenza A/H5N1</h4>
+                                    <span class="severity critical">Critical Concern</span>
+                                </div>
+                                <div class="outbreak-stats">
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Cases</span>
+                                        <span class="stat-value">4,219</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Fatalities</span>
+                                        <span class="stat-value">381</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Countries</span>
+                                        <span class="stat-value">27</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn-details">View Details</button>
+                            </div>
+
+                            <div class="outbreak-card" data-disease="sarscov2">
+                                <div class="outbreak-header">
+                                    <h4>SARS-CoV-2</h4>
+                                    <span class="severity moderate">Moderate Concern</span>
+                                </div>
+                                <div class="outbreak-stats">
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Cases</span>
+                                        <span class="stat-value">712.4M</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Fatalities</span>
+                                        <span class="stat-value">6.9M</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Countries</span>
+                                        <span class="stat-value">192</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn-details">View Details</button>
+                            </div>
+
+                            <div class="outbreak-card" data-disease="ebolavirus">
+                                <div class="outbreak-header">
+                                    <h4>Ebolavirus</h4>
+                                    <span class="severity critical">Critical Concern</span>
+                                </div>
+                                <div class="outbreak-stats">
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Cases</span>
+                                        <span class="stat-value">3,476</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Fatalities</span>
+                                        <span class="stat-value">1,872</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Countries</span>
+                                        <span class="stat-value">12</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn-details">View Details</button>
+                            </div>
+
+                            <div class="outbreak-card" data-disease="dengue">
+                                <div class="outbreak-header">
+                                    <h4>Dengue virus</h4>
+                                    <span class="severity high">High Concern</span>
+                                </div>
+                                <div class="outbreak-stats">
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Cases</span>
+                                        <span class="stat-value">128.8K</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Fatalities</span>
+                                        <span class="stat-value">1,432</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Countries</span>
+                                        <span class="stat-value">86</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn-details">View Details</button>
+                            </div>
+
+                            <div class="outbreak-card" data-disease="zika">
+                                <div class="outbreak-header">
+                                    <h4>Zika virus</h4>
+                                    <span class="severity moderate">Moderate Concern</span>
+                                </div>
+                                <div class="outbreak-stats">
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Cases</span>
+                                        <span class="stat-value">6,874</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Fatalities</span>
+                                        <span class="stat-value">58</span>
+                                    </div>
+                                    <div class="outbreak-stat">
+                                        <span class="stat-label">Countries</span>
+                                        <span class="stat-value">31</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn-details">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diseases Section -->
+            <section id="diseases" class="section">
+                <h2 class="text-xl font-semibold">Pathogen Reports</h2>
+                <p class="section-description">
+                    Comprehensive information on selected infectious disease outbreaks
+                </p>
+
+                <div class="disease-selector">
+                    <button class="disease-btn active" data-disease="mpox-2024">
+                        Monkeypox virus
+                    </button>
+                    <button class="disease-btn" data-disease="h5n1-2024">
+                        Influenza A/H5N1
+                    </button>
+                    <button class="disease-btn" data-disease="sarscov2">
+                        SARS-CoV-2
+                    </button>
+                    <button class="disease-btn" data-disease="ebolavirus">
+                        Ebolavirus
+                    </button>
+                    <button class="disease-btn" data-disease="dengue">
+                        Dengue virus
+                    </button>
+                    <button class="disease-btn" data-disease="zika">
+                        Zika virus
+                    </button>
+                </div>
+                <div class="disease-alerts mb-6">
+                    <div id="disease-alerts" class=" border-l-4 border-yellow-500 bg-yellow-50 text-yellow-700">
+                        Select a disease to view current alerts and warnings.
+                    </div>
+                </div>
+                <div class="disease-details" id="disease-details">
+
+
+                    <div class="disease-overview">
+
+
+
+                        <div class="disease-data-container">
+
+                            <div class="disease-stats">
+                                <div class="disease-stat-card">
+                                    <h4>Total Cases</h4>
+                                    <div class="disease-stat-value" id="disease-total-cases">
+                                        --
+                                    </div>
+                                </div>
+                                <div class="disease-stat-card">
+                                    <h4>Fatalities</h4>
+                                    <div class="disease-stat-value" id="disease-fatalities">
+                                        --
+                                    </div>
+                                </div>
+                                <div class="disease-stat-card">
+                                    <h4>Fatality Rate</h4>
+                                    <div class="disease-stat-value" id="disease-fatality-rate">
+                                        --
+                                    </div>
+                                </div>
+                                <div class="disease-stat-card">
+                                    <h4>R₀ Estimate</h4>
+                                    <div class="disease-stat-value" id="disease-r0">--</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="disease-info-container mt-6">
+                            <h3 class="mb-3">About <span class="disease-name-highlight">Monkeypox virus</span></h3>
+                            <div class="disease-info-content">
+                                <div class="disease-description" id="disease-description">
+                                    Monkeypox is a zoonotic disease caused by the monkeypox virus, belonging to the Orthopoxvirus genus. The 2024 outbreak represents a concerning evolution with increased human-to-human transmission compared to historical patterns.
+                                </div>
+
+                                <div class="disease-metadata mt-4 grid grid-cols-2 gap-4">
+                                    <div class="metadata-item">
+                                        <h4 class="text-sm font-semibold text-gray-500">Transmission</h4>
+                                        <p id="disease-transmission" class="mt-1">Direct contact with infected animals or humans, bodily fluids, contaminated materials, and respiratory droplets during prolonged face-to-face contact.</p>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <h4 class="text-sm font-semibold text-gray-500">Incubation Period</h4>
+                                        <p id="disease-incubation" class="mt-1">5-21 days, typically 6-13 days</p>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <h4 class="text-sm font-semibold text-gray-500">Symptoms</h4>
+                                        <p id="disease-symptoms" class="mt-1">Fever, headache, muscle aches, back pain, swollen lymph nodes, followed by a distinctive rash that evolves through several stages</p>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <h4 class="text-sm font-semibold text-gray-500">Prevention</h4>
+                                        <p id="disease-prevention" class="mt-1">Avoid contact with infected animals or humans, practice good hand hygiene, use PPE when caring for patients, and vaccination for high-risk groups.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="disease-charts-container">
+                        <div class="disease-chart-wrapper">
+                            <h3>Cases Over Time</h3>
+                            <canvas id="disease-timeline-chart"></canvas>
+                        </div>
+                        <div class="disease-chart-wrapper">
+                            <h3>Geographic Distribution</h3>
+                            <canvas id="disease-geo-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Genomics Section -->
+            <section id="genomics" class="section">
+                <h2 class="text-xl font-semibold">Surveillance Data</h2>
+                <p class="section-description">
+                    Analysis of genomic sequences, mutations, and phylogenetic
+                    relationships
+                </p>
+
+                <div class="genomics-selector">
+                    <button class="genomics-btn active" data-disease="mpox-2024">
+                        Monkeypox virus
+                    </button>
+                    <button class="genomics-btn" data-disease="h5n1-2024">
+                        Influenza A/H5N1
+                    </button>
+                    <button class="genomics-btn" data-disease="sarscov2">
+                        SARS-CoV-2
+                    </button>
+                    <button class="genomics-btn" data-disease="ebolavirus">
+                        Ebolavirus
+                    </button>
+                    <button class="genomics-btn" data-disease="dengue">
+                        Dengue virus
+                    </button>
+                    <button class="genomics-btn" data-disease="zika">
+                        Zika virus
+                    </button>
+                </div>
+
+                <div class="genomics-container">
+                    <div class="variants-container">
+                        <h3>Variant Composition</h3>
+                        <div class="genomics-chart-container">
+                            <canvas id="variants-chart"></canvas>
+                        </div>
+                        <div class="variants-table-container">
+                            <table class="variants-table">
+                                <thead>
+                                    <tr>
+                                        <th>Variant</th>
+                                        <th>Prevalence</th>
+                                        <th>R₀ Value</th>
+                                        <th>Key Mutations</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="variants-table-body">
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="genomics-viz-container">
+                        <h3>Mutation Visualization</h3>
+                        <div id="mutation-viz" class="genomics-viz">
+                            <!-- D3.js will render a mutation visualization here -->
+                            <p class="genomics-placeholder">
+                                Select a variant to visualize key mutations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Predictions Section -->
+            <section id="predictions" class="section">
+                <h2 class="text-xl font-semibold">Predictive Analysis</h2>
+                <p class="section-description">
+                    AI-powered forecasting of disease spread patterns and hotspot
+                    identification
+                </p>
+
+                <div class="predictions-controls">
+                    <div class="predictions-controls-content">
+                        <div class="predictions-controls-section">
+                            <h4>Select Pathogen:</h4>
+                            <div class="predictions-selector">
+                                <button class="prediction-btn active" data-disease="mpox-2024">
+                                    Monkeypox virus
+                                </button>
+                                <button class="prediction-btn" data-disease="h5n1-2024">
+                                    Influenza A/H5N1
+                                </button>
+                                <button class="prediction-btn" data-disease="sarscov2">
+                                    SARS-CoV-2
+                                </button>
+                                <button class="prediction-btn" data-disease="ebolavirus">
+                                    Ebolavirus
+                                </button>
+                                <button class="prediction-btn" data-disease="dengue">
+                                    Dengue virus
+                                </button>
+                                <button class="prediction-btn" data-disease="zika">
+                                    Zika virus
+                                </button>
+                            </div>
+                        </div>
+                        <div class="predictions-controls-section">
+                            <h4>Forecast Period:</h4>
+                            <div class="predictions-timeframe">
+                                <button class="timeframe-btn active" data-days="7">7 Days</button>
+                                <button class="timeframe-btn" data-days="14">14 Days</button>
+                                <button class="timeframe-btn" data-days="30">30 Days</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="predictions-container">
+                    <div class="prediction-map-container">
+                        <h3>Predicted Hotspots</h3>
+                        <div id="prediction-map" class="prediction-map">
+                            <!-- Map will be rendered here -->
+                        </div>
+                    </div>
+
+                    <div class="prediction-charts">
+                        <div class="prediction-chart-card">
+                            <h3>Projected Case Growth</h3>
+                            <canvas id="projection-chart"></canvas>
+                        </div>
+                        <div class="prediction-chart-card">
+                            <h3>Transmission Risk Assessment</h3>
+                            <div class="risk-matrix" id="risk-matrix">
+                                <!-- Risk matrix will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prediction-metrics">
+                        <div class="metric-card">
+                            <h4>Peak Date</h4>
+                            <div class="metric-value" id="peak-date">June 12, 2024</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Peak Cases</h4>
+                            <div class="metric-value" id="peak-cases">~4,320</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Growth Rate</h4>
+                            <div class="metric-value" id="growth-rate">1.42</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Confidence</h4>
+                            <div class="metric-value" id="confidence">76%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="datasets" class="section">
+                <h2 class="text-xl font-semibold">Datasets</h2>
+                <p class="section-description">
+                    Search and import additional epidemiological and genomic datasets
+                </p>
+
+                <div class="datasets-search">
+                    <input type="text" id="dataset-search" placeholder="Search for datasets..." />
+                    <button id="search-datasets-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+
+                <div class="datasets-filters">
+                    <div class="filter">
+                        <label>Data Type</label>
+                        <select id="data-type-filter">
+                            <option value="all">All Types</option>
+                            <option value="case-data">Case Data</option>
+                            <option value="genomic">Genomic</option>
+                            <option value="clinical">Clinical</option>
+                            <option value="travel">Travel & Movement</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <label>Region</label>
+                        <select id="region-filter">
+                            <option value="all">All Regions</option>
+                            <option value="africa">Africa</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <option value="north-america">North America</option>
+                            <option value="south-america">South America</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <label>Time Period</label>
+                        <select id="time-filter">
+                            <option value="all">All Time</option>
+                            <option value="last-week">Last Week</option>
+                            <option value="last-month">Last Month</option>
+                            <option value="last-6-months">Last 6 Months</option>
+                            <option value="last-year">Last Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="datasets-container">
+                    <div class="dataset-card">
+                        <div class="dataset-header">
+                            <h4>WHO Global Surveillance Database</h4>
+                            <span class="dataset-tag official">Official</span>
+                        </div>
+                        <p class="dataset-description">
+                            Official case counts and epidemiological data from the World
+                            Health Organization.
+                        </p>
+                        <div class="dataset-meta">
+                            <span><i class="fas fa-calendar"></i> Updated: Daily</span>
+                            <span><i class="fas fa-globe"></i> Global</span>
+                            <span><i class="fas fa-file"></i> CSV, JSON</span>
+                        </div>
+                        <button class="btn-import">Import Dataset</button>
+                    </div>
+
+                    <div class="dataset-card">
+                        <div class="dataset-header">
+                            <h4>GISAID EpiCoV Database</h4>
+                            <span class="dataset-tag genomic">Genomic</span>
+                        </div>
+                        <p class="dataset-description">
+                            Repository of genomic sequences for SARS-CoV-2, influenza and
+                            other pathogens.
+                        </p>
+                        <div class="dataset-meta">
+                            <span><i class="fas fa-calendar"></i> Updated: Daily</span>
+                            <span><i class="fas fa-globe"></i> Global</span>
+                            <span><i class="fas fa-file"></i> FASTA, JSON</span>
+                        </div>
+                        <button class="btn-import">Import Dataset</button>
+                    </div>
+
+                    <div class="dataset-card">
+                        <div class="dataset-header">
+                            <h4>CDC Outbreak Response Data</h4>
+                            <span class="dataset-tag official">Official</span>
+                        </div>
+                        <p class="dataset-description">
+                            US-specific outbreak data including regional spread and
+                            demographic details.
+                        </p>
+                        <div class="dataset-meta">
+                            <span><i class="fas fa-calendar"></i> Updated: Weekly</span>
+                            <span><i class="fas fa-map-marker-alt"></i> United States</span>
+                            <span><i class="fas fa-file"></i> CSV, API</span>
+                        </div>
+                        <button class="btn-import">Import Dataset</button>
+                    </div>
+
+                    <div class="dataset-card">
+                        <div class="dataset-header">
+                            <h4>NextStrain Open Dataset</h4>
+                            <span class="dataset-tag genomic">Genomic</span>
+                        </div>
+                        <p class="dataset-description">
+                            Pathogen phylogenetic analysis and visualization data for
+                            multiple diseases.
+                        </p>
+                        <div class="dataset-meta">
+                            <span><i class="fas fa-calendar"></i> Updated: Weekly</span>
+                            <span><i class="fas fa-globe"></i> Global</span>
+                            <span><i class="fas fa-file"></i> JSON, Newick</span>
+                        </div>
+                        <button class="btn-import">Import Dataset</button>
+                    </div>
+
+                    <div class="dataset-card">
+                        <div class="dataset-header">
+                            <h4>ECDC Surveillance Atlas</h4>
+                            <span class="dataset-tag official">Official</span>
+                        </div>
+                        <p class="dataset-description">
+                            European surveillance data on communicable diseases and
+                            outbreaks.
+                        </p>
+                        <div class="dataset-meta">
+                            <span><i class="fas fa-calendar"></i> Updated: Weekly</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                            <span><i class="fas fa-file"></i> CSV, XLSX</span>
+                        </div>
+                        <button class="btn-import">Import Dataset</button>
+                    </div>
+
+                    <div class="dataset-card">
+                        <div class="dataset-header">
+                            <h4>Global.health Dataset</h4>
+                            <span class="dataset-tag collaborative">Collaborative</span>
+                        </div>
+                        <p class="dataset-description">
+                            Line-list data of anonymized case records for emerging
+                            infectious diseases.
+                        </p>
+                        <div class="dataset-meta">
+                            <span><i class="fas fa-calendar"></i> Updated: Daily</span>
+                            <span><i class="fas fa-globe"></i> Global</span>
+                            <span><i class="fas fa-file"></i> CSV, JSON, API</span>
+                        </div>
+                        <button class="btn-import">Import Dataset</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <footer class="bg-[var(--maage-secondary-600)] text-white py-12">
+        <div class="container mx-auto px-4">
+            <!-- Main footer content -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <!-- Logo and description column -->
+                <div class="col-span-2 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <a href="/" class="inline-flex items-center gap-2" aria-label="MAAGE">
+                            <img class="h-14" src="/patric/images/maage/maage-logo.png" alt="MAAGE Logo">
+                            <div>
+                                <span class="font-poppins font-semibold text-3xl md:text-4xl lg:text-5xl text-[var(--maage-secondary-400)]">MA</span>
+                                <span class="font-poppins font-light text-3xl md:text-4xl lg:text-5xl text-[var(--maage-secondary-200)] ml-[-3px]">AGE</span>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-md font-medium mb-3 text-gray-400">Connect with us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/MAAGE-BRC" class="text-gray-400 hover:text-white transition hover:scale-110" aria-label="Github">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.twitter.com/maage_brc" class="text-gray-400 hover:text-white transition hover:scale-110" aria-label="Twitter">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/maage-brc" class="text-gray-400 hover:text-white transition hover:scale-110" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="mailto:help@maage-brc.org" class="text-gray-400 hover:text-white transition hover:scale-110" aria-label="Email">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources column -->
+                <div class="col-span-1">
+                    <h3 class="text-md font-semibold mb-4 text-[var(--maage-secondary-300)]">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">API Reference</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Analysis Reports</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Publications</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Downloads</a></li>
+                    </ul>
+                </div>
+
+                <!-- About column -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4 text-[var(--maage-secondary-300)]">About</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">About MAAGE</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Our Team</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Advisory Boards</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Partner Organizations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies & Connect column -->
+                <div class="col-span-1">
+                    <h3 class="text-lg font-semibold mb-4 text-[var(--maage-secondary-300)]">Policies</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Terms of Use</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Data Usage Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Accessibility</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Security</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Bottom links and info -->
+            <!-- <div class="mt-10 pt-8 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex space-x-4 mb-4 md:mb-0">
+                        <a href="https://www.anl.gov" target="_blank"><span class="text-sm text-gray-400 hover:text-white transition duration-300">ANL</span></a>
+                        <span class="hidden md:inline text-gray-600">|</span>
+                         <a href="https://dph.illinois.gov/" target="_blank"><span class="text-sm text-gray-400 hover:text-white transition duration-300">IDPH</span></a>
+                        <span class="hidden md:inline text-gray-600">|</span>
+                         <a href="https://www.illinois.edu" target="_blank"><span class="text-sm text-gray-400 hover:text-white transition duration-300">Illinois</span></a>
+                    </div>
+                    <div class="flex flex-wrap justify-center md:justify-end gap-4">
+                        <a href="/site-map.xml" class="text-sm text-gray-400 hover:text-white">Site Map</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </footer>
+    <div class="h-10 bg-[var(--maage-secondary-700)]"></div>
+    <script src="/public/js/maage/dashboard.js"></script>
+</body>
+
+</html>
