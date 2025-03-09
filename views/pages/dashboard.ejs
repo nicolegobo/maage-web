@@ -22,6 +22,37 @@
     <link rel="stylesheet" href="../../public/css/maage/dashboard.css" />
     <div id="dashboard-wrapper" class="dashboard">
 
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="menu">
+        <div class="menu-item active" data-section="overview">
+            <i class="fas fa-globe"></i>
+            <span>Overview</span>
+        </div>
+        <div class="menu-item" data-section="diseases">
+            <i class="fas fa-bacteria"></i>
+            <span>Outbreaks</span>
+        </div>
+        <div class="menu-item" data-section="genomics">
+            <i class="fas fa-dna"></i>
+            <span>Surveillance</span>
+        </div>
+        <div class="menu-item" data-section="predictions">
+            <i class="fas fa-chart-line"></i>
+            <span>Predictions</span>
+        </div>
+        <div class="menu-item" data-section="datasets">
+            <i class="fas fa-database"></i>
+            <span>Datasets</span>
+        </div>
+    </div>
+
+    <div class="menu-bottom">
+        <button id="dark-mode-toggle" class="sidebar-dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+</div>
 
         <!-- Main content -->
         <div class="content">
@@ -820,7 +851,8 @@
         </div>
     </footer>
     <div class="h-10 bg-[var(--maage-secondary-700)]"></div>
-    <script src="/public/js/maage/dashboard.js"></script>
+    <!-- <script src="/public/js/maage/dashboard.js"></script> -->
+    <script src="/public/js/maage/maage.js"></script>
 </body>
 
 </html>
