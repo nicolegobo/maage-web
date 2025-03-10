@@ -340,11 +340,12 @@
   }
 
   .dropdown-section h3 {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--secondary-color);
     margin-bottom: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 600;
   }
 
   .dropdown-section a {
@@ -525,37 +526,37 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.7s ease;
-  }
+  transition: left 0.7s ease;
+}
 
-  .login-btn:hover::before,
-  .register-btn:hover::before {
-    left: 100%;
-  }
+.login-btn:hover::before,
+.register-btn:hover::before {
+  left: 100%;
+}
 
-  .login-btn {
-    background-color: var(--bg-ui-color);
-    color: #262626;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
+.register-btn {
+  background-color: var(--bg-ui-color);
+  color: #262626;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
 
-  .login-btn:hover {
-    color: #fafafa;
-    background-color: #477e93;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
+.register-btn:hover {
+  color: #fafafa;
+  background-color: #477e93;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-  .register-btn {
-    color: #fafafa;
-    background-color: var(--secondary-color);
-  }
+.login-btn {
+  color: #fafafa;
+  background-color: var(--secondary-color);
+}
 
-  .register-btn:hover {
-    background-color: #477e93;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
+.login-btn:hover {
+  background-color: #477e93;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
   /* Sidebar */
   .sidebar {

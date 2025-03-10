@@ -5,7 +5,7 @@
 		<%- include('head') %>
 	  </head>
 	<body>
-		<%- include('navbar-dev') %>
+		<%- include('navbar') %>
 		<div class="claro patric bg-maage-bg <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>"></div>
 
 		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
@@ -19,8 +19,6 @@
 		<%- include('javascript') %>
 	</body>
 	<style>
-   .index-page-container {
-	transform: translateY(55px) !important;
-   }
+
 	</style>
 </html>
