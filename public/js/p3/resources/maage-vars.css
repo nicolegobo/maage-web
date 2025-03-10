@@ -43,7 +43,23 @@
     --maage-dark-text: #1a1a1a;
     --maage-dark-text-alt: #2c2c2c;
 
+
+
     --maage-bg: #F8F6F2;
+
+    --maage-gray-50: #f6f6f6;
+    --maage-gray-100: #ededed;
+    --maage-gray-200: #dedede;
+    --maage-gray-300: #c9c9c9;
+    --maage-gray-400: #adadad;
+    --maage-gray-500: #8f8f8f;
+    --maage-gray-600: #757575;
+    --maage-gray-700: #595959;
+    --maage-gray-800: #454545;
+    --maage-gray-900: #333333;
+    --maage-gray-950: #262626;
+
+
 
     --shark-50: #f6f6f6;
     --shark-100: #e7e7e7;
