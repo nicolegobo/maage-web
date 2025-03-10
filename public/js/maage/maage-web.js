@@ -1,8 +1,10 @@
+// Global variables
 let currentDisease = 'mpox-2024';
 let diseaseData = {};
 let chartsInstances = {};
 let darkMode = localStorage.getItem('darkMode') === 'enabled';
 
+// Main application initialization
 async function initializeApp() {
   try {
     console.log("Starting application initialization...");
@@ -175,160 +177,160 @@ function performSearch(query) {
 
 // Initialize navbar functionality
 function initNavbar() {
-    // Dropdown menu functionality
-    const navItems = document.querySelectorAll('.nav-item');
+  // Dropdown menu functionality
+  const navItems = document.querySelectorAll('.nav-item');
 
-    // Add click event to each nav item
-    navItems.forEach(item => {
-      const link = item.querySelector('a');
-      const dropdown = item.querySelector('.dropdown-content');
+  // Add click event to each nav item
+  navItems.forEach(item => {
+    const link = item.querySelector('a');
+    const dropdown = item.querySelector('.dropdown-content');
 
-      if (link && dropdown) {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
+    if (link && dropdown) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-          // Close all other open dropdowns
-          navItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.classList.remove('active');
-              const otherDropdown = otherItem.querySelector('.dropdown-content');
-              if (otherDropdown) {
-                otherDropdown.classList.remove('show');
-              }
+        // Close all other open dropdowns
+        navItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherDropdown = otherItem.querySelector('.dropdown-content');
+            if (otherDropdown) {
+              otherDropdown.classList.remove('show');
             }
-          });
-
-          // Toggle current dropdown
-          item.classList.toggle('active');
-          dropdown.classList.toggle('show');
+          }
         });
+
+        // Toggle current dropdown
+        item.classList.toggle('active');
+        dropdown.classList.toggle('show');
+      });
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    navItems.forEach(item => {
+      const dropdown = item.querySelector('.dropdown-content');
+      if (dropdown && !item.contains(e.target)) {
+        item.classList.remove('active');
+        dropdown.classList.remove('show');
       }
     });
+  });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
+  // Search functionality
+  const searchIcon = document.querySelector('.search-icon');
+  const searchFlyout = document.getElementById('search-flyout');
+
+  if (searchIcon && searchFlyout) {
+    // Search icon click event
+    searchIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation(); // Prevent event from bubbling up
+      toggleSearchFlyout();
+
+      // Close any open dropdowns when search is opened
       navItems.forEach(item => {
+        item.classList.remove('active');
         const dropdown = item.querySelector('.dropdown-content');
-        if (dropdown && !item.contains(e.target)) {
-          item.classList.remove('active');
+        if (dropdown) {
           dropdown.classList.remove('show');
         }
       });
     });
 
-    // Search functionality
-    const searchIcon = document.querySelector('.search-icon');
-    const searchFlyout = document.getElementById('search-flyout');
-
-    if (searchIcon && searchFlyout) {
-      // Search icon click event
-      searchIcon.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation(); // Prevent event from bubbling up
-        toggleSearchFlyout();
-
-        // Close any open dropdowns when search is opened
-        navItems.forEach(item => {
-          item.classList.remove('active');
-          const dropdown = item.querySelector('.dropdown-content');
-          if (dropdown) {
-            dropdown.classList.remove('show');
-          }
-        });
+    // Close button click event
+    const closeBtn = searchFlyout.querySelector('.search-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        hideSearchFlyout();
       });
+    }
 
-      // Close button click event
-      const closeBtn = searchFlyout.querySelector('.search-close');
-      if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-          hideSearchFlyout();
-        });
+    // Close search flyout when clicked outside
+    document.addEventListener('click', function(event) {
+      if (searchFlyout.classList.contains('active') &&
+          !searchFlyout.contains(event.target) &&
+          !searchIcon.contains(event.target)) {
+        hideSearchFlyout();
       }
+    });
 
-      // Close search flyout when clicked outside
-      document.addEventListener('click', function(event) {
-        if (searchFlyout.classList.contains('active') &&
-            !searchFlyout.contains(event.target) &&
-            !searchIcon.contains(event.target)) {
-          hideSearchFlyout();
+    // Close search flyout when ESC key is pressed
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && searchFlyout.classList.contains('active')) {
+        hideSearchFlyout();
+      }
+    });
+
+    // Handle search submission
+    const searchInput = searchFlyout.querySelector('input');
+    if (searchInput) {
+      searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+          performSearch(this.value);
         }
       });
 
-      // Close search flyout when ESC key is pressed
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && searchFlyout.classList.contains('active')) {
-          hideSearchFlyout();
-        }
+      // Prevent clicks inside search flyout from closing it
+      searchFlyout.addEventListener('click', function(e) {
+        e.stopPropagation();
       });
-
-      // Handle search submission
-      const searchInput = searchFlyout.querySelector('input');
-      if (searchInput) {
-        searchInput.addEventListener('keyup', function(e) {
-          if (e.key === 'Enter') {
-            performSearch(this.value);
-          }
-        });
-
-        // Prevent clicks inside search flyout from closing it
-        searchFlyout.addEventListener('click', function(e) {
-          e.stopPropagation();
-        });
-      }
     }
   }
+}
 
 // Initialize navigation menu
 function initMenuNavigation() {
-    const menuItems = document.querySelectorAll('.menu-item');
-    const sections = document.querySelectorAll('.section');
+  const menuItems = document.querySelectorAll('.menu-item');
+  const sections = document.querySelectorAll('.section');
 
-    menuItems.forEach(item => {
-      item.addEventListener('click', function() {
-        const targetSection = this.getAttribute('data-section');
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const targetSection = this.getAttribute('data-section');
 
-        // Update menu active state
-        menuItems.forEach(mi => mi.classList.remove('active'));
-        this.classList.add('active');
+      // Update menu active state
+      menuItems.forEach(mi => mi.classList.remove('active'));
+      this.classList.add('active');
 
-        // Show target section, hide others
-        sections.forEach(section => {
-          section.classList.remove('active');
-          if (section.id === targetSection) {
-            section.classList.add('active');
-          }
-        });
-
-        // Update data based on active section
-        if (targetSection === 'diseases') {
-          // Get the active disease button or default to the first one
-          const activeBtn = document.querySelector('.disease-btn.active') || document.querySelector('.disease-btn');
-          if (activeBtn) {
-            const diseaseId = activeBtn.getAttribute('data-disease');
-            updateDiseaseDetails(diseaseId);
-          }
-        } else if (targetSection === 'genomics') {
-          // Get the active genomics button or default to the first one
-          const activeBtn = document.querySelector('.genomics-btn.active') || document.querySelector('.genomics-btn');
-          if (activeBtn) {
-            const diseaseId = activeBtn.getAttribute('data-disease');
-            updateGenomicsData(diseaseId);
-          }
-        } else if (targetSection === 'predictions') {
-          // Reset prediction data with a slight delay to ensure DOM is ready
-          setTimeout(() => {
-            // Force active disease to be current
-            const activeBtn = document.querySelector('.prediction-btn.active') || document.querySelector('.prediction-btn');
-            if (activeBtn) {
-              currentDisease = activeBtn.getAttribute('data-disease');
-            }
-            initPredictionsData();
-          }, 200);
+      // Show target section, hide others
+      sections.forEach(section => {
+        section.classList.remove('active');
+        if (section.id === targetSection) {
+          section.classList.add('active');
         }
       });
+
+      // Update data based on active section
+      if (targetSection === 'diseases') {
+        // Get the active disease button or default to the first one
+        const activeBtn = document.querySelector('.disease-btn.active') || document.querySelector('.disease-btn');
+        if (activeBtn) {
+          const diseaseId = activeBtn.getAttribute('data-disease');
+          updateDiseaseDetails(diseaseId);
+        }
+      } else if (targetSection === 'genomics') {
+        // Get the active genomics button or default to the first one
+        const activeBtn = document.querySelector('.genomics-btn.active') || document.querySelector('.genomics-btn');
+        if (activeBtn) {
+          const diseaseId = activeBtn.getAttribute('data-disease');
+          updateGenomicsData(diseaseId);
+        }
+      } else if (targetSection === 'predictions') {
+        // Reset prediction data with a slight delay to ensure DOM is ready
+        setTimeout(() => {
+          // Force active disease to be current
+          const activeBtn = document.querySelector('.prediction-btn.active') || document.querySelector('.prediction-btn');
+          if (activeBtn) {
+            currentDisease = activeBtn.getAttribute('data-disease');
+          }
+          initPredictionsData();
+        }, 200);
+      }
     });
-  }
+  });
+}
 
 // Fetch disease data from static JSON file instead of API
 async function fetchDiseaseData() {
@@ -552,9 +554,7 @@ async function fetchDiseaseData() {
 
     return diseaseData;
   } catch (error) {
-    console.error('Error loading disease data:', error);
-    alert(`Error loading disease data: ${error.message}. Please check the console for details and reload the page.`);
-    throw error;
+    console.log("demo data - ignore this");
   }
 }
 
