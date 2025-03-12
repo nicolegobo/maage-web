@@ -400,7 +400,78 @@
   background: var(--green);
   opacity: 0.9;
   text-decoration: none;
+}
 
+#bv-brc-footer {
+  background-image: linear-gradient(#09456f, #34698e);
+}
+
+#bv-brc-footer-container {
+  /* width: 80%; */
+  margin: 0 auto;
+  /* padding: 0px 0px 20px 0px; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #bv-brc-footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+#bv-brc-footer-container h3 {
+  margin-top: 20px;
+  color: var(--main-text-light);
+  font-size: 1.25em;
+}
+
+#bv-brc-footer-container h3:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  padding-top: 10px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+#bv-brc-footer-container ul li {
+  list-style: none;
+}
+
+#bv-brc-footer-container ul li a {
+  color: var(--main-bg);
+  transition: color .1s;
+  font-size: 1em;
+}
+
+#bv-brc-footer-container ul li a:hover,
+#bv-brc-footer-container ul li a:focus {
+  color: var(--blue-tint);
+  text-decoration: underline;
+}
+
+#bv-brc-footer-container p {
+  color: var(--blue-tint);
+}
+
+#bv-brc-footer-container span::before {
+  padding: 0 5px;
+  color: var(--main-text-light);
+  transition: color .1s;
+}
+
+#bv-brc-footer-container span:hover::before,
+#bv-brc-footer-container span:focus::before {
+  color: var(--blue-tint);
+}
+
+#bv-brc-footer-container .col-2 {
+  padding: 1rem;
+}
 
 #bv-brc-home .announcements,
 #bv-brc-home .linkedin-feed {

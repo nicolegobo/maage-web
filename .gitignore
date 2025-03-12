@@ -33,7 +33,6 @@ p3-web.conf
 .zed/
 .fleet/
 *.swp
-CLAUDE.md
 
 # macOS
 .DS_Store
