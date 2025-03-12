@@ -23,6 +23,26 @@ router.get("/advisory-boards", function (req, res) {
   });
 });
 
+/* Dashboard. */
+router.get("/dashboard", function (req, res) {
+  req.applicationModule = "p3/app/p3app";
+  res.render("pages/dashboard", {
+    title: "PATRIC",
+    request: req,
+    response: res,
+  });
+});
+
+/* Dashboard. */
+router.get("/dashboard-dev", function (req, res) {
+  req.applicationModule = "p3/app/p3app";
+  res.render("pages/dashboard-dev", {
+    title: "PATRIC",
+    request: req,
+    response: res,
+  });
+});
+
 /* Announcements. */
 router.get("/announcements", function (req, res) {
   req.applicationModule = "p3/app/p3app";

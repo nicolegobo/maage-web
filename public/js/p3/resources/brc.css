@@ -59,9 +59,3 @@ color: var(--maage-light-text)!important;
 .DataItemHeader .fa {
 color: var(--maage-secondary-500);
 }
-
-
-#maage-footer .footer-social-links a,
-#maage-footer .footer-social-links a:visited {
-  color: var(--maage-secondary-500);
-}
