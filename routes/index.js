@@ -33,6 +33,16 @@ router.get("/dashboard", function (req, res) {
   });
 });
 
+/* Dashboard. */
+router.get("/dashboard-dev", function (req, res) {
+  req.applicationModule = "p3/app/p3app";
+  res.render("pages/dashboard-dev", {
+    title: "PATRIC",
+    request: req,
+    response: res,
+  });
+});
+
 /* Announcements. */
 router.get("/announcements", function (req, res) {
   req.applicationModule = "p3/app/p3app";
