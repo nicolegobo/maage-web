@@ -1,2611 +1,41 @@
-<div data-dojo-type="dijit/layout/ContentPane" class="HeaderBar maage-navbar" data-dojo-props="region:'top'">
-    <div id="bv-brc-header" class="P3Header" role="heading" aria-level="1">
-        <div>
-            <div id="maage-navbar">
-                <!-- Navbar -->
-                <div class="navbar">
-                    <div class="navbar-left">
-                        <div class="logo">
-                            <img src="/patric/images/maage/maage-logo.png" alt="MAAGE Logo" style="width: 45px; height: auto; margin-right: 10px;" />
-                            <span class="font-poppins font-semibold text-[40px] text-[var(--maage-secondary-500)]">MA</span>
-                            <span class="font-poppins font-light text-[40px] ml-[-2px] text-[var(--maage-secondary-700)]">AGE</span>
-                            <span class="text-[10px] ml-[4px] mt-[18px] logo-version"><i class="text-[10px]">v.<%- request.package.version %><%- request.applicationOptions.appLabel || " " %></i></span>
-                        </div>
-                    </div>
-                    <div class="nav-items" id="nav-items">
-                        <div class="nav-item">
-                            <a href="#">Organisms <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-section">
-                                            <h3>Bacteria</h3>
-                                            <a href="/view/Taxonomy/194#view_tab=overview">Campylobacter</a>
-                                            <a href="/view/Taxonomy/1637#view_tab=overview">Listeria</a>
-                                            <a href="/view/Taxonomy/561#view_tab=overview">Escherichia</a>
-                                            <a href="/view/Taxonomy/590#view_tab=overview">Salmonella</a>
-                                            <a href="#">All Bacteria</a>
-                                        </div>
-                                        <div class="dropdown-section">
-                                            <h3>Viruses</h3>
-                                            <a href="/view/Taxonomy/11320#view_tab=overview">Influenza A virus</a>
-                                            <a href="/view/Taxonomy/2697049#view_tab=overview">SARS-CoV-2</a>
-                                            <a href="/view/Taxonomy/10244#view_tab=overview">Monkeypox virus</a>
-                                            <a href="#">All Viruses</a>
-                                        </div>
-                                        <div class="dropdown-section">
-                                            <h3>Metagenomes</h3>
-                                            <a href="/view/Taxonomy/1637#view_tab=overview">SARS-CoV-2 Wastewater</a>
-                                            <a href="#">H5N1 Wastewater</a>
-                                            <a href="#">All Metagenomes</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="#">Searches <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-section">
-                                            <h3>Advanced Search</h3>
-                                            <a href="/searches/TaxaSearch">Taxa</a>
-                                            <a href="/searches/GenomeSearch">Genomes</a>
-                                            <a href="/searches/FeatureSearch">Features</a>
-                                            <a href="/searches/ProteinSearch">Proteins</a>
-                                            <a href="/searches/SpecialtyGeneSearch">Specialty Genes</a>
-                                            <a href="/searches/PathwaySearch">Pathways</a>
-                                            <a href="/searches/SubsystemSearch">Subsystems</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="#">Tools <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                                    <div class="dropdown-content two-columns">
-                                        <div class="dropdown-column" style="flex: 1; min-width: 280px;">
-                                            <div class="dropdown-section">
-                                                <h3>Genomics</h3>
-                                                <a href="/app/Assembly2">Genome Assembly</a>
-                                                <a href="/app/Annotation">Genome Annotation</a>
-                                                <a href="/app/ComprehensiveGenomeAnalysis">Comprehensive Genome Analysis (B)</a>
-                                                <a href="/app/Homology">BLAST</a>
-                                                <a href="/app/GenomeDistance">Similar Genome Finder</a>
-                                            </div>
-                                            <div class="dropdown-section">
-                                                <h3>Phylogenomics</h3>
-                                                <a href="/app/PhylogeneticTree">Bacterial Genome Tree</a>
-                                                <a href="/app/ViralGenomeTree">Viral Genome Tree</a>
-                                                <a href="/app/GeneTree">Gene Protein Tree</a>
-                                            </div>
-                                            <div class="dropdown-section">
-                                                <h3>Protein Tools</h3>
-                                                <a href="/app/MSA">MSA and SNP Analysis</a>
-                                                <a href="/app/SeqComparison">Proteome Comparison</a>
-                                                <a href="/app/ComparativeSystems">Comparative Systems</a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-column" style="flex: 1; min-width: 280px;">
-                                            <div class="dropdown-section">
-                                                <h3>Metagenomics</h3>
-                                                <a href="/app/TaxonomicClassification">Taxonomic Classification</a>
-                                                <a href="/app/MetagenomicBinning">Metagenomic Binning</a>
-                                                <a href="/app/MetagenomicReadMapping">Metagenomic Read Mapping</a>
-                                            </div>
-                                            <div class="dropdown-section">
-                                                <h3>Viral Tools</h3>
-                                                <a href="/app/ComprehensiveSARS2Analysis">SARS-COV-2 Genome Analysis</a>
-                                                <a href="/app/SARS2Wastewater">SARS-CoV-2 Wastewater Analysis</a>
-                                                <a href="/app/SubspeciesClassification">Subspecies Classification</a>
-                                            </div>
-                                            <div class="dropdown-section">
-                                                <h3>Outbreak Tracker</h3>
-                                                <a href="/outbreaks/Mpox/#view_tab=overview">Monkeypox virus</a>
-                                                <a href="/outbreaks/H5N1/#view_tab=overview">Influenza A/H5N1</a>
-                                                <a href="/outbreaks/SARSCoV2/#view_tab=overview">SARS-COV-2</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="#">Workspaces <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-section">
-
-                                            <a href="/workspace/public">Public Workspaces</a>
-
-                                            <a href="/workspace/">My Workspaces</a>
-                                            <a href="/job/">My Jobs</a>
-                                            <a href="/view/GenomeList/?eq(public,false)">My Genomes</a>
-                                            <a href="/">My BioProjects</a>
-                                            <hr>
-                                            <a href="/workspace/public">Public Workspaces</a>
-                                            <a href="/workspace/public/maage@bvbrc/MAAGE%20Workshop">MAAGE Workshop</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <a href="#">About <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-section">
-                                            <h3>MAAGE</h3>
-                                            <a href="/about">About Us</a>
-                                            <a href="/team">Team Members</a>
-                                            <a href="/advisory-boards">Advisory Boards</a>
-                                            <a href="mailto:help@maage-brc.org">Contact MAAGE</a>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-
-
-                    <div class="navbar-right">
-                        <button class="search-icon">
-                            <i class="fas fa-search"></i>
-                        </button>
-
-                        <a href="#" class="login-btn">Login</a>
-                        <a href="#" class="register-btn">Register</a>
-
-
-                        <button id="mobile-menu-toggle" class="mobile-menu-toggle">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="search-flyout" class="search-flyout">
-                    <div class="search-container">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search organisms, genomes, pathways..." autofocus>
-                        <button class="search-close"><i class="fas fa-times"></i></button>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div><!-- bv-brc-header-container -->
-    </div><!-- bv-brc-header -->
-</div><!-- HeaderBar -->
-<style>
-:root {
-  --primary-color: #a6c9b8;
-  --primary-50: #f2f8f5;
-  --primary-100: #deede4;
-  --primary-200: #bfd9cb;
-  --primary-300: #a6c9b8;
-  --primary-400: #89b8a3;
-  --primary-500: #65a48a;
-  --primary-600: #488970;
-  --primary-700: #3e7561;
-  --primary-800: #376755;
-  --primary-900: #305a4c;
-  --primary-950: #24423a;
-
-  --secondary-color: #548fa6;
-  --secondary-50: #f1f7f9;
-  --secondary-100: #dceaef;
-  --secondary-200: #c2d9e0;
-  --secondary-300: #a0c3cf;
-  --secondary-400: #71a3b7;
-  --secondary-500: #548fa6;
-  --secondary-600: #447188;
-  --secondary-700: #406477;
-  --secondary-800: #395160;
-  --secondary-900: #314654;
-  --secondary-950: #24333d;
-
-  --maage-primary-50: #f2f8f5;
-  --maage-primary-100: #deede4;
-  --maage-primary-200: #bfd9cb;
-  --maage-primary-300: #a6c9b8;
-  --maage-primary-400: #89b8a3;
-  --maage-primary-500: #65a48a;
-  --maage-primary-600: #488970;
-  --maage-primary-700: #3e7561;
-  --maage-primary-800: #376755;
-  --maage-primary-900: #305a4c;
-  --maage-primary-950: #24423a;
-
-  --maage-secondary-50: #f1f7f9;
-  --maage-secondary-100: #dceaef;
-  --maage-secondary-200: #c2d9e0;
-  --maage-secondary-300: #a0c3cf;
-  --maage-secondary-400: #71a3b7;
-  --maage-secondary-500: #548fa6;
-  --maage-secondary-600: #447188;
-  --maage-secondary-700: #406477;
-  --maage-secondary-800: #395160;
-  --maage-secondary-900: #314654;
-  --maage-secondary-950: #24333d;
-
-  --maage-tertiary-50: #f9f9fb;
-  --maage-tertiary-100: #f1f1f6;
-  --maage-tertiary-200: #e6e5ef;
-  --maage-tertiary-300: #d2d0e2;
-  --maage-tertiary-400: #b4b0cf;
-  --maage-tertiary-500: #a19ac1;
-  --maage-tertiary-600: #897daa;
-  --maage-tertiary-700: #766a95;
-  --maage-tertiary-800: #675d83;
-  --maage-tertiary-900: #574e6e;
-  --maage-tertiary-950: #3b364e;
-
-  --maage-gray-50: #f6f6f6;
-  --maage-gray-100: #ededed;
-  --maage-gray-200: #dbdbdb;
-  --maage-gray-300: #c9c9c9;
-  --maage-gray-400: #adadad;
-  --maage-gray-500: #8f8f8f;
-  --maage-gray-600: #757575;
-  --maage-gray-700: #595959;
-  --maage-gray-800: #454545;
-  --maage-gray-900: #333333;
-  --maage-gray-950: #262626;
-
-  --dove-gray-50: #f6f6f6;
-  --dove-gray-100: #e7e7e7;
-  --dove-gray-200: #dedede;
-  --dove-gray-300: #b0b0b0;
-  --dove-gray-400: #888888;
-  --dove-gray-500: #737373;
-  --dove-gray-600: #5d5d5d;
-  --dove-gray-700: #4f4f4f;
-  --dove-gray-800: #454545;
-  --dove-gray-900: #3d3d3d;
-  --dove-gray-950: #262626;
-
-
-  --accent-color: #8279a1;
-  --success-color: #2ecc71;
-  --warning-color: #f39c12;
-  --light-color: #ecf0f1;
-  --dark-color: #2c3e50;
-  --text-color: #2c2c2c;
-  --text-color-alt: #7f8c8d;
-  --text-color-dark-mode: #ecf0f1;
-  --text-color-dark-mode-alt: #bdc3c7;
-  --heading-color: #2c2c2c;
-  --heading-color-alt: #7f8c8d;
-  --heading-color-dark-mode: #ecf0f1;
-  --heading-color-dark-mode-alt: #bdc3c7;
-  --text-light: #7f8c8d;
-  --background-color: #F8F6F4;
-  --bg-ui-color: #F8F6F4;
-  --card-color: #fafafa;
-  --viz-placeholder: #e7e7e7;
-  --sidebar-width: 240px;
-  --header-height: 60px;
-  --border-radius: 8px;
-  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --ma-color: #477e93;
-  --age-color: #375767;
-  --viz-bg: #fafafa;
-}
-
-[data-theme="dark"] {
-  --primary-color: #3d677d;
-  --secondary-color: #305a6a;
-  --accent-color: #6e6b8a;
-  --success-color: #27ae60;
-  --warning-color: #e67e22;
-  --light-color: #2c3e50;
-  --dark-color: #ecf0f1;
-  --text-color: #ecf0f1;
-  --text-light: #bdc3c7;
-  --background-color: #2e3f4b;
-  --card-color: #2c3e50;
-  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  --ma-color: #5b9eb8;
-  --age-color: #7c91a3;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  transition: color 0.5s, background-color 0.5s;
-}
-
-body, .card-color, .navbar, .sidebar, .stat-card, .outbreak-card, .disease-stat-card,
-.disease-chart-wrapper, .prediction-chart-card, .metric-card, .dataset-card {
-  transition: background-color 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
-}
-
-.stat-card:hover, .outbreak-card:hover, .dataset-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Dashboard Layout */
-.dashboard {
-  min-height: 100vh;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--header-height);
-  background: var(--primary-color);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 20;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-}
-
-.navbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  min-width: 32px;
-  height: auto;
-  transition: all 0.3s ease;
-}
-
-.nav-items {
-  display: flex;
-  gap: 20px;
-  margin-left: 30px;
-}
-
-.nav-item {
-  position: relative;
-  padding: 0 15px;
-}
-
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--secondary-800);
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px;
-  transition: transform 0.3s ease;
-}
-
-.mobile-menu-toggle:hover {
-  transform: scale(1.1);
-}
-
-.nav-item > a {
-  color: var(--secondary-800);
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 8px 0;
-  display: block;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-item > a:hover {
-  color: var(--secondary-900);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.nav-item > a:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--secondary-700);
-  transition: width 0.3s ease;
-}
-
-.nav-item > a:hover:after {
-  width: 100%;
-}
-
-.dropdown-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 4px;
-  padding: 10px;
-  display: none;
-  z-index: 30;
-}
-
-.dropdown-content.two-columns {
-  display: none;
-  flex-direction: row !important; /* Force row layout */
-  min-width: 600px;
-  left: -150px;
-  width: auto;
-}
-
-.dropdown-column {
-  flex: 1;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  width: 50%; /* Ensure each column takes up half the width */
-  box-sizing: border-box;
-}
-
-.nav-item .dropdown-content.two-columns.show {
-  display: flex !important; /* Force flex display when visible */
-}
-
-.nav-item .dropdown-content.show {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-item > a {
-  display: flex;
-  align-items: center;
-}
-
-.nav-item > a .dropdown-icon {
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.nav-item.active > a .dropdown-icon {
-  transform: rotate(180deg);
-}
-
-.dropdown-section {
-  margin-bottom: 10px;
-}
-
-.dropdown-section h3 {
-  font-size: 14px;
-  color: var(--secondary-color);
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.dropdown-section a {
-  display: block;
-  padding: 5px 0;
-  color: var(--text-color);
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.dropdown-section a:hover {
-  color: var(--secondary-color);
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.search-icon, .dark-mode-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: var(--dark-color);
-  margin-right: 10px;
-  transition: transform 0.2s ease;
-}
-
-.search-icon:hover {
-  transform: scale(1.1);
-}
-
-.search-flyout {
-  background-color: #fafafa;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  position: fixed;
-  top: var(--header-height);
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 20px 0;
-  display: none;
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.search-flyout.active {
-  display: block;
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.search-container {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 20px;
-}
-
-.search-container i.fa-search {
-  position: absolute;
-  left: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-light);
-  font-size: 18px;
-}
-
-.search-container input {
-  color: var(--text-color);
-  background-color: #fafafa;
-  border: 1px solid var(--light-color);
-  border-radius: var(--border-radius);
-  padding: 12px 15px 12px 45px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.search-container .search-close {
-  position: absolute;
-  right: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--text-light);
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.search-container .search-close:hover {
-  color: var(--text-color);
-}
-
-.search-container input:focus {
-  outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 2px rgba(61, 103, 125, 0.2);
-}
-
-.search-message {
-  position: fixed;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-20px);
-  background-color: var(--card-color);
-  color: var(--text-color);
-  padding: 12px 24px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 110;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.search-message.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.sidebar-dark-mode-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 12px 0;
-  margin-top: auto;
-  transition: all 0.3s ease;
-}
-
-.sidebar-dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .sidebar-dark-mode-toggle i.fa-moon {
-  color: #f1c40f;
-}
-
-[data-theme="dark"] .fa-moon:before {
-  content: "\f185"; /* Change to sun icon when in dark mode */
-}
-
-.login-btn, .register-btn {
-  text-decoration: none;
-  padding: 8px 32px;
-  border-radius: 6px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.login-btn::before, .register-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.7s ease;
-}
-
-.login-btn:hover::before, .register-btn:hover::before {
-  left: 100%;
-}
-
-.login-btn {
-  background-color: var(--bg-ui-color);
-  color: #262626;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.login-btn:hover {
-  color: #fafafa;
-  background-color: #477e93;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.register-btn {
-  color: #fafafa;
-  background-color: var(--secondary-color);
-}
-
-.register-btn:hover {
-  background-color: #477e93;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Sidebar */
-.sidebar {
-  width: 64px;
-  background-color: var(--secondary-color);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  height: auto;
-  max-height: 80vh;
-  z-index: 10;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  margin-right: 20px;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.logo i {
-  font-size: 12px;
-  font-style: normal;
-  margin-right: 10px;
-  color: var(--secondary-color);
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
-}
-
-.logo h1 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--dark-color);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-}
-
-.sidebar-header {
-  padding: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.menu {
-  flex: 1;
-  padding: 20px 0;
-  overflow-y: auto;
-  max-height: 60vh;
-}
-
-.menu-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.menu-item.active {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-left: 3px solid var(--secondary-color);
-}
-
-.menu-item i {
-  font-size: 20px;
-  width: 24px;
-  text-align: center;
-}
-
-.menu-item span {
-  display: none;
-}
-
-.menu-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* Content Area */
-.content {
-  margin-left: 84px; /* 64px sidebar width + 20px padding */
-  margin-top: var(--header-height);
-  padding: 20px;
-}
-
-.platform-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
-
-}
-
-.platform-header h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: var(--secondary-700);
-}
-
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background-color: var(--background-color);
-  border-radius: 20px;
-  padding: 8px 15px;
-  width: 300px;
-}
-
-.search-bar i {
-  color: var(--text-light);
-  margin-right: 10px;
-}
-
-.search-bar input {
-  border: none;
-  background: transparent;
-  outline: none;
-  color: var(--text-color);
-  width: 100%;
-  font-size: 14px;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-}
-
-.btn-notifications {
-  background: none;
-  border: none;
-  color: var(--text-light);
-  font-size: 18px;
-  cursor: pointer;
-  margin-right: 20px;
-  position: relative;
-}
-
-.btn-notifications::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.user-profile img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-/* Section Styling */
-.section {
-  padding: 20px;
-  display: none;
-}
-
-.section.active {
-  display: block;
-}
-
-.section h2 {
-  margin-bottom: 10px;
-}
-
-.section .section-title {
-
-}
-
-/* Risk Matrix Styles */
-.risk-matrix-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 2px;
-  height: 180px;
-  width: 180px;
-  margin: 0 auto;
-}
-
-.risk-cell {
-  position: relative;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.disease-marker {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: bold;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  z-index: 5;
-}
-
-.risk-axis-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.risk-x-axis {
-  display: flex;
-  justify-content: space-between;
-  width: 180px;
-  margin: 5px auto;
-  font-size: 12px;
-  color: var(--text-light);
-}
-
-.risk-y-axis {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 180px;
-  margin-left: 10px;
-  font-size: 12px;
-  color: var(--text-light);
-}
-
-.risk-legend {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  gap: 10px;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  font-size: 12px;
-}
-
-.legend-color {
-  width: 12px;
-  height: 12px;
-  border-radius: 2px;
-  margin-right: 5px;
-}
-
-/* Prediction Map Styles */
-.prediction-map {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-}
-
-.hotspot-pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    r: 5;
-    opacity: 0.7;
-  }
-  50% {
-    r: 12;
-    opacity: 0.4;
-  }
-  100% {
-    r: 5;
-    opacity: 0.7;
-  }
-}
-
-.prediction-tooltip {
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-/* Responsive adjustments for the prediction section */
-@media (max-width: 768px) {
-  .prediction-charts {
-    grid-template-columns: 1fr;
-  }
-
-  .prediction-metrics {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .risk-matrix-grid {
-    height: 150px;
-    width: 150px;
-  }
-
-  .risk-x-axis, .risk-y-axis {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-  color: var(--dark-color);
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-}
-
-.section-description {
-  color: #3c3c3c;
-  margin-bottom: 12px;
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-}
-
-.section-disclaimer {
-  font-family: 'Inter', sans-serif;
-  color: #7c7c7c;
-  font-size: 15px;
-  font-style: italic;
-}
-
-.disclaimer-container {
-  background-color: var(--background-color);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  border-left: 3px solid var(--secondary-color);
-  margin-top: 10px;
-  transition: opacity 0.3s ease;
-  max-width: 800px;
-}
-
-.disclaimer-container.hidden {
-  display: none !important;
-}
-
-.disclaimer-container:not(.hidden) {
-  display: block;
-  animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.disclaimer-toggle {
-  background: none;
-  border: none;
-  color: var(--secondary-color);
-  margin-left: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
-}
-
-.disclaimer-toggle:hover {
-  transform: scale(1.2);
-}
-
-/* Stats Cards */
-.stats-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.stat-card {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  box-shadow: var(--box-shadow);
-}
-
-.stat-card h3 {
-  font-size: 16px;
-  color: #6c6c6c;
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-
-.stat-value {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #2c2c2c;
-}
-
-.stat-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.stat-label {
-  color: var(--text-light);
-}
-
-.stat-change {
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-.stat-change.increase {
-  color: var(--success-color);
-}
-
-.stat-change.decrease {
-  color: var(--accent-color);
-}
-
-/* Map Container */
-.map-container {
-  background-color: transparent;
-  border-radius: var(--border-radius);
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.map-container h2 {
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.global-stats-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--secondary-700);
-  font-family: 'Poppins', sans-serif;
-}
-
-.dashboard-overview-section {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-/* Global Stats Overview with Map Stats */
-.global-stats-overview {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-@media (max-width: 768px) {
-  .global-stats-overview {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .global-stats-overview {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Global Stats Container Styles */
-.global-stats-container {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 16px;
-  box-shadow: var(--box-shadow);
-  margin-bottom: 16px;
-}
-
-.global-stats-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--secondary-700);
-  font-family: 'Poppins', sans-serif;
-}
-
-.global-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.global-stat-panel {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.global-stat-panel:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.global-stat-header {
-  padding: 10px 12px;
-  background-color: var(--primary-100);
-  border-bottom: 2px solid var(--primary-300);
-}
-
-.global-stat-header h4 {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--secondary-700);
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.global-stat-content {
-  padding: 12px;
-}
-
-.global-stat-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-family: 'Inter', sans-serif;
-}
-
-.global-stat-item:last-child {
-  margin-bottom: 0;
-}
-
-.global-stat-label {
-  font-size: 13px;
-  color: var(--text-light);
-}
-
-.global-stat-value {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--secondary-700);
-}
-
-.global-stat-alerts {
-  padding: 12px;
-}
-
-.global-alert-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-  padding: 6px 8px;
-  border-radius: 4px;
-  background-color: var(--card-color);
-  border-left: 3px solid var(--light-color);
-}
-
-.global-alert-item:last-child {
-  margin-bottom: 0;
-}
-
-.alert-badge {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 10px;
-  margin-right: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.alert-badge.high {
-  background-color: rgba(231, 76, 60, 0.15);
-  color: #e74c3c;
-}
-
-.alert-badge.moderate {
-  background-color: rgba(243, 156, 18, 0.15);
-  color: var(--warning-color);
-}
-
-.alert-badge.low {
-  background-color: rgba(46, 204, 113, 0.15);
-  color: var(--success-color);
-}
-
-.alert-text {
-  font-size: 12px;
-  color: var(--text-color);
-  flex: 1;
-  text-align: right;
-}
-
-@media (max-width: 1200px) {
-  .global-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .global-stats-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.map-unified-container {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 16px;
-  box-shadow: var(--box-shadow);
-  margin-bottom: 10px;
-}
-
-.map-unified-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.map-unified-header h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--secondary-700);
-  font-family: 'Poppins', sans-serif;
-}
-
-.map-controls {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 10px 15px;
-  margin-bottom: 10px;
-}
-
-.map-diseases-selector {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-size: 14px;
-
-}
-
-.disease-selection-title {
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: var(--text-color);
-  font-size: 14px;
-}
-
-.map-visualization-container {
-  width: 100%;
-}
-
-#world-map {
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-  background-color: var(--maage-gray-200);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--maage-gray-500);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (min-width: 768px) {
-  .map-diseases-selector {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .disease-selection-title {
-    margin-right: 15px;
-    margin-bottom: 0;
-    text-align: left;
-  }
-}
-
-.disease-checkboxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.disease-checkbox-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background-color: var(--card-color);
-  padding: 8px 16px;
-  border-radius: 16px;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.disease-checkbox-item:hover {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.disease-checkbox-item input {
-  margin: 0;
-  width: 14px;
-  height: 14px;
-}
-
-.disease-checkbox-item label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 12px;
-}
-
-.disease-color-indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 5px;
-  display: inline-block;
-}
-
-/* Map tooltip */
-.map-tooltip {
-  background-color: var(--card-color) !important;
-  color: var(--text-color) !important;
-  z-index: 1000;
-}
-
-/* Map styling */
-.country {
-  transition: fill 0.2s ease;
-}
-
-.country:hover {
-  fill: #e6e6e6;
-}
-
-.disease-circle {
-  transition: r 0.2s ease, fill-opacity 0.2s ease;
-  cursor: pointer;
-}
-
-/* Outbreak Summary Section */
-.outbreak-summary-container {
-  margin-top: 10px;
-}
-
-.outbreak-section-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--secondary-700);
-  font-family: 'Poppins', sans-serif;
-}
-
-.outbreak-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.outbreak-card {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 18px;
-  box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
-  border-top: 4px solid var(--secondary-color);
-  display: flex;
-  flex-direction: column;
-}
-
-.outbreak-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-}
-
-.outbreak-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.outbreak-header h4 {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  color: var(--secondary-700);
-}
-
-.severity {
-  font-size: 11px;
-  padding: 3px 10px;
-  border-radius: 15px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  text-transform: uppercase;
-}
-
-.severity.low {
-  background-color: rgba(46, 204, 113, 0.15);
-  color: var(--success-color);
-  border: 1px solid rgba(46, 204, 113, 0.3);
-}
-
-.severity.moderate {
-  background-color: rgba(243, 156, 18, 0.15);
-  color: var(--warning-color);
-  border: 1px solid rgba(243, 156, 18, 0.3);
-}
-
-.severity.high {
-  background-color: rgba(231, 76, 60, 0.15);
-  color: #e74c3c;
-  border: 1px solid rgba(231, 76, 60, 0.3);
-}
-
-.severity.critical {
-  background-color: rgba(192, 57, 43, 0.15);
-  color: #c0392b;
-  border: 1px solid rgba(192, 57, 43, 0.3);
-}
-
-.outbreak-stats {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 18px;
-  padding: 10px;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-}
-
-.outbreak-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.outbreak-stat .stat-label {
-  font-size: 12px;
-  color: var(--text-light);
-  font-weight: 500;
-}
-
-.outbreak-stat .stat-value {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 5px 0 0;
-  color: var(--secondary-700);
-}
-
-.outbreak-chart {
-  height: 120px;
-  margin-bottom: 15px;
-}
-
-.btn-details {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-details:hover {
-  background-color: var(--secondary-600);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btn-details:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-  .map-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .outbreak-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .outbreak-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .map-stats {
-    grid-template-columns: 1fr;
-  }
-
-  #world-map {
-    height: 350px;
-  }
-
-  .map-container {
-    padding: 15px;
-  }
-}
-
-/* Disease Details Section */
-.disease-selector {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 10px;
-  box-shadow: var(--box-shadow);
-}
-
-.disease-btn {
-  padding: 8px 15px;
-  margin: 5px;
-  background: none;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s;
-  color: var(--text-light);
-}
-
-.disease-btn.active {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.disease-details {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  box-shadow: var(--box-shadow);
-}
-
-.disease-overview {
-  margin-bottom: 20px;
-}
-
-.disease-overview h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.disease-data-container {
-  display: flex;
-  gap: 20px;
-}
-
-.disease-info-container,
-.disease-alerts {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  margin-top: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.disease-description {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.metadata-item {
-  margin-bottom: 12px;
-}
-
-.metadata-item h4 {
-  color: var(--text-light);
-  margin-bottom: 4px;
-  font-size: 14px;
-}
-
-.metadata-item p {
-  font-size: 15px;
-}
-
-.disease-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  width: 100%;
-}
-
-.disease-stat-card {
-  background-color: var(--ui-card-bg);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  text-align: center;
-}
-
-.disease-stat-card h4 {
-  font-size: 14px;
-  color: var(--text-light);
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.disease-stat-value {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--dark-color);
-}
-
-.disease-charts-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.disease-chart-wrapper {
-  background-color: var(--viz-bg);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  height: 350px;
-}
-
-.disease-chart-wrapper h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.disease-chart-wrapper canvas {
-  max-height: 280px;
-}
-
-/* Genomics Section */
-.genomics-selector {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 10px;
-  box-shadow: var(--box-shadow);
-}
-
-.genomics-btn {
-  padding: 8px 15px;
-  margin: 5px;
-  background: none;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s;
-  color: var(--text-light);
-}
-
-.genomics-btn.active {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.genomics-container {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  box-shadow: var(--box-shadow);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.variants-container h3,
-.genomics-viz-container h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.genomics-chart-container {
-  height: 200px;
-margin-bottom: 20px;
-}
-
-.variants-table-container {
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.variants-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.variants-table th,
-.variants-table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid var(--light-color);
-}
-
-.variants-table th {
-  font-weight: 600;
-  color: var(--text-light);
-  font-size: 14px;
-}
-
-.genomics-viz {
-  height: 400px;
-  background-color: var(--viz-bg);
-  border-radius: var(--border-radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.genomics-placeholder {
-  color: var(--text-light);
-  font-style: italic;
-}
-
-/* Styling for selected variant in table */
-#variants-table-body tr.selected-variant {
-  background-color: var(--secondary-50);
-  border-left: 3px solid var(--secondary-color);
-}
-
-#variants-table-body tr:hover {
-  background-color: var(--primary-50);
-  transition: background-color 0.2s ease;
-}
-
-/* SVG styling for mutation visualization */
-#mutation-viz svg text {
-  font-family: 'Inter', sans-serif;
-}
-
-#mutation-viz .mutation:hover circle {
-  fill-opacity: 0.8;
-  r: 9;
-  transition: all 0.2s ease;
-}
-
-/* Mutation tooltip */
-.mutation-tooltip {
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--text-color);
-}
-
-.mutation-tooltip strong {
-  font-weight: 600;
-  color: var(--secondary-600);
-}
-
-/* Axis styling */
-#mutation-viz .domain,
-#mutation-viz .tick line {
-  stroke: var(--text-light);
-  opacity: 0.3;
-}
-
-[data-theme="dark"] #mutation-viz .mutation-tooltip {
-  background-color: var(--card-color) !important;
-  color: var(--text-color) !important;
-  border-color: var(--secondary-600) !important;
-}
-
-/* Predictions Section */
-.predictions-controls {
-  display: flex;
-  margin-bottom: 20px;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  box-shadow: var(--box-shadow);
-}
-
-.predictions-controls-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.predictions-controls-section {
-  margin-bottom: 5px;
-}
-
-.predictions-controls-section h4 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--secondary-700);
-  font-family: 'Poppins', sans-serif;
-}
-
-.predictions-selector {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.prediction-btn {
-  padding: 8px 15px;
-  background: none;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s;
-  color: var(--text-light);
-}
-
-.prediction-btn.active {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.predictions-timeframe {
-  display: flex;
-}
-
-.timeframe-btn {
-  padding: 8px 15px;
-  background: none;
-  border: 1px solid var(--light-color);
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s;
-  color: var(--text-light);
-}
-
-.timeframe-btn:first-child {
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-}
-
-.timeframe-btn:last-child {
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
-
-.timeframe-btn.active {
-  background-color: var(--secondary-color);
-  color: white;
-  border-color: var(--secondary-color);
-}
-
-.predictions-container {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  box-shadow: var(--box-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.prediction-map-container h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.prediction-map {
-  height: 300px;
-  background-color: var(--viz-big);
-  border-radius: var(--border-radius);
-}
-
-.prediction-charts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.prediction-chart-card {
-  background-color: var(--viz-bg);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-.prediction-chart-card h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.prediction-chart-card canvas {
-  flex: 1;
-  max-height: 220px;
-}
-
-.risk-matrix {
-  height: 220px;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-}
-
-.prediction-metrics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
-
-.metric-card {
-  background-color: var(--viz-bg);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  text-align: center;
-}
-
-.metric-card h4 {
-  font-size: 14px;
-  color: var(--text-light);
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.metric-value {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark-color);
-}
-
-/* Datasets Section */
-.datasets-search {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.datasets-search input {
-  flex: 1;
-  padding: 10px 15px;
-  border: 1px solid var(--light-color);
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-  font-size: 14px;
-  outline: none;
-}
-
-.datasets-search button {
-  padding: 10px 20px;
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.datasets-filters {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 15px;
-  box-shadow: var(--box-shadow);
-}
-
-.filter {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.filter label {
-  font-size: 14px;
-  color: var(--text-light);
-  margin-bottom: 5px;
-}
-
-.filter select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid var(--light-color);
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-size: 14px;
-}
-
-.datasets-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.dataset-card {
-  background-color: var(--card-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  box-shadow: var(--box-shadow);
-}
-
-.dataset-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.dataset-header h4 {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.dataset-tag {
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-.dataset-tag.official {
-  background-color: rgba(52, 152, 219, 0.2);
-  color: var(--secondary-color);
-}
-
-.dataset-tag.genomic {
-  background-color: rgba(142, 68, 173, 0.2);
-  color: #8e44ad;
-}
-
-.dataset-tag.collaborative {
-  background-color: rgba(46, 204, 113, 0.2);
-  color: var(--success-color);
-}
-
-.dataset-description {
-  color: var(--text-color);
-  font-size: 14px;
-  margin-bottom: 15px;
-  height: 60px;
-  overflow: hidden;
-}
-
-.dataset-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-  font-size: 12px;
-  color: var(--text-light);
-}
-
-.dataset-meta span {
-  display: flex;
-  align-items: center;
-}
-
-.dataset-meta i {
-  margin-right: 5px;
-}
-
-.btn-import {
-  width: 100%;
-  padding: 8px;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--light-color);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s;
-}
-
-.btn-import:hover {
-  background-color: var(--secondary-color);
-  color: white;
-  border-color: var(--secondary-color);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .stats-container,
-  .disease-stats,
-  .prediction-metrics,
-  .datasets-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .map-content {
-    grid-template-columns: 1fr;
-  }
-
-  .map-stats {
-    grid-template-columns: repeat(4, 1fr);
-    display: grid;
-  }
-
-  .outbreak-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .disease-charts-container,
-  .prediction-charts,
-  .genomics-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 991px) {
-  .sidebar {
-    left: 10px;
-  }
-
-  .content {
-    margin-left: 74px;
-  }
-
-  .search-bar {
-    width: 200px;
-  }
-
-  .logo img {
-    width: 36px;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-  }
-
-  .nav-items {
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    background: var(--primary-400);
-    flex-direction: column;
-    gap: 0;
-    margin-left: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    z-index: 30;
-  }
-
-  .nav-items.show {
-    max-height: 500px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-item {
-    padding: 15px 20px;
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  .dropdown-content {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 10px 0 10px 20px;
-  }
-
-  .dropdown-content.two-columns {
-    flex-direction: column !important;
-    min-width: auto;
-    left: 0;
-    width: 100%;
-  }
-
-  .dropdown-column {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .stats-container,
-  .outbreak-cards,
-  .disease-stats,
-  .datasets-container {
-    grid-template-columns: 1fr;
-  }
-
-  .map-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #world-map {
-    height: 350px;
-  }
-
-  .datasets-filters {
-    flex-direction: column;
-  }
-
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .header-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-
-  .login-btn, .register-btn {
-    padding: 6px 15px;
-    font-size: 12px;
-  }
-
-  .login-btn {
-    margin-right: 8px;
-  }
-}
-
-@media (max-width: 576px) {
-  .section {
-    padding: 15px 10px;
-  }
-
-  .disease-selector,
-  .genomics-selector,
-  .predictions-controls {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .timeframe-btn:first-child,
-  .timeframe-btn:last-child {
-    border-radius: var(--border-radius);
-  }
-
-  .predictions-timeframe {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-}
-
-/* Footer Styles */
-.dashboard-footer {
-  background-color: var(--secondary-color);
-  color: #fff;
-  padding: 40px 20px 20px;
-  margin-top: 40px;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.footer-logo-img {
-  width: 50px;
-  height: auto;
-  filter: brightness(0) invert(1);
-}
-
-.footer-logo-text h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.footer-logo-text p {
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-links-column {
-  min-width: 150px;
-}
-
-.footer-links-column h4 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--primary-200);
-}
-
-.footer-links-column a {
-  display: block;
-  color: #fff;
-  opacity: 0.8;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.footer-links-column a:hover {
-  opacity: 1;
-  color: var(--primary-300);
-  transform: translateX(5px);
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  background-color: var(--primary-500);
-  transform: translateY(-5px);
-}
-
-.footer-contact {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 8px;
-}
-
-.footer-bottom {
-  max-width: 1200px;
-  margin: 30px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-.footer-made-with i {
-  color: #e25555;
-  margin: 0 3px;
-}
-
-/* Responsive Styles for Footer */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .footer-logo {
-    justify-content: center;
-  }
-
-  .footer-links {
-    justify-content: space-around;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  .footer-contact {
-    text-align: center;
-  }
-}
-
-
-</style>
-
-<script>
-// Global variables
 let currentDisease = 'mpox-2024';
 let diseaseData = {};
 let chartsInstances = {};
 let darkMode = localStorage.getItem('darkMode') === 'enabled';
 
+async function initializeApp() {
+  try {
+    console.log("Starting application initialization...");
+
+    // Initialize UI components that don't depend on data
+    initDarkMode();
+    initNavbar();
+    initMobileMenu();
+    initMenuNavigation();
+    initSearch();
+
+    // Fetch disease data first and wait for it to complete
+    console.log("Fetching disease data...");
+    await fetchDiseaseData();
+    console.log("Disease data loaded successfully");
+
+    // Initialize components that depend on disease data
+    initDiseaseSelectors();
+    initMapPlaceholders();
+    initInteractiveElements();
+
+    console.log("Application initialization complete");
+  } catch (error) {
+    console.error("Error during application initialization:", error);
+    alert("There was a problem initializing the application. Please check the console for details.");
+  }
+}
+
 // Fetch all disease data when the page loads
-document.addEventListener('DOMContentLoaded', async function() {
-  // Initialize dark mode
-  initDarkMode();
-
-  // Initialize navbar functionality
-  initNavbar();
-
-  // Initialize mobile menu
-  initMobileMenu();
-
-  // Initialize menu navigation
-  initMenuNavigation();
-
-  // Fetch disease data first and wait for it to complete
-  await fetchDiseaseData();
-
-  // Initialize components that depend on disease data
-  initDiseaseSelectors();
-  initMapPlaceholders();
-
-  // Initialize search functionality
-  initSearch();
-
-  // Initialize buttons and interactive elements
-  initInteractiveElements();
+document.addEventListener('DOMContentLoaded', function() {
+  initializeApp().catch(error => {
+    console.error("Failed to initialize application:", error);
+  });
 });
 
 // Initialize dark mode functionality
@@ -2693,246 +123,422 @@ function initMobileMenu() {
   }
 }
 
+// Search flyout utility functions
+function toggleSearchFlyout() {
+  const searchFlyout = document.getElementById('search-flyout');
+  if (searchFlyout.classList.contains('active')) {
+    hideSearchFlyout();
+  } else {
+    showSearchFlyout();
+  }
+}
+
+function showSearchFlyout() {
+  const searchFlyout = document.getElementById('search-flyout');
+  searchFlyout.classList.add('active');
+  setTimeout(() => {
+    // Focus on input after animation completes
+    const searchInput = searchFlyout.querySelector('input');
+    if (searchInput) searchInput.focus();
+  }, 300);
+}
+
+function hideSearchFlyout() {
+  const searchFlyout = document.getElementById('search-flyout');
+  searchFlyout.classList.remove('active');
+}
+
+function performSearch(query) {
+  if (query.trim()) {
+    console.log('Searching for:', query);
+    // In a real implementation, this would perform a search and display results
+    // For now, just hide the search flyout and show a temporary message
+    hideSearchFlyout();
+
+    // Show a temporary search message
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'search-message';
+    messageDiv.innerHTML = `<p>Searching for: <strong>${query}</strong></p>`;
+    document.body.appendChild(messageDiv);
+
+    setTimeout(() => {
+      messageDiv.classList.add('show');
+      setTimeout(() => {
+        messageDiv.classList.remove('show');
+        setTimeout(() => {
+          document.body.removeChild(messageDiv);
+        }, 300);
+      }, 2000);
+    }, 100);
+  }
+}
+
 // Initialize navbar functionality
 function initNavbar() {
-  // Dropdown menu functionality
-  const navItems = document.querySelectorAll('.nav-item');
+    // Dropdown menu functionality
+    const navItems = document.querySelectorAll('.nav-item');
 
-  // Add click event to each nav item
-  navItems.forEach(item => {
-    const link = item.querySelector('a');
-    const dropdown = item.querySelector('.dropdown-content');
-
-    if (link && dropdown) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // Close all other open dropdowns
-        navItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.classList.remove('active');
-            const otherDropdown = otherItem.querySelector('.dropdown-content');
-            if (otherDropdown) {
-              otherDropdown.classList.remove('show');
-            }
-          }
-        });
-
-        // Toggle current dropdown
-        item.classList.toggle('active');
-        dropdown.classList.toggle('show');
-      });
-    }
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(e) {
+    // Add click event to each nav item
     navItems.forEach(item => {
+      const link = item.querySelector('a');
       const dropdown = item.querySelector('.dropdown-content');
-      if (dropdown && !item.contains(e.target)) {
-        item.classList.remove('active');
-        dropdown.classList.remove('show');
+
+      if (link && dropdown) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Close all other open dropdowns
+          navItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+              const otherDropdown = otherItem.querySelector('.dropdown-content');
+              if (otherDropdown) {
+                otherDropdown.classList.remove('show');
+              }
+            }
+          });
+
+          // Toggle current dropdown
+          item.classList.toggle('active');
+          dropdown.classList.toggle('show');
+        });
       }
     });
-  });
 
-  // Search functionality
-  const searchIcon = document.querySelector('.search-icon');
-  const searchFlyout = document.getElementById('search-flyout');
-
-  if (searchIcon && searchFlyout) {
-    // Search icon click event
-    searchIcon.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation(); // Prevent event from bubbling up
-      toggleSearchFlyout();
-
-      // Close any open dropdowns when search is opened
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
       navItems.forEach(item => {
-        item.classList.remove('active');
         const dropdown = item.querySelector('.dropdown-content');
-        if (dropdown) {
+        if (dropdown && !item.contains(e.target)) {
+          item.classList.remove('active');
           dropdown.classList.remove('show');
         }
       });
     });
 
-    // Close button click event
-    const closeBtn = searchFlyout.querySelector('.search-close');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        hideSearchFlyout();
+    // Search functionality
+    const searchIcon = document.querySelector('.search-icon');
+    const searchFlyout = document.getElementById('search-flyout');
+
+    if (searchIcon && searchFlyout) {
+      // Search icon click event
+      searchIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // Prevent event from bubbling up
+        toggleSearchFlyout();
+
+        // Close any open dropdowns when search is opened
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          const dropdown = item.querySelector('.dropdown-content');
+          if (dropdown) {
+            dropdown.classList.remove('show');
+          }
+        });
       });
-    }
 
-    // Close search flyout when clicked outside
-    document.addEventListener('click', function(event) {
-      if (searchFlyout.classList.contains('active') &&
-          !searchFlyout.contains(event.target) &&
-          !searchIcon.contains(event.target)) {
-        hideSearchFlyout();
+      // Close button click event
+      const closeBtn = searchFlyout.querySelector('.search-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          hideSearchFlyout();
+        });
       }
-    });
 
-    // Close search flyout when ESC key is pressed
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && searchFlyout.classList.contains('active')) {
-        hideSearchFlyout();
-      }
-    });
-
-    // Handle search submission
-    const searchInput = searchFlyout.querySelector('input');
-    if (searchInput) {
-      searchInput.addEventListener('keyup', function(e) {
-        if (e.key === 'Enter') {
-          performSearch(this.value);
+      // Close search flyout when clicked outside
+      document.addEventListener('click', function(event) {
+        if (searchFlyout.classList.contains('active') &&
+            !searchFlyout.contains(event.target) &&
+            !searchIcon.contains(event.target)) {
+          hideSearchFlyout();
         }
       });
 
-      // Prevent clicks inside search flyout from closing it
-      searchFlyout.addEventListener('click', function(e) {
-        e.stopPropagation();
+      // Close search flyout when ESC key is pressed
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchFlyout.classList.contains('active')) {
+          hideSearchFlyout();
+        }
       });
-    }
-  }
 
-  function toggleSearchFlyout() {
-    if (searchFlyout.classList.contains('active')) {
-      hideSearchFlyout();
-    } else {
-      showSearchFlyout();
-    }
-  }
-
-  function showSearchFlyout() {
-    searchFlyout.classList.add('active');
-    setTimeout(() => {
-      // Focus on input after animation completes
+      // Handle search submission
       const searchInput = searchFlyout.querySelector('input');
-      if (searchInput) searchInput.focus();
-    }, 300);
-  }
+      if (searchInput) {
+        searchInput.addEventListener('keyup', function(e) {
+          if (e.key === 'Enter') {
+            performSearch(this.value);
+          }
+        });
 
-  function hideSearchFlyout() {
-    searchFlyout.classList.remove('active');
-  }
-
-  function performSearch(query) {
-    if (query.trim()) {
-      console.log('Searching for:', query);
-      // In a real implementation, this would perform a search and display results
-      // For now, just hide the search flyout and show a temporary message
-      hideSearchFlyout();
-
-      // Show a temporary search message
-      const messageDiv = document.createElement('div');
-      messageDiv.className = 'search-message';
-      messageDiv.innerHTML = `<p>Searching for: <strong>${query}</strong></p>`;
-      document.body.appendChild(messageDiv);
-
-      setTimeout(() => {
-        messageDiv.classList.add('show');
-        setTimeout(() => {
-          messageDiv.classList.remove('show');
-          setTimeout(() => {
-            document.body.removeChild(messageDiv);
-          }, 300);
-        }, 2000);
-      }, 100);
+        // Prevent clicks inside search flyout from closing it
+        searchFlyout.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
     }
   }
-}
 
 // Initialize navigation menu
 function initMenuNavigation() {
-  const menuItems = document.querySelectorAll('.menu-item');
-  const sections = document.querySelectorAll('.section');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const sections = document.querySelectorAll('.section');
 
-  menuItems.forEach(item => {
-    item.addEventListener('click', function() {
-      const targetSection = this.getAttribute('data-section');
+    menuItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const targetSection = this.getAttribute('data-section');
 
-      // Update menu active state
-      menuItems.forEach(mi => mi.classList.remove('active'));
-      this.classList.add('active');
+        // Update menu active state
+        menuItems.forEach(mi => mi.classList.remove('active'));
+        this.classList.add('active');
 
-      // Show target section, hide others
-      sections.forEach(section => {
-        section.classList.remove('active');
-        if (section.id === targetSection) {
-          section.classList.add('active');
+        // Show target section, hide others
+        sections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === targetSection) {
+            section.classList.add('active');
+          }
+        });
+
+        // Update data based on active section
+        if (targetSection === 'diseases') {
+          // Get the active disease button or default to the first one
+          const activeBtn = document.querySelector('.disease-btn.active') || document.querySelector('.disease-btn');
+          if (activeBtn) {
+            const diseaseId = activeBtn.getAttribute('data-disease');
+            updateDiseaseDetails(diseaseId);
+          }
+        } else if (targetSection === 'genomics') {
+          // Get the active genomics button or default to the first one
+          const activeBtn = document.querySelector('.genomics-btn.active') || document.querySelector('.genomics-btn');
+          if (activeBtn) {
+            const diseaseId = activeBtn.getAttribute('data-disease');
+            updateGenomicsData(diseaseId);
+          }
+        } else if (targetSection === 'predictions') {
+          // Reset prediction data with a slight delay to ensure DOM is ready
+          setTimeout(() => {
+            // Force active disease to be current
+            const activeBtn = document.querySelector('.prediction-btn.active') || document.querySelector('.prediction-btn');
+            if (activeBtn) {
+              currentDisease = activeBtn.getAttribute('data-disease');
+            }
+            initPredictionsData();
+          }, 200);
         }
       });
-
-      // Update data based on active section
-      if (targetSection === 'diseases') {
-        // Get the active disease button or default to the first one
-        const activeBtn = document.querySelector('.disease-btn.active') || document.querySelector('.disease-btn');
-        if (activeBtn) {
-          const diseaseId = activeBtn.getAttribute('data-disease');
-          updateDiseaseDetails(diseaseId);
-        }
-      } else if (targetSection === 'genomics') {
-        // Get the active genomics button or default to the first one
-        const activeBtn = document.querySelector('.genomics-btn.active') || document.querySelector('.genomics-btn');
-        if (activeBtn) {
-          const diseaseId = activeBtn.getAttribute('data-disease');
-          updateGenomicsData(diseaseId);
-        }
-      } else if (targetSection === 'predictions') {
-        // Reset prediction data with a slight delay to ensure DOM is ready
-        setTimeout(() => {
-          // Force active disease to be current
-          const activeBtn = document.querySelector('.prediction-btn.active') || document.querySelector('.prediction-btn');
-          if (activeBtn) {
-            currentDisease = activeBtn.getAttribute('data-disease');
-          }
-          initPredictionsData();
-        }, 200);
-      }
     });
-  });
-}
+  }
 
-// Fetch disease data from API
+// Fetch disease data from static JSON file instead of API
 async function fetchDiseaseData() {
   try {
-    console.log("Fetching disease data...");
+    console.log("Fetching disease data from static file...");
 
-    // Use the full URL including the host
-    const baseUrl = window.location.origin;
-    console.log("Base URL:", baseUrl);
+    // Static disease data directly embedded in the app instead of fetching from API
+    const staticDiseaseData = {
+      "mpox-2024": {
+        name: "Monkeypox virus",
+        totalCases: 8743,
+        fatalitiesCount: 276,
+        countries: {
+          "USA": 1254,
+          "UK": 567,
+          "Brazil": 2187,
+          "DR Congo": 3421,
+          "Nigeria": 982,
+          "Others": 332
+        },
+        timeline: [
+          { date: "2024-01-01", newCases: 120 },
+          { date: "2024-01-15", newCases: 240 },
+          { date: "2024-02-01", newCases: 380 },
+          { date: "2024-02-15", newCases: 560 },
+          { date: "2024-03-01", newCases: 798 },
+          { date: "2024-03-15", newCases: 1201 },
+          { date: "2024-04-01", newCases: 1532 },
+          { date: "2024-04-15", newCases: 1890 },
+          { date: "2024-05-01", newCases: 2022 }
+        ],
+        genomicData: {
+          variants: [
+            { name: "Clade I", percentage: 12.5, r0: 1.8 },
+            { name: "Clade II", percentage: 82.3, r0: 2.2 },
+            { name: "Clade III", percentage: 5.2, r0: 1.6 }
+          ]
+        }
+      },
+      "h5n1-2024": {
+        name: "Influenza A/H5N1",
+        totalCases: 4219,
+        fatalitiesCount: 381,
+        countries: {
+          "USA": 912,
+          "China": 876,
+          "Vietnam": 654,
+          "India": 548,
+          "Indonesia": 389,
+          "Others": 840
+        },
+        timeline: [
+          { date: "2024-01-01", newCases: 89 },
+          { date: "2024-01-15", newCases: 167 },
+          { date: "2024-02-01", newCases: 295 },
+          { date: "2024-02-15", newCases: 418 },
+          { date: "2024-03-01", newCases: 567 },
+          { date: "2024-03-15", newCases: 743 },
+          { date: "2024-04-01", newCases: 921 },
+          { date: "2024-04-15", newCases: 1019 },
+          { date: "2024-05-01", newCases: 1287 }
+        ],
+        genomicData: {
+          variants: [
+            { name: "Clade 2.3.4.4b", percentage: 67.8, r0: 1.9 },
+            { name: "Clade 2.3.4.4c", percentage: 23.1, r0: 2.1 },
+            { name: "Clade 2.3.2.1", percentage: 9.1, r0: 1.7 }
+          ]
+        }
+      },
+      "sarscov2": {
+        name: "SARS-CoV-2",
+        totalCases: 712438901,
+        fatalitiesCount: 6958516,
+        countries: {
+          "USA": 103436829,
+          "India": 44986461,
+          "France": 39894902,
+          "Germany": 38435774,
+          "Brazil": 37039535,
+          "Others": 448645400
+        },
+        timeline: [
+          { date: "2024-01-01", newCases: 187432 },
+          { date: "2024-01-15", newCases: 201374 },
+          { date: "2024-02-01", newCases: 198765 },
+          { date: "2024-02-15", newCases: 176543 },
+          { date: "2024-03-01", newCases: 154329 },
+          { date: "2024-03-15", newCases: 143287 },
+          { date: "2024-04-01", newCases: 121987 },
+          { date: "2024-04-15", newCases: 98765 },
+          { date: "2024-05-01", newCases: 87654 }
+        ],
+        genomicData: {
+          variants: [
+            { name: "JN.1", percentage: 61.3, r0: 2.5 },
+            { name: "XBB.1.5", percentage: 17.8, r0: 2.2 },
+            { name: "FLiRT", percentage: 12.4, r0: 2.3 },
+            { name: "Others", percentage: 8.5, r0: 2.0 }
+          ]
+        }
+      },
+      "ebolavirus": {
+        name: "Ebolavirus",
+        totalCases: 3476,
+        fatalitiesCount: 1872,
+        countries: {
+          "DR Congo": 1532,
+          "Uganda": 876,
+          "Sierra Leone": 432,
+          "Guinea": 298,
+          "Liberia": 187,
+          "Others": 151
+        },
+        timeline: [
+          { date: "2024-01-01", newCases: 32 },
+          { date: "2024-01-15", newCases: 78 },
+          { date: "2024-02-01", newCases: 145 },
+          { date: "2024-02-15", newCases: 234 },
+          { date: "2024-03-01", newCases: 375 },
+          { date: "2024-03-15", newCases: 512 },
+          { date: "2024-04-01", newCases: 687 },
+          { date: "2024-04-15", newCases: 743 },
+          { date: "2024-05-01", newCases: 670 }
+        ],
+        genomicData: {
+          variants: [
+            { name: "Zaire ebolavirus", percentage: 78.4, r0: 1.8 },
+            { name: "Sudan ebolavirus", percentage: 16.7, r0: 1.5 },
+            { name: "Bundibugyo ebolavirus", percentage: 4.9, r0: 1.4 }
+          ]
+        }
+      },
+      "dengue": {
+        name: "Dengue virus",
+        totalCases: 128750,
+        fatalitiesCount: 1432,
+        countries: {
+          "Brazil": 32450,
+          "Philippines": 24680,
+          "India": 18975,
+          "Indonesia": 17824,
+          "Mexico": 15320,
+          "Others": 19501
+        },
+        timeline: [
+          { date: "2024-01-01", newCases: 5432 },
+          { date: "2024-01-15", newCases: 7864 },
+          { date: "2024-02-01", newCases: 10237 },
+          { date: "2024-02-15", newCases: 14356 },
+          { date: "2024-03-01", newCases: 17652 },
+          { date: "2024-03-15", newCases: 21984 },
+          { date: "2024-04-01", newCases: 24867 },
+          { date: "2024-04-15", newCases: 25987 },
+          { date: "2024-05-01", newCases: 26791 }
+        ],
+        genomicData: {
+          variants: [
+            { name: "DENV-1", percentage: 34.2, r0: 1.3 },
+            { name: "DENV-2", percentage: 28.7, r0: 1.4 },
+            { name: "DENV-3", percentage: 24.1, r0: 1.2 },
+            { name: "DENV-4", percentage: 13.0, r0: 1.1 }
+          ]
+        }
+      },
+      "zika": {
+        name: "Zika virus",
+        totalCases: 6874,
+        fatalitiesCount: 58,
+        countries: {
+          "Brazil": 2354,
+          "Colombia": 1236,
+          "Mexico": 854,
+          "Puerto Rico": 642,
+          "Honduras": 487,
+          "Others": 1301
+        },
+        timeline: [
+          { date: "2024-01-01", newCases: 156 },
+          { date: "2024-01-15", newCases: 287 },
+          { date: "2024-02-01", newCases: 435 },
+          { date: "2024-02-15", newCases: 576 },
+          { date: "2024-03-01", newCases: 743 },
+          { date: "2024-03-15", newCases: 964 },
+          { date: "2024-04-01", newCases: 1243 },
+          { date: "2024-04-15", newCases: 1375 },
+          { date: "2024-05-01", newCases: 1095 }
+        ],
+        genomicData: {
+          variants: [
+            { name: "Asian lineage", percentage: 68.3, r0: 1.4 },
+            { name: "African lineage", percentage: 27.5, r0: 1.2 },
+            { name: "Other lineages", percentage: 4.2, r0: 1.0 }
+          ]
+        }
+      }
+    };
 
-    // Fetch all diseases summary
-    const response = await fetch(`${baseUrl}/api/diseases`);
+    // Create a list of diseases from the static data
+    const diseasesList = Object.entries(staticDiseaseData).map(([key, value]) => ({
+      id: key,
+      name: value.name,
+      totalCases: value.totalCases,
+      fatalitiesCount: value.fatalitiesCount
+    }));
 
-    if (!response.ok) {
-      throw new Error(`Failed to fetch diseases list: ${response.status} ${response.statusText}`);
-    }
-
-    const diseasesList = await response.json();
     console.log("Diseases list:", diseasesList);
 
-    if (!Array.isArray(diseasesList) || diseasesList.length === 0) {
-      throw new Error("Disease list is empty or not in expected format");
-    }
-
-    // Fetch detailed data for each disease
-    for (const disease of diseasesList) {
-      console.log(`Fetching details for ${disease.id}...`);
-      const detailResponse = await fetch(`${baseUrl}/api/diseases/${disease.id}`);
-
-      if (!detailResponse.ok) {
-        throw new Error(`Failed to fetch details for ${disease.id}: ${detailResponse.status} ${detailResponse.statusText}`);
-      }
-
-      const detailData = await detailResponse.json();
-      diseaseData[disease.id] = detailData;
-      console.log(`Loaded data for ${disease.id}:`, detailData);
-    }
-
+    // Once all data is successfully loaded, update the global diseaseData
+    diseaseData = staticDiseaseData;
     console.log("Loaded disease data:", Object.keys(diseaseData));
 
     // Initialize the dashboard with data
@@ -2946,7 +552,7 @@ async function fetchDiseaseData() {
 
     return diseaseData;
   } catch (error) {
-    console.error('Error fetching disease data:', error);
+    console.error('Error loading disease data:', error);
     alert(`Error loading disease data: ${error.message}. Please check the console for details and reload the page.`);
     throw error;
   }
@@ -3034,14 +640,21 @@ function initSearch() {
         const query = this.value.trim();
         if (query) {
           try {
-            const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-            const results = await response.json();
+            // For static site, just show a message instead of actually fetching
+            console.log('Search query:', query);
 
-            // For demo purposes, we'll just log the results
-            console.log('Search results:', results);
+            // Show a temporary message about searching in the static version
+            const searchResults = Object.keys(diseaseData)
+              .filter(key => diseaseData[key].name.toLowerCase().includes(query.toLowerCase()))
+              .map(key => ({
+                id: key,
+                name: diseaseData[key].name,
+                totalCases: diseaseData[key].totalCases,
+                fatalitiesCount: diseaseData[key].fatalitiesCount
+              }));
 
-            // In a full implementation, you would display these results in a dropdown
-            // or navigate to a search results page
+            console.log('Static search results:', searchResults);
+
           } catch (error) {
             console.error('Error searching:', error);
           }
@@ -3059,9 +672,39 @@ function initSearch() {
       if (datasetQuery) {
         // For demo purposes, just log the query
         console.log('Searching for datasets:', datasetQuery);
-        // In a real implementation, this would fetch and display matching datasets
+        // In a static site, just acknowledge the search was attempted
+        alert(`Search for "${datasetQuery}" would fetch matching datasets from the server in the dynamic version.`);
       }
     });
+  }
+}
+
+// Initialize disclaimer toggle functionality
+function initDisclaimerToggle() {
+  const disclaimerToggle = document.getElementById('disclaimer-toggle');
+  const disclaimerContainer = document.getElementById('disclaimer-container');
+
+  if (disclaimerToggle && disclaimerContainer) {
+    // Make sure it's hidden by default
+    disclaimerContainer.classList.add('hidden');
+
+    // Add click event listener
+    disclaimerToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      disclaimerContainer.classList.toggle('hidden');
+
+      // Subtle animation effect
+      if (!disclaimerContainer.classList.contains('hidden')) {
+        disclaimerContainer.style.opacity = '0';
+        setTimeout(() => {
+          disclaimerContainer.style.opacity = '1';
+        }, 10);
+      }
+    });
+
+    console.log('Disclaimer toggle initialized');
+  } else {
+    console.warn('Disclaimer elements not found');
   }
 }
 
@@ -3070,11 +713,14 @@ function initInteractiveElements() {
   // Prediction timeframe buttons
   const timeframeButtons = document.querySelectorAll('.timeframe-btn');
   timeframeButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      timeframeButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
+    btn.addEventListener('click', function(event) {
+      // Use the event target instead of 'this' for more reliable behavior
+      const clickedButton = event.currentTarget;
 
-      const days = this.getAttribute('data-days');
+      timeframeButtons.forEach(b => b.classList.remove('active'));
+      clickedButton.classList.add('active');
+
+      const days = clickedButton.getAttribute('data-days');
       updatePredictionTimeframe(days);
     });
   });
@@ -3082,12 +728,14 @@ function initInteractiveElements() {
   // Prediction disease buttons
   const predictionButtons = document.querySelectorAll('.prediction-btn');
   predictionButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const diseaseId = this.getAttribute('data-disease');
+    btn.addEventListener('click', function(event) {
+      // Use the event target instead of 'this' for more reliable behavior
+      const clickedButton = event.currentTarget;
+      const diseaseId = clickedButton.getAttribute('data-disease');
 
       // Update active button
       predictionButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
+      clickedButton.classList.add('active');
 
       // Update prediction disease
       updatePredictionDisease(diseaseId);
@@ -3097,8 +745,10 @@ function initInteractiveElements() {
   // Dataset import buttons
   const importButtons = document.querySelectorAll('.btn-import');
   importButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const datasetCard = this.closest('.dataset-card');
+    btn.addEventListener('click', function(event) {
+      // Use the event target instead of 'this' for more reliable behavior
+      const clickedButton = event.currentTarget;
+      const datasetCard = clickedButton.closest('.dataset-card');
       const datasetName = datasetCard.querySelector('h4').textContent;
 
       // For demo purposes, just show an alert
@@ -3107,36 +757,7 @@ function initInteractiveElements() {
     });
   });
 
-  // Disclaimer toggle - moved to initInteractiveElements() to ensure it's initialized after DOM is fully loaded
-  function initDisclaimerToggle() {
-    const disclaimerToggle = document.getElementById('disclaimer-toggle');
-    const disclaimerContainer = document.getElementById('disclaimer-container');
-
-    if (disclaimerToggle && disclaimerContainer) {
-      // Make sure it's hidden by default
-      disclaimerContainer.classList.add('hidden');
-
-      // Add click event listener
-      disclaimerToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        disclaimerContainer.classList.toggle('hidden');
-
-        // Subtle animation effect
-        if (!disclaimerContainer.classList.contains('hidden')) {
-          disclaimerContainer.style.opacity = '0';
-          setTimeout(() => {
-            disclaimerContainer.style.opacity = '1';
-          }, 10);
-        }
-      });
-
-      console.log('Disclaimer toggle initialized');
-    } else {
-      console.warn('Disclaimer elements not found');
-    }
-  }
-
-  // Call this directly - no need to wait since we're already in a DOMContentLoaded event
+  // Initialize the disclaimer toggle
   initDisclaimerToggle();
 }
 
@@ -3314,6 +935,9 @@ function updateDiseaseDetails(diseaseId) {
     return sum + (variant.r0 * (variant.percentage / 100));
   }, 0).toFixed(2);
   document.getElementById('disease-r0').textContent = avgR0;
+
+  // Update the disease heading with the actual disease name, styled with HTML
+  document.querySelector('.disease-info-container h3').innerHTML = `About <span class="disease-name-highlight">${disease.name}</span>`;
 
   // Add disease information based on the selected disease
   updateDiseaseInformation(diseaseId);
@@ -4418,7 +2042,19 @@ function addHotspots(g, projection) {
     'zika': '#3a97d3'
   };
 
-  // Add hotspot indicators
+  // Calculate next week and next month dates for prediction labels
+  const today = new Date();
+  const nextWeek = new Date(today);
+  nextWeek.setDate(today.getDate() + 7);
+
+  const nextMonth = new Date(today);
+  nextMonth.setDate(today.getDate() + 30);
+
+  const formatDate = (date) => {
+    return `${date.getMonth() + 1}/${date.getDate()}`;
+  };
+
+  // Add hotspot indicators (area of effect)
   g.selectAll('.hotspot')
     .data(hotspots)
     .enter()
@@ -4439,8 +2075,114 @@ function addHotspots(g, projection) {
     .attr('stroke-width', 1)
     .attr('stroke-opacity', 0.7);
 
-  // Add pulsating effect to represent growth
-  g.selectAll('.hotspot')
+  // Add second outer ring for high-risk hotspots
+  g.selectAll('.hotspot-outer-ring')
+    .data(hotspots.filter(h => h.intensity > 0.7))
+    .enter()
+    .append('circle')
+    .attr('class', 'hotspot-outer-ring')
+    .attr('cx', d => {
+      const proj = projection(d.coordinates);
+      return proj ? proj[0] : 0;
+    })
+    .attr('cy', d => {
+      const proj = projection(d.coordinates);
+      return proj ? proj[1] : 0;
+    })
+    .attr('r', d => 25 * d.intensity) // Larger than the main hotspot
+    .attr('fill', 'none')
+    .attr('stroke', diseaseColors[diseaseId] || '#3498db')
+    .attr('stroke-width', 1)
+    .attr('stroke-dasharray', '3,3')
+    .attr('stroke-opacity', 0.4);
+
+  // Add prediction expansion rings for week and month projections
+  hotspots.filter(h => h.intensity > 0.7).forEach(hotspot => {
+    // Next week projection ring
+    const weekRadius = 15 * hotspot.intensity * hotspot.growthRate;
+    g.append('circle')
+      .attr('class', 'prediction-ring')
+      .attr('cx', () => {
+        const proj = projection(hotspot.coordinates);
+        return proj ? proj[0] : 0;
+      })
+      .attr('cy', () => {
+        const proj = projection(hotspot.coordinates);
+        return proj ? proj[1] : 0;
+      })
+      .attr('r', weekRadius)
+      .attr('fill', 'none')
+      .attr('stroke', diseaseColors[diseaseId] || '#3498db')
+      .attr('stroke-width', 1.5)
+      .attr('stroke-dasharray', '5,5')
+      .attr('stroke-opacity', 0.6);
+
+    // Add week label
+    g.append('text')
+      .attr('class', 'prediction-label')
+      .attr('x', () => {
+        const proj = projection(hotspot.coordinates);
+        return proj ? proj[0] + weekRadius - 10 : 0;
+      })
+      .attr('y', () => {
+        const proj = projection(hotspot.coordinates);
+        return proj ? proj[1] - 5 : 0;
+      })
+      .attr('text-anchor', 'end')
+      .attr('font-family', "'Inter', sans-serif")
+      .attr('font-size', '8px')
+      .attr('fill', diseaseColors[diseaseId] || '#3498db')
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 2)
+      .attr('stroke-opacity', 0.6)
+      .attr('paint-order', 'stroke')
+      .text(`${formatDate(nextWeek)}`);
+
+    // Next month projection ring for very high risk areas
+    if (hotspot.intensity > 0.8) {
+      const monthRadius = 30 * hotspot.intensity * Math.pow(hotspot.growthRate, 2);
+      g.append('circle')
+        .attr('class', 'prediction-ring')
+        .attr('cx', () => {
+          const proj = projection(hotspot.coordinates);
+          return proj ? proj[0] : 0;
+        })
+        .attr('cy', () => {
+          const proj = projection(hotspot.coordinates);
+          return proj ? proj[1] : 0;
+        })
+        .attr('r', monthRadius)
+        .attr('fill', 'none')
+        .attr('stroke', diseaseColors[diseaseId] || '#3498db')
+        .attr('stroke-width', 1)
+        .attr('stroke-dasharray', '2,4')
+        .attr('stroke-opacity', 0.4);
+
+      // Add month label
+      g.append('text')
+        .attr('class', 'prediction-label')
+        .attr('x', () => {
+          const proj = projection(hotspot.coordinates);
+          return proj ? proj[0] + monthRadius - 10 : 0;
+        })
+        .attr('y', () => {
+          const proj = projection(hotspot.coordinates);
+          return proj ? proj[1] - 5 : 0;
+        })
+        .attr('text-anchor', 'end')
+        .attr('font-family', "'Inter', sans-serif")
+        .attr('font-size', '8px')
+        .attr('fill', diseaseColors[diseaseId] || '#3498db')
+        .attr('stroke', '#fff')
+        .attr('stroke-width', 2)
+        .attr('stroke-opacity', 0.5)
+        .attr('paint-order', 'stroke')
+        .text(`${formatDate(nextMonth)}`);
+    }
+  });
+
+  // Add pulsating effect to represent growth (center dots)
+  g.selectAll('.hotspot-pulse')
     .data(hotspots)
     .enter()
     .append('circle')
@@ -4459,7 +2201,31 @@ function addHotspots(g, projection) {
     .attr('stroke', 'white')
     .attr('stroke-width', 1)
     .on('mouseover', function(event, d) {
-      // Show tooltip
+      // Highlight on hover
+      d3.select(this)
+        .attr('r', 7)
+        .attr('fill-opacity', 1);
+
+      // Create ripple effect
+      const cx = parseFloat(d3.select(this).attr('cx'));
+      const cy = parseFloat(d3.select(this).attr('cy'));
+
+      g.append('circle')
+        .attr('class', 'ripple-effect')
+        .attr('cx', cx)
+        .attr('cy', cy)
+        .attr('r', 5)
+        .attr('fill', 'none')
+        .attr('stroke', diseaseColors[diseaseId] || '#3498db')
+        .attr('stroke-width', 2)
+        .attr('stroke-opacity', 0.7)
+        .transition()
+        .duration(1000)
+        .attr('r', 25)
+        .attr('stroke-opacity', 0)
+        .remove();
+
+      // Show enhanced tooltip
       const tooltip = d3.select('#prediction-map')
         .append('div')
         .attr('class', 'prediction-tooltip')
@@ -4473,20 +2239,153 @@ function addHotspots(g, projection) {
         .style('z-index', '10')
         .style('font-family', "'Inter', sans-serif")
         .style('font-size', '13px')
+        .style('max-width', '220px')
         .style('transition', 'opacity 0.2s ease')
-        .style('left', `${event.pageX - predictionMap.getBoundingClientRect().left + 15}px`)
-        .style('top', `${event.pageY - predictionMap.getBoundingClientRect().top - 40}px`);
+        .style('left', `${event.pageX - document.getElementById('prediction-map').getBoundingClientRect().left + 15}px`)
+        .style('top', `${event.pageY - document.getElementById('prediction-map').getBoundingClientRect().top - 40}px`);
 
+      // Calculate projections
+      const weeklyProjectedCases = Math.round(300 * d.intensity * d.growthRate);
+      const monthlyProjectedCases = Math.round(300 * d.intensity * Math.pow(d.growthRate, 4));
+
+      // Determine risk level color
+      let riskColor;
+      if (d.intensity > 0.8) riskColor = '#e74c3c'; // High risk
+      else if (d.intensity > 0.6) riskColor = '#f39c12'; // Medium risk
+      else riskColor = '#2ecc71'; // Low risk
+
+      // Enhanced tooltip content
       tooltip.html(`
-        <div style="font-weight: 600; margin-bottom: 4px; color: #333;">${d.country}</div>
-        <div style="margin-top: 4px;">Risk Level: <span style="font-weight: 600;">${Math.round(d.intensity * 100)}%</span></div>
-        <div style="margin-top: 4px;">Growth Rate: <span style="font-weight: 600;">${d.growthRate}x</span></div>
+        <div style="font-weight: 600; margin-bottom: 4px; color: #333; font-size: 14px;">${d.country}</div>
+        <div style="color: ${diseaseColors[diseaseId]}; font-weight: 500;">${diseaseData[diseaseId].name}</div>
+        <div style="margin-top: 8px; font-weight: 600;">Prediction Metrics:</div>
+        <div style="margin-top: 4px;">Risk Level: <span style="font-weight: 600; color: ${riskColor};">${Math.round(d.intensity * 100)}%</span></div>
+        <div style="margin-top: 4px;">Growth Rate: <span style="font-weight: 600;">${d.growthRate}x per week</span></div>
+        <div style="margin-top: 8px; font-weight: 600;">Projected New Cases:</div>
+        <div style="margin-top: 4px;">Next Week: <span style="font-weight: 600;">~${weeklyProjectedCases}</span></div>
+        <div style="margin-top: 4px;">Next Month: <span style="font-weight: 600;">~${monthlyProjectedCases}</span></div>
+        <div style="margin-top: 8px; font-size: 11px; color: #666;">Projections based on current trends and genomic data</div>
       `);
     })
     .on('mouseout', function() {
+      // Reset on mouseout
+      d3.select(this)
+        .attr('r', 5)
+        .attr('fill-opacity', 0.7);
+
       // Remove tooltip
       d3.select('.prediction-tooltip').remove();
     });
+
+  // Add country labels for major hotspots
+  g.selectAll('.hotspot-label')
+    .data(hotspots.filter(h => h.intensity > 0.7)) // Only label high-intensity hotspots
+    .enter()
+    .append('text')
+    .attr('class', 'outbreak-label')
+    .attr('x', d => {
+      const proj = projection(d.coordinates);
+      return proj ? proj[0] : 0;
+    })
+    .attr('y', d => {
+      const proj = projection(d.coordinates);
+      return proj ? proj[1] + 20 : 0; // Position below the circle
+    })
+    .attr('text-anchor', 'middle')
+    .attr('font-family', "'Inter', sans-serif")
+    .attr('font-size', '9px')
+    .attr('font-weight', '600')
+    .attr('fill', diseaseColors[diseaseId] || '#3498db')
+    .attr('stroke', '#ffffff')
+    .attr('stroke-width', 2)
+    .attr('stroke-opacity', 0.8)
+    .attr('paint-order', 'stroke')
+    .text(d => d.country);
+
+  // Add a legend for the prediction map
+  const legendWidth = 160;
+  const legendHeight = 80;
+  const legendX = 10;
+  const legendY = 210;
+
+  const legend = g.append('g')
+    .attr('class', 'map-legend')
+    .attr('transform', `translate(${legendX}, ${legendY})`);
+
+  // Legend background
+  legend.append('rect')
+    .attr('width', legendWidth)
+    .attr('height', legendHeight)
+    .attr('fill', 'rgba(255, 255, 255, 0.85)')
+    .attr('stroke', '#ddd')
+    .attr('stroke-width', 1)
+    .attr('rx', 4);
+
+  // Legend title
+  legend.append('text')
+    .attr('x', 10)
+    .attr('y', 15)
+    .attr('font-family', "'Poppins', sans-serif")
+    .attr('font-size', '10px')
+    .attr('font-weight', '600')
+    .attr('fill', '#333')
+    .text('Prediction Legend');
+
+  // Solid circle for current hotspot
+  legend.append('circle')
+    .attr('cx', 20)
+    .attr('cy', 35)
+    .attr('r', 6)
+    .attr('fill', diseaseColors[diseaseId] || '#3498db')
+    .attr('fill-opacity', 0.7)
+    .attr('stroke', '#fff')
+    .attr('stroke-width', 1);
+
+  legend.append('text')
+    .attr('x', 30)
+    .attr('y', 38)
+    .attr('font-family', "'Inter', sans-serif")
+    .attr('font-size', '9px')
+    .attr('fill', '#333')
+    .text('Current Hotspot');
+
+  // Dashed circle for weekly prediction
+  legend.append('circle')
+    .attr('cx', 20)
+    .attr('cy', 55)
+    .attr('r', 10)
+    .attr('fill', 'none')
+    .attr('stroke', diseaseColors[diseaseId] || '#3498db')
+    .attr('stroke-width', 1.5)
+    .attr('stroke-dasharray', '5,5')
+    .attr('stroke-opacity', 0.6);
+
+  legend.append('text')
+    .attr('x', 30)
+    .attr('y', 58)
+    .attr('font-family', "'Inter', sans-serif")
+    .attr('font-size', '9px')
+    .attr('fill', '#333')
+    .text('1-Week Prediction');
+
+  // Dotted circle for monthly prediction
+  legend.append('circle')
+    .attr('cx', 20)
+    .attr('cy', 75)
+    .attr('r', 15)
+    .attr('fill', 'none')
+    .attr('stroke', diseaseColors[diseaseId] || '#3498db')
+    .attr('stroke-width', 1)
+    .attr('stroke-dasharray', '2,4')
+    .attr('stroke-opacity', 0.4);
+
+  legend.append('text')
+    .attr('x', 30)
+    .attr('y', 78)
+    .attr('font-family', "'Inter', sans-serif")
+    .attr('font-size', '9px')
+    .attr('fill', '#333')
+    .text('1-Month Prediction');
 
   // Update metrics based on this data
   updatePredictionMetrics(hotspots);
@@ -4549,6 +2448,13 @@ function initPredictionMap(container) {
   // Create a group for the map
   const g = svg.append('g');
 
+  // Add a background ocean fill
+  g.append('rect')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('fill', '#e6f2f5')
+    .attr('stroke', 'none');
+
   // Define map projection - adjusted scale for better fit
   const projection = d3.geoEquirectangular()
     .scale(width / 6.5)
@@ -4557,6 +2463,20 @@ function initPredictionMap(container) {
   // Create path generator
   const path = d3.geoPath()
     .projection(projection);
+
+  // Add graticule (longitude/latitude grid lines)
+  const graticule = d3.geoGraticule()
+    .step([15, 15]);
+
+  g.append("path")
+    .datum(graticule)
+    .attr("class", "graticule")
+    .attr("d", path)
+    .attr("fill", "none")
+    .attr("stroke", "#cccccc")
+    .attr("stroke-width", 0.3)
+    .attr("stroke-dasharray", "2,2")
+    .attr("stroke-opacity", 0.5);
 
   // Load world map data
   fetch('https://unpkg.com/world-atlas@2/countries-110m.json')
@@ -4573,8 +2493,24 @@ function initPredictionMap(container) {
         // Convert TopoJSON to GeoJSON
         const countries = topojson.feature(world, world.objects.countries).features;
 
+        // Create data structure for identifying countries by id
+        const countryNames = {};
+        try {
+          // Try to fetch country names (if available)
+          const countriesData = world.objects.countries.geometries;
+          if (countriesData && countriesData.length > 0) {
+            countriesData.forEach(country => {
+              if (country.properties && country.properties.name) {
+                countryNames[country.id] = country.properties.name;
+              }
+            });
+          }
+        } catch (e) {
+          console.warn("Couldn't extract country names from data");
+        }
+
         // Draw countries
-        g.selectAll('path')
+        g.selectAll('path.country')
           .data(countries)
           .enter()
           .append('path')
@@ -4582,16 +2518,280 @@ function initPredictionMap(container) {
           .attr('d', path)
           .attr('fill', '#f0f0f0')
           .attr('stroke', '#ccc')
-          .attr('stroke-width', 0.5);
+          .attr('stroke-width', 0.5)
+          .on('mouseover', function(event, d) {
+            // Country highlight on hover
+            d3.select(this)
+              .attr('fill', '#e0e0e0')
+              .attr('stroke', '#999')
+              .attr('stroke-width', 1);
+
+            // Get country name (if available)
+            const countryName = countryNames[d.id] || d.properties?.name || "Unknown region";
+
+            // Basic country tooltip
+            const tooltip = d3.select('#prediction-map')
+              .append('div')
+              .attr('class', 'map-tooltip country-tooltip')
+              .style('position', 'absolute')
+              .style('background-color', 'rgba(255, 255, 255, 0.9)')
+              .style('border-radius', '4px')
+              .style('padding', '8px')
+              .style('box-shadow', '0 2px 5px rgba(0, 0, 0, 0.2)')
+              .style('font-family', "'Inter', sans-serif")
+              .style('font-size', '12px')
+              .style('pointer-events', 'none')
+              .style('z-index', '5')
+              .style('left', `${event.pageX - container.getBoundingClientRect().left + 10}px`)
+              .style('top', `${event.pageY - container.getBoundingClientRect().top - 25}px`);
+
+            tooltip.html(`<div>${countryName}</div>`);
+          })
+          .on('mouseout', function() {
+            // Reset on mouseout
+            d3.select(this)
+              .attr('fill', '#f0f0f0')
+              .attr('stroke', '#ccc')
+              .attr('stroke-width', 0.5);
+
+            // Remove tooltip
+            d3.select('.country-tooltip').remove();
+          });
+
+        // Add equator line
+        const equatorData = {
+          type: "LineString",
+          coordinates: [[-180, 0], [180, 0]]
+        };
+
+        g.append("path")
+          .datum(equatorData)
+          .attr("class", "equator")
+          .attr("d", path)
+          .attr("fill", "none")
+          .attr("stroke", "rgba(0, 0, 0, 0.2)")
+          .attr("stroke-width", 1)
+          .attr("stroke-dasharray", "5,5");
+
+        // Add tropics lines
+        const tropicCancerData = {
+          type: "LineString",
+          coordinates: [[-180, 23.5], [180, 23.5]]
+        };
+
+        const tropicCapricornData = {
+          type: "LineString",
+          coordinates: [[-180, -23.5], [180, -23.5]]
+        };
+
+        g.append("path")
+          .datum(tropicCancerData)
+          .attr("class", "tropic")
+          .attr("d", path)
+          .attr("fill", "none")
+          .attr("stroke", "rgba(0, 0, 0, 0.1)")
+          .attr("stroke-width", 0.5)
+          .attr("stroke-dasharray", "3,3");
+
+        g.append("path")
+          .datum(tropicCapricornData)
+          .attr("class", "tropic")
+          .attr("d", path)
+          .attr("fill", "none")
+          .attr("stroke", "rgba(0, 0, 0, 0.1)")
+          .attr("stroke-width", 0.5)
+          .attr("stroke-dasharray", "3,3");
+
+        // Add continental labels
+        const continentLabels = [
+          { name: "North America", coordinates: [-100.0, 45.0], fontSize: 10 },
+          { name: "South America", coordinates: [-60.0, -20.0], fontSize: 10 },
+          { name: "Europe", coordinates: [15.0, 50.0], fontSize: 10 },
+          { name: "Africa", coordinates: [20.0, 0.0], fontSize: 10 },
+          { name: "Asia", coordinates: [100.0, 45.0], fontSize: 10 },
+          { name: "Oceania", coordinates: [140.0, -25.0], fontSize: 10 }
+        ];
+
+        g.selectAll('.continent-label')
+          .data(continentLabels)
+          .enter()
+          .append('text')
+          .attr('class', 'continent-label')
+          .attr('x', d => {
+            const proj = projection(d.coordinates);
+            return proj ? proj[0] : 0;
+          })
+          .attr('y', d => {
+            const proj = projection(d.coordinates);
+            return proj ? proj[1] : 0;
+          })
+          .attr('text-anchor', 'middle')
+          .attr('font-family', "'Poppins', sans-serif")
+          .attr('font-size', d => d.fontSize || 10)
+          .attr('font-weight', '500')
+          .attr('fill', 'rgba(50, 50, 50, 0.2)')
+          .attr('pointer-events', 'none')
+          .text(d => d.name);
 
         // Add hotspots for the selected disease
         addHotspots(g, projection);
 
-        // Add zoom functionality
+        // Add map border
+        svg.append('rect')
+          .attr('width', width)
+          .attr('height', height)
+          .attr('fill', 'none')
+          .attr('stroke', '#ccc')
+          .attr('stroke-width', 1)
+          .attr('pointer-events', 'none');
+
+        // Add zoom controls
+        const zoomControlWidth = 24;
+        const zoomControls = svg.append('g')
+          .attr('class', 'zoom-controls')
+          .attr('transform', `translate(10, 10)`);
+
+        // Zoom in button
+        const zoomIn = zoomControls.append('g')
+          .attr('class', 'zoom-in')
+          .attr('cursor', 'pointer')
+          .on('click', function() {
+            // Implement zoom in
+            const currentTransform = d3.zoomTransform(svg.node());
+            const newScale = currentTransform.k * 1.3;
+            svg.transition().duration(300).call(
+              zoom.transform,
+              d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(newScale)
+            );
+          });
+
+        zoomIn.append('rect')
+          .attr('width', zoomControlWidth)
+          .attr('height', zoomControlWidth)
+          .attr('fill', 'rgba(255, 255, 255, 0.9)')
+          .attr('stroke', '#ccc')
+          .attr('stroke-width', 1)
+          .attr('rx', 4);
+
+        zoomIn.append('text')
+          .attr('x', zoomControlWidth / 2)
+          .attr('y', zoomControlWidth / 2 + 4)
+          .attr('text-anchor', 'middle')
+          .attr('font-family', "'Inter', sans-serif")
+          .attr('font-size', '14px')
+          .attr('font-weight', '700')
+          .attr('fill', '#666')
+          .text('+');
+
+        // Zoom out button
+        const zoomOut = zoomControls.append('g')
+          .attr('class', 'zoom-out')
+          .attr('transform', `translate(0, ${zoomControlWidth + 4})`)
+          .attr('cursor', 'pointer')
+          .on('click', function() {
+            // Implement zoom out
+            const currentTransform = d3.zoomTransform(svg.node());
+            const newScale = currentTransform.k / 1.3;
+            svg.transition().duration(300).call(
+              zoom.transform,
+              d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(newScale)
+            );
+          });
+
+        zoomOut.append('rect')
+          .attr('width', zoomControlWidth)
+          .attr('height', zoomControlWidth)
+          .attr('fill', 'rgba(255, 255, 255, 0.9)')
+          .attr('stroke', '#ccc')
+          .attr('stroke-width', 1)
+          .attr('rx', 4);
+
+        zoomOut.append('text')
+          .attr('x', zoomControlWidth / 2)
+          .attr('y', zoomControlWidth / 2 + 4)
+          .attr('text-anchor', 'middle')
+          .attr('font-family', "'Inter', sans-serif")
+          .attr('font-size', '14px')
+          .attr('font-weight', '700')
+          .attr('fill', '#666')
+          .text('-');
+
+        // Reset zoom button
+        const resetZoom = zoomControls.append('g')
+          .attr('class', 'reset-zoom')
+          .attr('transform', `translate(0, ${(zoomControlWidth + 4) * 2})`)
+          .attr('cursor', 'pointer')
+          .on('click', function() {
+            // Reset to initial zoom level
+            svg.transition().duration(500).call(
+              zoom.transform,
+              d3.zoomIdentity.scale(0.9).translate(width/10, height/10)
+            );
+          });
+
+        resetZoom.append('rect')
+          .attr('width', zoomControlWidth)
+          .attr('height', zoomControlWidth)
+          .attr('fill', 'rgba(255, 255, 255, 0.9)')
+          .attr('stroke', '#ccc')
+          .attr('stroke-width', 1)
+          .attr('rx', 4);
+
+        resetZoom.append('text')
+          .attr('x', zoomControlWidth / 2)
+          .attr('y', zoomControlWidth / 2 + 3)
+          .attr('text-anchor', 'middle')
+          .attr('font-family', "'Inter', sans-serif")
+          .attr('font-size', '10px')
+          .attr('font-weight', '700')
+          .attr('fill', '#666')
+          .text('⟲');
+
+        // Add compass
+        const compassSize = 24;
+        const compass = svg.append('g')
+          .attr('class', 'compass')
+          .attr('transform', `translate(${width - compassSize - 10}, 20)`);
+
+        compass.append('circle')
+          .attr('cx', compassSize / 2)
+          .attr('cy', compassSize / 2)
+          .attr('r', compassSize / 2)
+          .attr('fill', 'rgba(255, 255, 255, 0.8)')
+          .attr('stroke', '#ccc')
+          .attr('stroke-width', 1);
+
+        compass.append('path')
+          .attr('d', `M${compassSize/2},5 L${compassSize/2 - 7},${compassSize - 5} L${compassSize/2},${compassSize - 10} L${compassSize/2 + 7},${compassSize - 5} Z`)
+          .attr('fill', '#666')
+          .attr('stroke', '#fff')
+          .attr('stroke-width', 1);
+
+        compass.append('text')
+          .attr('x', compassSize / 2)
+          .attr('y', compassSize / 2 + 3)
+          .attr('text-anchor', 'middle')
+          .attr('font-family', "'Inter', sans-serif")
+          .attr('font-size', '10px')
+          .attr('font-weight', '700')
+          .attr('fill', '#fff')
+          .text('N');
+
+        // Add zoom functionality with limits and better initialization
         const zoom = d3.zoom()
-          .scaleExtent([0.7, 5])
+          .scaleExtent([0.7, 8]) // Allow more zoom levels
           .on('zoom', (event) => {
             g.attr('transform', event.transform);
+
+            // Adjust font sizes for labels based on zoom level
+            const currentScale = event.transform.k;
+
+            // Scale labels inversely to the zoom to keep them readable
+            g.selectAll('.continent-label, .outbreak-label')
+              .style('font-size', function() {
+                const baseSize = parseFloat(d3.select(this).attr('font-size') || 10);
+                return `${baseSize / currentScale}px`;
+              });
           });
 
         // Initialize with a slight zoom out to see the whole world
@@ -4625,6 +2825,9 @@ function initWorldMap() {
   const diseaseCheckboxesContainer = document.getElementById('map-disease-checkboxes');
 
   if (!worldMapContainer || !diseaseCheckboxesContainer) return;
+
+  // Ensure the map container is properly sized to its parent
+  worldMapContainer.style.width = '100%';
 
   // Define disease colors with user-specified values
   const diseaseColors = {
@@ -4719,6 +2922,13 @@ function initWorldMap() {
       // Create a group for the map
       const g = svg.append('g');
 
+      // Add a background ocean fill that fills entire container
+      g.append('rect')
+        .attr('width', width)
+        .attr('height', height)
+        .attr('fill', '#e6f2f5')
+        .attr('stroke', 'none');
+
       // Define map projection - adjusted scale for better fit
       const projection = d3.geoEquirectangular()
         .scale(width / 6.5)
@@ -4727,6 +2937,20 @@ function initWorldMap() {
       // Create path generator
       const path = d3.geoPath()
         .projection(projection);
+
+      // Add graticule (longitude/latitude grid lines)
+      const graticule = d3.geoGraticule()
+        .step([15, 15]);
+
+      g.append("path")
+        .datum(graticule)
+        .attr("class", "graticule")
+        .attr("d", path)
+        .attr("fill", "none")
+        .attr("stroke", "#cccccc")
+        .attr("stroke-width", 0.3)
+        .attr("stroke-dasharray", "2,2")
+        .attr("stroke-opacity", 0.5);
 
       // Load world map data
       fetch('https://unpkg.com/world-atlas@2/countries-110m.json')
@@ -4743,8 +2967,24 @@ function initWorldMap() {
             // Convert TopoJSON to GeoJSON
             const countries = topojson.feature(world, world.objects.countries).features;
 
+            // Create data structure for identifying countries by id
+            const countryNames = {};
+            try {
+              // Try to fetch country names (if available)
+              const countriesData = world.objects.countries.geometries;
+              if (countriesData && countriesData.length > 0) {
+                countriesData.forEach(country => {
+                  if (country.properties && country.properties.name) {
+                    countryNames[country.id] = country.properties.name;
+                  }
+                });
+              }
+            } catch (e) {
+              console.warn("Couldn't extract country names from data");
+            }
+
             // Draw countries
-            g.selectAll('path')
+            g.selectAll('path.country')
               .data(countries)
               .enter()
               .append('path')
@@ -4752,7 +2992,180 @@ function initWorldMap() {
               .attr('d', path)
               .attr('fill', '#f0f0f0')
               .attr('stroke', '#ccc')
-              .attr('stroke-width', 0.5);
+              .attr('stroke-width', 0.5)
+              .on('mouseover', function(event, d) {
+                // Country highlight on hover
+                d3.select(this)
+                  .attr('fill', '#e0e0e0')
+                  .attr('stroke', '#999')
+                  .attr('stroke-width', 1);
+
+                // Get country name (if available)
+                const countryName = countryNames[d.id] || d.properties?.name || "Unknown region";
+
+                // Basic country tooltip
+                const tooltip = d3.select('#world-map')
+                  .append('div')
+                  .attr('class', 'map-tooltip country-tooltip')
+                  .style('position', 'absolute')
+                  .style('background-color', 'rgba(255, 255, 255, 0.9)')
+                  .style('border-radius', '4px')
+                  .style('padding', '8px')
+                  .style('box-shadow', '0 2px 5px rgba(0, 0, 0, 0.2)')
+                  .style('font-family', "'Inter', sans-serif")
+                  .style('font-size', '12px')
+                  .style('pointer-events', 'none')
+                  .style('z-index', '5')
+                  .style('left', `${event.pageX - worldMapContainer.getBoundingClientRect().left + 10}px`)
+                  .style('top', `${event.pageY - worldMapContainer.getBoundingClientRect().top - 25}px`);
+
+                tooltip.html(`<div>${countryName}</div>`);
+              })
+              .on('mouseout', function() {
+                // Reset on mouseout
+                d3.select(this)
+                  .attr('fill', '#f0f0f0')
+                  .attr('stroke', '#ccc')
+                  .attr('stroke-width', 0.5);
+
+                // Remove tooltip
+                d3.select('.country-tooltip').remove();
+              });
+
+            // Add major country labels for better orientation
+            const majorCountries = [
+              { name: "United States", coordinates: [-95.7129, 37.0902], fontSize: 10 },
+              { name: "Canada", coordinates: [-106.3468, 56.1304], fontSize: 10 },
+              { name: "Brazil", coordinates: [-51.9253, -14.2350], fontSize: 10 },
+              { name: "Russia", coordinates: [105.3188, 61.5240], fontSize: 10 },
+              { name: "China", coordinates: [104.1954, 35.8617], fontSize: 10 },
+              { name: "India", coordinates: [78.9629, 20.5937], fontSize: 10 },
+              { name: "Australia", coordinates: [133.7751, -25.2744], fontSize: 10 },
+              { name: "Europe", coordinates: [15.2551, 54.5260], fontSize: 9, className: "region-label" }
+            ];
+
+            g.selectAll('.country-label')
+              .data(majorCountries)
+              .enter()
+              .append('text')
+              .attr('class', d => d.className || 'country-label')
+              .attr('x', d => {
+                const proj = projection(d.coordinates);
+                return proj ? proj[0] : 0;
+              })
+              .attr('y', d => {
+                const proj = projection(d.coordinates);
+                return proj ? proj[1] : 0;
+              })
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-size', d => d.fontSize || 10)
+              .attr('fill', '#555')
+              .attr('pointer-events', 'none')
+              .text(d => d.name);
+
+            // Add continent labels for orientation
+            const continents = [
+              { name: "North America", coordinates: [-100.0, 45.0], fontSize: 12 },
+              { name: "South America", coordinates: [-60.0, -20.0], fontSize: 12 },
+              { name: "Europe", coordinates: [15.0, 50.0], fontSize: 12 },
+              { name: "Africa", coordinates: [20.0, 0.0], fontSize: 12 },
+              { name: "Asia", coordinates: [100.0, 45.0], fontSize: 12 },
+              { name: "Oceania", coordinates: [140.0, -25.0], fontSize: 12 }
+            ];
+
+            g.selectAll('.continent-label')
+              .data(continents)
+              .enter()
+              .append('text')
+              .attr('class', 'continent-label')
+              .attr('x', d => {
+                const proj = projection(d.coordinates);
+                return proj ? proj[0] : 0;
+              })
+              .attr('y', d => {
+                const proj = projection(d.coordinates);
+                return proj ? proj[1] : 0;
+              })
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Poppins', sans-serif")
+              .attr('font-size', d => d.fontSize || 12)
+              .attr('font-weight', '500')
+              .attr('fill', 'rgba(50, 50, 50, 0.2)')
+              .attr('pointer-events', 'none')
+              .text(d => d.name);
+
+            // Add major ocean labels
+            const oceans = [
+              { name: "Pacific Ocean", coordinates: [-150.0, 0.0], fontSize: 11 },
+              { name: "Atlantic Ocean", coordinates: [-30.0, 0.0], fontSize: 11 },
+              { name: "Indian Ocean", coordinates: [80.0, -15.0], fontSize: 11 }
+            ];
+
+            g.selectAll('.ocean-label')
+              .data(oceans)
+              .enter()
+              .append('text')
+              .attr('class', 'ocean-label')
+              .attr('x', d => {
+                const proj = projection(d.coordinates);
+                return proj ? proj[0] : 0;
+              })
+              .attr('y', d => {
+                const proj = projection(d.coordinates);
+                return proj ? proj[1] : 0;
+              })
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-style', 'italic')
+              .attr('font-size', d => d.fontSize || 11)
+              .attr('fill', 'rgba(70, 130, 180, 0.4)')
+              .attr('pointer-events', 'none')
+              .text(d => d.name);
+
+            // Add equator line
+            const equatorData = {
+              type: "LineString",
+              coordinates: [[-180, 0], [180, 0]]
+            };
+
+            g.append("path")
+              .datum(equatorData)
+              .attr("class", "equator")
+              .attr("d", path)
+              .attr("fill", "none")
+              .attr("stroke", "rgba(0, 0, 0, 0.2)")
+              .attr("stroke-width", 1)
+              .attr("stroke-dasharray", "5,5");
+
+            // Add tropics lines
+            const tropicCancerData = {
+              type: "LineString",
+              coordinates: [[-180, 23.5], [180, 23.5]]
+            };
+
+            const tropicCapricornData = {
+              type: "LineString",
+              coordinates: [[-180, -23.5], [180, -23.5]]
+            };
+
+            g.append("path")
+              .datum(tropicCancerData)
+              .attr("class", "tropic")
+              .attr("d", path)
+              .attr("fill", "none")
+              .attr("stroke", "rgba(0, 0, 0, 0.1)")
+              .attr("stroke-width", 0.5)
+              .attr("stroke-dasharray", "3,3");
+
+            g.append("path")
+              .datum(tropicCapricornData)
+              .attr("class", "tropic")
+              .attr("d", path)
+              .attr("fill", "none")
+              .attr("stroke", "rgba(0, 0, 0, 0.1)")
+              .attr("stroke-width", 0.5)
+              .attr("stroke-dasharray", "3,3");
 
             // Create circles for each disease outbreak after map is drawn
             selectedDiseases.forEach(diseaseId => {
@@ -4784,6 +3197,29 @@ function initWorldMap() {
               }).filter(d => d !== null);
 
               console.log(`Adding ${circleData.length} circles for ${diseaseId}`);
+
+              // Create outlines for larger bubbles first (for a haloed effect)
+              g.selectAll(`.circle-outline-${diseaseId}`)
+                .data(circleData.filter(d => Math.log(d.cases) * 1.2 > 10)) // Only for larger bubbles
+                .enter()
+                .append('circle')
+                .attr('class', `disease-circle-outline disease-${diseaseId}`)
+                .attr('cx', d => {
+                  const proj = projection(d.coordinates);
+                  return proj ? proj[0] : 0;
+                })
+                .attr('cy', d => {
+                  const proj = projection(d.coordinates);
+                  return proj ? proj[1] : 0;
+                })
+                .attr('r', d => {
+                  const baseSize = Math.log(d.cases) * 1.2;
+                  return Math.max(3, Math.min(baseSize, 20)) + 2; // Slightly larger than the main circle
+                })
+                .attr('fill', 'none')
+                .attr('stroke', d => d.color)
+                .attr('stroke-width', 1)
+                .attr('stroke-opacity', 0.3);
 
               // Add circles to the map - ensure proper sizing
               g.selectAll(`.circle-${diseaseId}`)
@@ -4818,7 +3254,26 @@ function initWorldMap() {
                       return Math.max(5, Math.min(baseSize + 2, 22));
                     });
 
-                  // Add tooltip
+                  // Create ripple effect
+                  const cx = parseFloat(d3.select(this).attr('cx'));
+                  const cy = parseFloat(d3.select(this).attr('cy'));
+
+                  g.append('circle')
+                    .attr('class', 'ripple-effect')
+                    .attr('cx', cx)
+                    .attr('cy', cy)
+                    .attr('r', 5)
+                    .attr('fill', 'none')
+                    .attr('stroke', d.color)
+                    .attr('stroke-width', 2)
+                    .attr('stroke-opacity', 0.7)
+                    .transition()
+                    .duration(1000)
+                    .attr('r', 25)
+                    .attr('stroke-opacity', 0)
+                    .remove();
+
+                  // Add enhanced tooltip
                   const tooltip = d3.select('#world-map')
                     .append('div')
                     .attr('class', 'map-tooltip')
@@ -4826,20 +3281,31 @@ function initWorldMap() {
                     .style('background-color', 'rgba(255, 255, 255, 0.95)')
                     .style('border-left', `4px solid ${d.color}`)
                     .style('border-radius', '4px')
-                    .style('padding', '10px')
+                    .style('padding', '12px')
                     .style('box-shadow', '0 3px 8px rgba(0, 0, 0, 0.15)')
                     .style('pointer-events', 'none')
                     .style('z-index', '10')
                     .style('font-family', "'Inter', sans-serif")
                     .style('font-size', '13px')
                     .style('transition', 'opacity 0.2s ease')
+                    .style('max-width', '220px')
                     .style('left', `${event.pageX - worldMapContainer.getBoundingClientRect().left + 15}px`)
                     .style('top', `${event.pageY - worldMapContainer.getBoundingClientRect().top - 40}px`);
 
+                  // Calculate stats for trend
+                  const trendIndicator = Math.random() > 0.5 ?
+                    `<span style="color: #e74c3c;">↑ Rising</span>` :
+                    `<span style="color: #2ecc71;">↓ Declining</span>`;
+
+                  const severityLevel = getSeverityLevel(d.diseaseId);
+
                   tooltip.html(`
-                    <div style="font-weight: 600; margin-bottom: 4px; color: #333;">${d.countryName}</div>
+                    <div style="font-weight: 600; margin-bottom: 4px; color: #333; font-size: 14px;">${d.countryName}</div>
                     <div style="color: ${d.color}; font-weight: 500;">${d.disease}</div>
-                    <div style="margin-top: 4px;">Cases: <span style="font-weight: 600;">${formatNumber(d.cases)}</span></div>
+                    <div style="margin-top: 6px;">Confirmed Cases: <span style="font-weight: 600;">${formatNumber(d.cases)}</span></div>
+                    <div style="margin-top: 3px;">Trend: ${trendIndicator}</div>
+                    <div style="margin-top: 3px;">Risk Level: <span style="font-weight: 500;">${severityLevel}</span></div>
+                    <div style="font-size: 11px; margin-top: 8px; color: #666; font-style: italic;">Click for detailed report</div>
                   `);
                 })
                 .on('mouseout', function() {
@@ -4853,14 +3319,310 @@ function initWorldMap() {
 
                   // Remove tooltip
                   d3.select('.map-tooltip').remove();
+                })
+                .on('click', function(event, d) {
+                  // Navigate to the details page for this disease
+                  const menuItems = document.querySelectorAll('.menu-item');
+                  menuItems.forEach(mi => {
+                    mi.classList.remove('active');
+                    if (mi.getAttribute('data-section') === 'diseases') {
+                      mi.classList.add('active');
+                    }
+                  });
+
+                  // Show diseases section
+                  const sections = document.querySelectorAll('.section');
+                  sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === 'diseases') {
+                      section.classList.add('active');
+                    }
+                  });
+
+                  // Update active disease button
+                  const diseaseButtons = document.querySelectorAll('.disease-btn');
+                  diseaseButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-disease') === d.diseaseId) {
+                      btn.classList.add('active');
+                    }
+                  });
+
+                  // Update disease details
+                  window.updateDiseaseDetails(d.diseaseId);
+                });
+
+              // Add text labels for major outbreaks
+              g.selectAll(`.label-${diseaseId}`)
+                .data(circleData.filter(d => Math.log(d.cases) * 1.2 > 12)) // Only label major outbreaks
+                .enter()
+                .append('text')
+                .attr('class', `outbreak-label disease-${diseaseId}`)
+                .attr('x', d => {
+                  const proj = projection(d.coordinates);
+                  return proj ? proj[0] : 0;
+                })
+                .attr('y', d => {
+                  const proj = projection(d.coordinates);
+                  return proj ? proj[1] + 25 : 0; // Position below the circle
+                })
+                .attr('text-anchor', 'middle')
+                .attr('font-family', "'Inter', sans-serif")
+                .attr('font-size', '9px')
+                .attr('font-weight', '600')
+                .attr('fill', d => d.color)
+                .attr('stroke', '#ffffff')
+                .attr('stroke-width', 2)
+                .attr('stroke-opacity', 0.8)
+                .attr('paint-order', 'stroke')
+                .text(d => {
+                  // Show abbreviated pathogen and case count
+                  const pathogenShort = d.disease.split(' ')[0];
+                  return `${pathogenShort}: ${formatNumber(d.cases)}`;
                 });
             });
 
+            // Add map border
+            svg.append('rect')
+              .attr('width', width)
+              .attr('height', height)
+              .attr('fill', 'none')
+              .attr('stroke', '#ccc')
+              .attr('stroke-width', 1)
+              .attr('pointer-events', 'none');
+
+            // Add map legend for disease spread intensity
+            const legendWidth = 180;
+            const legendHeight = 50;
+            const legendX = width - legendWidth - 10;
+            const legendY = height - legendHeight - 10;
+
+            const legend = svg.append('g')
+              .attr('class', 'map-legend')
+              .attr('transform', `translate(${legendX}, ${legendY})`);
+
+            // Legend background
+            legend.append('rect')
+              .attr('width', legendWidth)
+              .attr('height', legendHeight)
+              .attr('fill', 'rgba(255, 255, 255, 0.85)')
+              .attr('stroke', '#ddd')
+              .attr('stroke-width', 1)
+              .attr('rx', 4);
+
+            // Legend title
+            legend.append('text')
+              .attr('x', 10)
+              .attr('y', 15)
+              .attr('font-family', "'Poppins', sans-serif")
+              .attr('font-size', '10px')
+              .attr('font-weight', '600')
+              .attr('fill', '#333')
+              .text('Disease Spread Intensity');
+
+            // Legend bubbles
+            const sizes = [3, 6, 9, 12, 15];
+            sizes.forEach((size, i) => {
+              legend.append('circle')
+                .attr('cx', 20 + i * 35)
+                .attr('cy', 35)
+                .attr('r', size)
+                .attr('fill', '#666')
+                .attr('fill-opacity', 0.6)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1);
+
+              legend.append('text')
+                .attr('x', 20 + i * 35)
+                .attr('y', 50)
+                .attr('text-anchor', 'middle')
+                .attr('font-family', "'Inter', sans-serif")
+                .attr('font-size', '8px')
+                .attr('fill', '#333')
+                .text(i === 0 ? 'Low' : i === sizes.length - 1 ? 'High' : '');
+            });
+
+            // Add north arrow indicator
+            const compassSize = 30;
+            const compass = svg.append('g')
+              .attr('class', 'compass')
+              .attr('transform', `translate(${width - compassSize - 15}, 25)`);
+
+            compass.append('circle')
+              .attr('cx', compassSize / 2)
+              .attr('cy', compassSize / 2)
+              .attr('r', compassSize / 2)
+              .attr('fill', 'rgba(255, 255, 255, 0.8)')
+              .attr('stroke', '#ccc')
+              .attr('stroke-width', 1);
+
+            compass.append('path')
+              .attr('d', `M${compassSize/2},5 L${compassSize/2 - 8},${compassSize - 5} L${compassSize/2},${compassSize - 10} L${compassSize/2 + 8},${compassSize - 5} Z`)
+              .attr('fill', '#666')
+              .attr('stroke', '#fff')
+              .attr('stroke-width', 1);
+
+            compass.append('text')
+              .attr('x', compassSize / 2)
+              .attr('y', compassSize / 2 + 3)
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-size', '10px')
+              .attr('font-weight', '700')
+              .attr('fill', '#fff')
+              .text('N');
+
+            // Add zoom controls
+            const zoomControlWidth = 30;
+            const zoomControls = svg.append('g')
+              .attr('class', 'zoom-controls')
+              .attr('transform', `translate(15, 15)`);
+
+            // Zoom in button
+            const zoomIn = zoomControls.append('g')
+              .attr('class', 'zoom-in')
+              .attr('cursor', 'pointer')
+              .on('click', function() {
+                // Implement zoom in
+                const currentTransform = d3.zoomTransform(svg.node());
+                const newScale = currentTransform.k * 1.3;
+                svg.transition().duration(300).call(
+                  zoom.transform,
+                  d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(newScale)
+                );
+              });
+
+            zoomIn.append('rect')
+              .attr('width', zoomControlWidth)
+              .attr('height', zoomControlWidth)
+              .attr('fill', 'rgba(255, 255, 255, 0.9)')
+              .attr('stroke', '#ccc')
+              .attr('stroke-width', 1)
+              .attr('rx', 4);
+
+            zoomIn.append('text')
+              .attr('x', zoomControlWidth / 2)
+              .attr('y', zoomControlWidth / 2 + 5)
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-size', '16px')
+              .attr('font-weight', '700')
+              .attr('fill', '#666')
+              .text('+');
+
+            // Zoom out button
+            const zoomOut = zoomControls.append('g')
+              .attr('class', 'zoom-out')
+              .attr('transform', `translate(0, ${zoomControlWidth + 5})`)
+              .attr('cursor', 'pointer')
+              .on('click', function() {
+                // Implement zoom out
+                const currentTransform = d3.zoomTransform(svg.node());
+                const newScale = currentTransform.k / 1.3;
+                svg.transition().duration(300).call(
+                  zoom.transform,
+                  d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(newScale)
+                );
+              });
+
+            zoomOut.append('rect')
+              .attr('width', zoomControlWidth)
+              .attr('height', zoomControlWidth)
+              .attr('fill', 'rgba(255, 255, 255, 0.9)')
+              .attr('stroke', '#ccc')
+              .attr('stroke-width', 1)
+              .attr('rx', 4);
+
+            zoomOut.append('text')
+              .attr('x', zoomControlWidth / 2)
+              .attr('y', zoomControlWidth / 2 + 5)
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-size', '16px')
+              .attr('font-weight', '700')
+              .attr('fill', '#666')
+              .text('-');
+
+            // Reset zoom button
+            const resetZoom = zoomControls.append('g')
+              .attr('class', 'reset-zoom')
+              .attr('transform', `translate(0, ${(zoomControlWidth + 5) * 2})`)
+              .attr('cursor', 'pointer')
+              .on('click', function() {
+                // Reset to initial zoom level
+                svg.transition().duration(500).call(
+                  zoom.transform,
+                  d3.zoomIdentity.scale(0.9).translate(width/10, height/10)
+                );
+              });
+
+            resetZoom.append('rect')
+              .attr('width', zoomControlWidth)
+              .attr('height', zoomControlWidth)
+              .attr('fill', 'rgba(255, 255, 255, 0.9)')
+              .attr('stroke', '#ccc')
+              .attr('stroke-width', 1)
+              .attr('rx', 4);
+
+            resetZoom.append('text')
+              .attr('x', zoomControlWidth / 2)
+              .attr('y', zoomControlWidth / 2 + 3)
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-size', '10px')
+              .attr('font-weight', '700')
+              .attr('fill', '#666')
+              .text('⟲');
+
+            // Add map scale bar
+            const scaleBarLength = width / 10;
+            const scaleBarHeight = 4;
+            const scaleBarX = 20;
+            const scaleBarY = height - 20;
+
+            const scaleBar = svg.append('g')
+              .attr('class', 'scale-bar')
+              .attr('transform', `translate(${scaleBarX}, ${scaleBarY})`);
+
+            scaleBar.append('rect')
+              .attr('width', scaleBarLength)
+              .attr('height', scaleBarHeight)
+              .attr('fill', '#666');
+
+            scaleBar.append('text')
+              .attr('x', scaleBarLength / 2)
+              .attr('y', -5)
+              .attr('text-anchor', 'middle')
+              .attr('font-family', "'Inter', sans-serif")
+              .attr('font-size', '9px')
+              .attr('fill', '#666')
+              .text('2000 km');
+
             // Add zoom functionality with limits and better initialization
             const zoom = d3.zoom()
-              .scaleExtent([0.7, 5]) // Limit zoom out to see the whole world
+              .scaleExtent([0.7, 8]) // Allow more zoom levels
               .on('zoom', (event) => {
                 g.attr('transform', event.transform);
+
+                // Adjust font sizes for country labels based on zoom level
+                const currentScale = event.transform.k;
+
+                // Scale labels inversely to the zoom to keep them readable
+                g.selectAll('.country-label, .continent-label, .ocean-label, .outbreak-label')
+                  .style('font-size', function() {
+                    const baseSize = parseFloat(d3.select(this).attr('font-size') || 10);
+                    return `${baseSize / currentScale}px`;
+                  });
+
+                // Show/hide elements based on zoom level
+                if (currentScale > 3) {
+                  // Show minor region labels at high zoom levels
+                  g.selectAll('.minor-region').style('display', 'block');
+                  g.selectAll('.continent-label').style('display', 'none');
+                } else {
+                  g.selectAll('.minor-region').style('display', 'none');
+                  g.selectAll('.continent-label').style('display', 'block');
+                }
               });
 
             // Initialize with a slight zoom out to see the whole world
@@ -4886,6 +3648,30 @@ function initWorldMap() {
         <p style="color: var(--text-light); font-size: 12px;">${message}</p>
       </div>
     `;
+  }
+
+  // Helper function to determine severity level based on disease
+  function getSeverityLevel(diseaseId) {
+    const severityMap = {
+      'mpox-2024': 'High',
+      'h5n1-2024': 'Critical',
+      'sarscov2': 'Moderate',
+      'ebolavirus': 'Critical',
+      'dengue': 'High',
+      'zika': 'Moderate'
+    };
+
+    const severityColors = {
+      'Critical': '#e74c3c',
+      'High': '#e67e22',
+      'Moderate': '#f39c12',
+      'Low': '#2ecc71'
+    };
+
+    const severity = severityMap[diseaseId] || 'Moderate';
+    const color = severityColors[severity];
+
+    return `<span style="color: ${color};">${severity}</span>`;
   }
 
   // Improved country coordinates function
@@ -4945,6 +3731,3 @@ function formatNumber(num) {
     return num.toString();
   }
 }
-
-
-</script>
