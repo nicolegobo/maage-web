@@ -27,12 +27,15 @@ ecosystem.config.js
 # BRC configs
 p3-web.conf
 
-# Editor & IDE settings
+# Editors, IDEs, Terminals
 .vscode/
 .idea/
 .zed/
 .fleet/
 *.swp
+.project
+.warp
+CLAUDE.md
 
 # macOS
 .DS_Store
