@@ -532,7 +532,8 @@
   }
 
   .login-btn::before,
-  .register-btn::before {
+  .register-btn::before,
+  .profile-btn::before {
     content: '';
     position: absolute;
     top: 0;
