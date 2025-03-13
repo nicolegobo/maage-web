@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <title>Bacterial and Viral Bioinformatics Resource Center | BV-BRC</title>
-		<%- include('header') %>
-	</head>
-	<body class="claro patric <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>">
+		<title>Midwest Alliance for Applied Genomic Epidemiology | MAAGE</title>
+		<%- include('head') %>
+	  </head>
+	<body>
+		<%- include('navbar') %>
+		<div class="claro patric bg-maage-bg <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>"></div>
+
 		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
-			<%- include('bv-brc-header') %>
-			<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px solid #ddd;background:inherit;">
+
+			<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px solid #ddd;background:inherit;" class="index-page-container bg-[var(--maage-bg)]">
                 <%- include('home') %>
+
             </div>
+			<%- include('footer') %>
 		</div>
+
 		<%- include('javascript') %>
 	</body>
+	<style>
+
+	</style>
 </html>

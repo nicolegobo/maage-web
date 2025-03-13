@@ -1,6 +1,6 @@
 {
   "name": "p3-web",
-  "version": "3.46.3",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/p3-web",
@@ -28,6 +28,7 @@
     "decompress": "^4.2.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
     "express-formidable": "^1.2.0",
     "feedparser": "^2.2.10",
     "flag-icons": "^7.2.1",
@@ -44,18 +45,27 @@
     "phyloxml": "^1.0.0",
     "promised-io": "^0.3.6",
     "pug": "^3.0.3",
+    "readme-md-generator": "^1.0.0",
     "rql": "^0.3.3",
     "serve-favicon": "^2.5.0",
+    "sitemap": "^8.0.0",
     "underscore": "^1.13.6",
     "webcola": "^3.4.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
     "cross-env": "^7.0.3",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "gulp-replace": "^1.1.4",
     "minimatch": "^9.0.4",
+    "semantic-release": "^24.2.3",
     "stylelint": "^16.5.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.0",
+    "tailwindcss": "^3.4.16"
   }
 }
