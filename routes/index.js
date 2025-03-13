@@ -34,9 +34,9 @@ router.get("/dashboard", function (req, res) {
 });
 
 /* Dashboard. */
-router.get("/dashboard-dev", function (req, res) {
+router.get("/dashboard-2", function (req, res) {
   req.applicationModule = "p3/app/p3app";
-  res.render("pages/dashboard-dev", {
+  res.render("pages/dashboard-2", {
     title: "PATRIC",
     request: req,
     response: res,

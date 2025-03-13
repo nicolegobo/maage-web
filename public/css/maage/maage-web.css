@@ -1521,7 +1521,7 @@
   .btn-details {
     width: 100%;
     padding: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
