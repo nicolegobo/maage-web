@@ -1,15 +1,14 @@
 <style>
   #wrapper--footer {
-            /* display: block;
-            z-index: 1025;
-            width: 100%;
-            position: unset;
-            display: block;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            color: #eeeeee;
-            height: 300px; */
+  display: block;
+  z-index: 1025;
+  width: 100%;
+  position: unset;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #eeeeee;
   height: 350px;
   background: #395160;
         }
@@ -33,8 +32,358 @@
   </style>
 
 <div id="wrapper--footer">
+  <section class="bg-primary-400 py-4 inherited-styles-for-exported-element h-[150px]">
+    <div class="container mt-[10px] mx-auto px-4 md:px-6 flex flex-col items-center justify-between">
+        <h3 class="text-white font-medium text-2xl">MAAGE Weekly Newsletter</h3>
+        <p class="text-sm text-white opacity-80">lorem lorem lorem</p>
+<br>
+      <div class="flex mt-3 md:mt-0 w-full md:w-auto"><input type="email" class="flex rounded-md border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-full md:w-64 h-10 rounded-l-md border-0" placeholder="Email"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 px-4 py-2 bg-secondary-600 hover:bg-secondary-700 text-white rounded-l-none rounded-r-md h-10">Send</button></div>
+    </div>
+  </section>
+
+  <style>
+    /* ".inherited-styles-for-exported-element" is a generated class for the inherited styles of the exported element, feel free to rename it. */
+
+    :root {
+      --radius: 0.5rem;
+      --background: 150 33% 96%;
+      --foreground: 222.2 84% 4.9%;
+      --ring: 222.2 84% 4.9%;
+    }
+
+    *, ::after, ::before {
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-color: rgba(59, 130, 246, 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-ring-offset-color: #fff;
+      --tw-shadow: 0 0 #0000;
+    }
+
+    ::backdrop {
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgba(59, 130, 246, 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+    }
+
+    *, ::after, ::before {
+      border-style: solid;
+      border-width: 0;
+      box-sizing: border-box;
+    }
+
+    ::after, ::before {
+      border-color: #e5e7eb;
+    }
+
+    .inherited-styles-for-exported-element {
+      color: hsl(222.2 84% 4.9%);
+      font-family: Inter, sans-serif;
+      tab-size: 4;
+    }
+
+    h3 {
+      font-family: Poppins, sans-serif;
+      font-size: inherit;
+      margin: 0;
+    }
+
+    button, input {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      letter-spacing: inherit;
+      margin: 0;
+    }
+
+    input {
+      color: inherit;
+      font-weight: inherit;
+    }
+
+    button {
+      appearance: button;
+      background-image: none;
+      cursor: pointer;
+      text-transform: none;
+    }
+
+    input:where([type="button"]), input:where([type="reset"]), input:where([type="submit"]) {
+      appearance: button;
+      background-color: transparent;
+      background-image: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    input::placeholder {
+      color: #9ca3af;
+      opacity: 1;
+    }
+
+    :disabled {
+      cursor: default;
+    }
+
+    * {
+      border-color: #e2e8f0;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px;
+      }
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mt-3 {
+      margin-top: .75rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .inline-flex {
+      display: inline-flex;
+    }
+
+    .h-10 {
+      height: 2.5rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .gap-2 {
+      column-gap: .5rem;
+      row-gap: .5rem;
+    }
+
+    .whitespace-nowrap {
+      text-wrap-mode: nowrap;
+      white-space-collapse: collapse;
+    }
+
+    .rounded-md {
+      border-bottom-right-radius: calc(var(--radius) - 2px);
+      border-top-right-radius: calc(var(--radius) - 2px);
+    }
+
+    .rounded-l-md {
+      border-bottom-left-radius: calc(var(--radius) - 2px);
+      border-top-left-radius: calc(var(--radius) - 2px);
+    }
+
+    .rounded-l-none {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    .rounded-r-md {
+      border-bottom-right-radius: calc(var(--radius) - 2px);
+      border-top-right-radius: calc(var(--radius) - 2px);
+    }
+
+    .border-0 {
+      border-width: 0;
+    }
+
+    .border-input {
+      border-color: #e2e8f0;
+    }
+
+    .bg-background {
+      background-color: hsl(var(--background));
+    }
+
+    .bg-primary-400 {
+      background-color: rgb(137 184 163/var(--tw-bg-opacity, 1));
+      --tw-bg-opacity: 1;
+    }
+
+    .bg-secondary-600 {
+      background-color: rgb(68 113 136/var(--tw-bg-opacity, 1));
+      --tw-bg-opacity: 1;
+    }
+
+    .px-3 {
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .py-2 {
+      padding-bottom: .5rem;
+      padding-top: .5rem;
+    }
+
+    .py-4 {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    .text-base {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .text-sm {
+      font-size: .875rem;
+      line-height: 1.25rem;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .text-white {
+      color: rgb(255 255 255/var(--tw-text-opacity, 1));
+      --tw-text-opacity: 1;
+    }
+
+    .opacity-80 {
+      opacity: .8;
+    }
+
+    .ring-offset-background {
+      --tw-ring-offset-color: hsl(var(--background));
+    }
+
+    .transition-colors {
+      transition-duration: .15s;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .file\:border-0::file-selector-button {
+      border-width: 0;
+    }
+
+    .file\:bg-transparent::file-selector-button {
+      background-color: transparent;
+    }
+
+    .file\:text-sm::file-selector-button {
+      font-size: .875rem;
+      line-height: 1.25rem;
+    }
+
+    .file\:font-medium::file-selector-button {
+      font-weight: 500;
+    }
+
+    .file\:text-foreground::file-selector-button {
+      color: hsl(var(--foreground));
+    }
+
+    .hover\:bg-secondary-700:hover {
+      background-color: rgb(64 100 119/var(--tw-bg-opacity, 1));
+      --tw-bg-opacity: 1;
+    }
+
+    .focus-visible\:outline-none:focus-visible {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    .focus-visible\:ring-2:focus-visible {
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    }
+
+    .focus-visible\:ring-ring:focus-visible {
+      --tw-ring-color: hsl(var(--ring));
+    }
+
+    .focus-visible\:ring-offset-2:focus-visible {
+      --tw-ring-offset-width: 2px;
+    }
+
+    .disabled\:pointer-events-none:disabled {
+      pointer-events: none;
+    }
+
+    .disabled\:cursor-not-allowed:disabled {
+      cursor: not-allowed;
+    }
+
+    .disabled\:opacity-50:disabled {
+      opacity: .5;
+    }
+
+    @media (min-width: 768px) {
+      .md\:mt-0 {
+        margin-top: 0;
+      }
+
+      .md\:w-64 {
+        width: 16rem;
+      }
+
+      .md\:w-auto {
+        width: auto;
+      }
+
+      .md\:flex-row {
+        flex-direction: row;
+      }
+
+      .md\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .md\:text-sm {
+        font-size: .875rem;
+        line-height: 1.25rem;
+      }
+    }
+  </style>
+
   <footer
-    class="inherited-styles-for-exported-element footer-bg-var-maage-secondary-600-text-white-py-12 min-h-[250px]">
+    class="inherited-styles-for-exported-element footer-bg-var-maage-secondary-600-text-white-py-12 min-h-[335px]">
 
     <div class="div-container-mx-auto-px-4">
       <div class="div-grid-grid-cols-1-md-grid-cols-5-gap-8 my-[20px]">
@@ -77,12 +426,12 @@
         </div>
 
         <div class="col-span-1">
-          <h3 class="text-[var(--maage-secondary-200)] text-xl font-poppins font-medium">About</h3>
+          <h3 class="text-[var(--maage-secondary-200)] text-xl font-poppins font-medium">MAAGE</h3>
           <div class="h-[4px] w-[55px] bg-[var(--maage-primary-300)] mt-[6px] mb-[6px]"></div>
           <ul>
             <li class="pt-1"><a
                 class="hover:text-white visited:text-[var(--maage-gray-200)] text-[15px] font-poppins font-normal text-[var(--maage-gray-200)] transition duration-300"
-                href="/about">About MAAGE</a></li>
+                href="/about">About Us</a></li>
             <li class="pt-1"><a
                 class="hover:text-white visited:text-[var(--maage-gray-200)] text-[15px] font-poppins font-normal text-[var(--maage-gray-200)] transition duration-300"
                 href="/team">Our Team</a></li>
@@ -143,6 +492,18 @@
     </div>
 
   </footer>
+
+  <section class="mt-[35px]">
+    <div class="footer-cap bg-red">
+      <div class="flex">
+        <a href="/sitemap.xml"
+          class="ml-auto mr-[20px] font-poppins text-sm font-light hover:text-[var(--maage-primary-200)] transition duration-300">sitemap</a>
+      </div>
+    </div>
+  </section>
+
+
+
 </div>
     <style>
       .footer-bg-var-maage-secondary-600-text-white-py-12 {
@@ -690,7 +1051,5 @@ div.div-col-span-1-unique-1:nth-child(4) > ul.ul-space-y-2-text-sm-unique-1 > li
 }
 
 
-    </style>
+</style>
 
-  </div>
-  <!-- end id=wrapper--footer -->

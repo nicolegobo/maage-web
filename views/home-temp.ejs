@@ -1,0 +1,519 @@
+<style>
+    body {
+  background: #eee;
+  /* This is just a helper in case the element has a transparent background or white colors. */
+}
+
+:root {
+  --radius: 0.5rem;
+  --tw-shadow-color: ;
+}
+
+*, ::after, ::before {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+}
+
+::backdrop {
+  --tw-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
+*, ::after, ::before {
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+}
+
+::after, ::before {
+  border-color: #e5e7eb;
+}
+
+.inherited-styles-for-exported-element {
+  color: hsl(222.2 84% 4.9%);
+  font-family: Inter, sans-serif;
+  tab-size: 4;
+}
+
+h3 {
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+input, select {
+  color: inherit;
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+
+select {
+  text-transform: none;
+}
+
+input:where([type="button"]), input:where([type="reset"]), input:where([type="submit"]) {
+  appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+h1, h2 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+:disabled {
+  cursor: default;
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
+* {
+  border-color: #e2e8f0;
+}
+
+h3 {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+.mx-1 {
+  margin-left: .25rem;
+  margin-right: .25rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-2 {
+  margin-bottom: .5rem;
+}
+
+.mb-3 {
+  margin-bottom: .75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-1 {
+  margin-left: .25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  column-gap: .5rem;
+  row-gap: .5rem;
+}
+
+.gap-4 {
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.gap-6 {
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-bottom: calc(.25rem*var(--tw-space-y-reverse));
+  margin-top: calc(.25rem*calc(1 - var(--tw-space-y-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-bottom: calc(.5rem*var(--tw-space-y-reverse));
+  margin-top: calc(.5rem*calc(1 - var(--tw-space-y-reverse)));
+  --tw-space-y-reverse: 0;
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+  margin-top: calc(1.5rem*calc(1 - var(--tw-space-y-reverse)));
+  --tw-space-y-reverse: 0;
+}
+
+.rounded {
+  border-radius: .25rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: var(--radius);
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db;
+}
+
+.bg-gray-200 {
+  background-color: rgb(229 231 235/var(--tw-bg-opacity, 1));
+  --tw-bg-opacity: 1;
+}
+
+.bg-primary-50 {
+  background-color: rgb(242 248 245/var(--tw-bg-opacity, 1));
+  --tw-bg-opacity: 1;
+}
+
+.bg-white {
+  background-color: rgb(255 255 255/var(--tw-bg-opacity, 1));
+  --tw-bg-opacity: 1;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
+
+.font-poppins {
+  font-family: Poppins, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-500 {
+  color: rgb(107 114 128/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.text-gray-600 {
+  color: rgb(75 85 99/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.text-gray-700 {
+  color: rgb(55 65 81/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.text-gray-800 {
+  color: rgb(31 41 55/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.text-primary-800 {
+  color: rgb(55 103 85/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.text-secondary-600 {
+  color: rgb(68 113 136/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.shadow-sm {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.search-box-wrapper {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.search-box-wrapper .all-terms, .search-box-wrapper select {
+  border-bottom-color: #ccc;
+  border-bottom-width: 1px;
+  border-top-color: #ccc;
+  border-top-width: 1px;
+  height: 38px;
+}
+
+.search-box-wrapper select {
+  border-bottom-style: solid;
+  border-left: 1px solid #ccc;
+  border-radius: .25rem 0 0 .25rem;
+  border-right-color: initial;
+  border-right-style: none;
+  border-right-width: initial;
+  border-top-style: solid;
+  padding: .5rem;
+}
+
+.search-box-wrapper input {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  flex-grow: 1;
+  height: 38px;
+  padding: .5rem;
+}
+
+.search-box-wrapper .all-terms {
+  align-items: center;
+  background-color: #fff;
+  border-left-color: initial;
+  border-left-width: initial;
+  border-radius: 0 .25rem .25rem 0;
+  border-right: 1px solid #ccc;
+  border-style: solid solid none;
+  display: flex;
+  padding: 0 .75rem;
+}
+
+.hover\:bg-gray-50:hover {
+  background-color: rgb(249 250 251/var(--tw-bg-opacity, 1));
+  --tw-bg-opacity: 1;
+}
+
+.hover\:text-secondary-600:hover {
+  color: rgb(68 113 136/var(--tw-text-opacity, 1));
+  --tw-text-opacity: 1;
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column-end: span 2;
+    grid-column-start: span 2;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+html {
+  font-size: 16px;
+  /* This is IMPORTANT since some copied values use "REM" units */
+}
+</style>
+<main class="flex-grow container mx-auto p-4 md:p-6 inherited-styles-for-exported-element" spellcheck="false" data-ms-editor="true">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 space-y-6">
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h1 class="text-2xl font-bold text-gray-800 mb-4 font-poppins">Midwest Alliance for Applied Genomic Epidemiology</h1>
+          <p class="text-gray-700 mb-4">The Midwest Alliance for Applied Genomic Epidemiology (MAAGE) is a collaboration of IDPH, the University of Illinois, and Argonne National Laboratory. The goal of the MAAGE is to develop a genomic surveillance and epidemiology platform to enable state and local public health agencies to detect and track the spread of infectious diseases with greater sensitivity and to provide educational material to help the public health and healthcare community to use this platform for their everyday work.</p>
+          <p class="text-gray-700">Please refer to the<!-- --> <a href="http://192.168.5.92:3000/#" class="text-secondary-600 hover:underline">quick start guide</a> <!-- -->to learn how to get started and contact us if you have any questions.</p>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-lg font-bold text-gray-800 mb-4 font-poppins">SEARCH</h2>
+          <div class="search-box-wrapper" data-protonpass-form=""><select class="text-sm">
+              <option>All Data Types</option>
+              <option>Genomes</option>
+              <option>Proteins</option>
+              <option>Taxa</option>
+            </select><input type="text" placeholder="Find a gene, genome, microarray, etc." class="text-sm" spellcheck="false" data-ms-editor="true">
+            <div class="all-terms text-sm">All<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down ml-1 h-4 w-4">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg></div>
+          </div>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-4 font-poppins">Analyze Data with MAAGE</h2>
+          <p class="text-gray-700 mb-4">Upload and analyze your data in the private workspace.<a class="text-secondary-600 hover:underline mx-1" href="http://192.168.5.92:3000/register">Register</a>or<a class="text-secondary-600 hover:underline mx-1" href="http://192.168.5.92:3000/login">Login</a>to get started.</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="space-y-2">
+              <h3 class="font-bold text-gray-700">Search</h3>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Taxa</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Genomes</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Features</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Specialty Genes</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">All Searches...</a></li>
+              </ul>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-bold text-gray-700">Analyze</h3>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Assembly</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Annotation</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">BLAST</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">MSA</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">All Tools &amp; Services...</a></li>
+              </ul>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-bold text-gray-700">Manage Data</h3>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Access Private Workspace</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Save Search Results</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Upload Data</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Access Analysis Jobs</a></li>
+                <li><a class="hover:text-secondary-600" href="http://192.168.5.92:3000/#">Share and Publish</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 justify-center"><a class="border border-gray-300 text-gray-700 px-4 py-2 rounded-3xl hover:bg-gray-50 text-sm" href="http://192.168.5.92:3000/#">Quick Start</a><a class="border border-gray-300 text-gray-700 px-4 py-2 rounded-3xl hover:bg-gray-50 text-sm" href="http://192.168.5.92:3000/#">Reference Guides</a><a class="border border-gray-300 text-gray-700 px-4 py-2 rounded-3xl hover:bg-gray-50 text-sm" href="http://192.168.5.92:3000/#">Tutorials</a></div>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-4 font-poppins">Dashboards</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-primary-50 rounded-lg p-4">
+              <h3 class="text-lg font-semibold text-primary-800 mb-2">Mpox 2024</h3>
+              <div class="bg-gray-200 w-full h-32 flex items-center justify-center mb-3 rounded"><span class="text-gray-500">240 × 120</span></div>
+              <p class="text-sm text-gray-600 mb-4">Monkeypox virus lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="text-secondary-600 hover:underline text-sm" href="http://192.168.5.92:3000/#">View Dashboard</a>
+            </div>
+            <div class="bg-primary-50 rounded-lg p-4">
+              <h3 class="text-lg font-semibold text-primary-800 mb-2">Influenza H5N1 2024</h3>
+              <div class="bg-gray-200 w-full h-32 flex items-center justify-center mb-3 rounded"><span class="text-gray-500">240 × 120</span></div>
+              <p class="text-sm text-gray-600 mb-4">The H5N1 virus ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="text-secondary-600 hover:underline text-sm" href="http://192.168.5.92:3000/#">View Dashboard</a>
+            </div>
+            <div class="bg-primary-50 rounded-lg p-4">
+              <h3 class="text-lg font-semibold text-primary-800 mb-2">SARS-CoV-2</h3>
+              <div class="bg-gray-200 w-full h-32 flex items-center justify-center mb-3 rounded"><span class="text-gray-500">240 × 120</span></div>
+              <p class="text-sm text-gray-600 mb-4">SARS-CoV-2 virus ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="text-secondary-600 hover:underline text-sm" href="http://192.168.5.92:3000/#">View Dashboard</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="space-y-6">
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-4 font-poppins">Latest News</h2>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-4 font-poppins">Event Calendar</h2>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-4 font-poppins">Outreach Programs</h2>
+        </section>
+      </div>
+    </div>
+  </main>
