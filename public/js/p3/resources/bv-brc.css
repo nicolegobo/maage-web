@@ -118,10 +118,7 @@
 
 
 @media only screen and (min-width: 768px) {
-  #bv-brc-home p,
-  #bv-brc-page p {
-    font-size: 14px;
-  }
+
 }
 
 #bv-brc-home .home-banner {
@@ -720,9 +717,7 @@
   margin-bottom: 0.5em;
 }
 
-#bv-brc-page .searches p {
-  font-size: 14px;
-}
+
 
 #bv-brc-page .searches ul {
   padding-top: 4px;
