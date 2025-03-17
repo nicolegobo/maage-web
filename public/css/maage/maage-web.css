@@ -98,6 +98,102 @@
     --dove-gray-900: #3d3d3d;
     --dove-gray-950: #262626;
 
+    --maage-green-50: #f2f7f5;
+--maage-green-100: #deede4;
+--maage-green-200: #c0dacc;
+--maage-green-300: #a6c9b8;
+--maage-green-400: #689f86;
+--maage-green-500: #488169;
+--maage-green-600: #356653;
+--maage-green-700: #2a5243;
+--maage-green-800: #234236;
+--maage-green-900: #1e362e;
+--maage-green-950: #101e1a;
+
+--maage-blue-50: #f2f8f9;
+--maage-blue-100: #deebef;
+--maage-blue-200: #c0d9e1;
+--maage-blue-300: #94bdcc;
+--maage-blue-400: #548fa6;
+--maage-blue-500: #467d94;
+--maage-blue-600: #3c677e;
+--maage-blue-700: #365668;
+--maage-blue-800: #334a57;
+--maage-blue-900: #2e3f4b;
+--maage-blue-950: #1b2831;
+
+--maage-purple-50: #f9f9fa;
+--maage-purple-100: #f2f2f7;
+--maage-purple-200: #e8e8f1;
+--maage-purple-300: #d6d5e5;
+--maage-purple-400: #b4b2ce;
+--maage-purple-500: #a9a5c5;
+--maage-purple-600: #978fb5;
+--maage-purple-700: #8279a1;
+--maage-purple-800: #69618b;
+--maage-purple-900: #585172;
+--maage-purple-950: #38354c;
+
+--maage-yellow-50: #fefcf6;
+--maage-yellow-100: #fcf7e8;
+--maage-yellow-200: #f9eccd;
+--maage-yellow-300: #f5e0b2;
+--maage-yellow-400: #f0c98e;
+--maage-yellow-500: #ecc188;
+--maage-yellow-600: #e7b279;
+--maage-yellow-700: #dd8f4b;
+--maage-yellow-800: #c97031;
+--maage-yellow-900: #a6602b;
+--maage-yellow-950: #5e3117;
+
+--maage-harvest-50: #fefcf6;
+--maage-harvest-100: #fcf7e8;
+--maage-harvest-200: #f9eccd;
+--maage-harvest-300: #f5e0b2;
+--maage-harvest-400: #f0c98e;
+--maage-harvest-500: #ecc188;
+--maage-harvest-600: #e7b279;
+--maage-harvest-700: #dd8f4b;
+--maage-harvest-800: #c97031;
+--maage-harvest-900: #a6602b;
+--maage-harvest-950: #5e3117;
+
+--maage-red-50: #fcf6f4;
+--maage-red-100: #faeae9;
+--maage-red-200: #f4dad7;
+--maage-red-300: #ebbbb6;
+--maage-red-400: #e0918c;
+--maage-red-500: #d06663;
+--maage-red-600: #bc4749;
+--maage-red-700: #9c3438;
+--maage-red-800: #832e34;
+--maage-red-900: #712a32;
+--maage-red-950: #3e1316;
+
+--maage-natural-50: #fdfdfc;
+--maage-natural-100: #fafaf6;
+--maage-natural-200: #f5f4ef;
+--maage-natural-300: #efeee4;
+--maage-natural-400: #e9e6da;
+--maage-natural-500: #edeae0;
+--maage-natural-600: #dcd5c6;
+--maage-natural-700: #c3b59c;
+--maage-natural-800: #aa987b;
+--maage-natural-900: #927f60;
+--maage-natural-950: #4d4031;
+
+--maage-gray-50: #f6f6f6;
+--maage-gray-100: #ededed;
+--maage-gray-200: #dedede;
+--maage-gray-300: #c9c9c9;
+--maage-gray-400: #adadad;
+--maage-gray-500: #8f8f8f;
+--maage-gray-600: #757575;
+--maage-gray-700: #595959;
+--maage-gray-800: #454545;
+--maage-gray-900: #333333;
+--maage-gray-950: #262626;
+
 
     --accent-color: #8279a1;
     --success-color: #2ecc71;
@@ -168,6 +264,8 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+
 
   [data-theme="dark"] {
     --primary-color: #3d677d;
