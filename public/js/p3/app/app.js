@@ -278,23 +278,6 @@ define([
 
         // console.log("Open Dialog", type);
       });
-      /* istanbul ignore next */
-      on(window, 'message', function (msg) {
-        // console.log('onMessage: ', msg);
-        if (msg && (msg.data === 'RemoteReady' || !msg.data || msg.origin=="https://syndication.twitter.com")) {
-          return;
-        }
-
-        try {
-          msg = JSON.parse(msg.data);
-          // console.log('Message From Remote: ', msg);
-          if (msg && msg.topic) {
-           Topic.publish(msg.topic, msg.payload);
-          }
-        } catch (err){
-          console.log("Error handling window message: ", msg,err)
-        }
-      }, '*');
 
       /* istanbul ignore next */
       Topic.subscribe('/navigate', function (msg) {

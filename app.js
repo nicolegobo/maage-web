@@ -121,6 +121,7 @@ app.use('/public/pdfs/', [
   }
 ]);
 app.use('/patric/', express.static(path.join(__dirname, 'public/patric/')));
+app.use('/maage/', express.static(path.join(__dirname, 'public/maage/')));
 app.use('/public/', express.static(path.join(__dirname, 'public/')));
 app.use('/', routes);
 // app.use('/home-prev', prevHome);
