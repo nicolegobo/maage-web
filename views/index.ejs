@@ -4,29 +4,19 @@
 		<title>Midwest Alliance for Applied Genomic Epidemiology | MAAGE</title>
 		<%- include('head') %>
 	  </head>
-
-	<body>
-
-		<div class="claro patric maage <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>">
-
-
-			<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
-				<%- include('navbar') %>
-				<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px" class="maage-index bg-[var(--maage-bg)]">
-					<div class="maage--index-wrapper">
-						<%- include('home') %>
-					</div>
-
-
-				</div>
-
-			</div>
-
+	<body class="claro patric bg-maage-bg <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>">
+		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
+			<%- include('navbar') %>
+			<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px solid #ddd;background:inherit;" class="bg-[var(--maage-bg)]">
+                <%- include('home') %>
+            </div>
 		</div>
-
-
-
 		<%- include('javascript') %>
 	</body>
-
+	<style>
+		#maage-home {
+			position: relative;
+			top: 100px;
+		}
+	</style>
 </html>
