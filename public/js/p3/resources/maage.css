@@ -205,12 +205,6 @@ span#dijit_form_DropDownButton_0>span.dijitReset.dijitInline.dijitArrowButtonInn
   cursor: pointer;
 }
 
-
-div#bv-brc-home {
-  background-color: var(--maage-bg);
-  background-repeat: initial;
-}
-
 #bv-brc-home-container div.grid-container>div#bv-brc-info {
   background-color: #F8FBF9;
   border-left-width: 0;
