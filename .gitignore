@@ -26,6 +26,9 @@ ecosystem.config.js
 
 # BRC configs
 p3-web.conf
+p3-web.conf-dev.maage
+p3-web.conf-test.maage
+p3-web.conf-prod.maage
 
 # Editors, IDEs, Terminals
 .vscode/
