@@ -9,6 +9,31 @@
     }
   </script>
 
+<style>
+  #ApplicationContainer.layoutContainer {
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: relative;
+    height: auto !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+  body {
+    height: auto !important;
+  }
+  #ApplicationContainer .App,
+  #ApplicationContainer .PanelForm {
+    position: relative;
+    top: 55px;
+  }
+  #maage-home,
+  #maage-page {
+    position: relative;
+    top: 55px;
+  }
+</style>
+
   <!-- Scripts -->
   <%
   const load_scripts = [
