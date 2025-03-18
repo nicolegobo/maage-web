@@ -194,6 +194,12 @@
 --maage-gray-900: #333333;
 --maage-gray-950: #262626;
 
+--maage-bg-color: #f8f6f4;
+--maage-text-color: #2c2c2c;
+--maage-text-color-alt: #7f8c8d;
+--maage-text-color-dark-mode: #ecf0f1;
+--maage-text-color-dark-mode-alt: #bdc3c7;
+
 
     --accent-color: #8279a1;
     --success-color: #2ecc71;
@@ -675,23 +681,9 @@
     overflow: hidden;
   }
 
-  .login-btn::before,
-  .register-btn::before,
-  .profile-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.7s ease;
-}
 
-.login-btn:hover::before,
-.register-btn:hover::before {
-  left: 100%;
-}
+
+
 
 .register-btn {
   background-color: var(--bg-ui-color);
@@ -699,22 +691,10 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.register-btn:hover {
-  color: #fafafa;
-  background-color: #477e93;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
 
 .login-btn {
   color: #fafafa;
   background-color: var(--secondary-color);
-}
-
-.login-btn:hover {
-  background-color: #477e93;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
   /* Sidebar */
