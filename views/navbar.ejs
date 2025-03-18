@@ -45,7 +45,7 @@
                           <h3>Advanced Search</h3>
                           <a href="/searches/TaxaSearch">Taxa</a>
                           <a href="/searches/GenomeSearch">Genomes</a>
-                          <a href="/searches/FeatureSearch">Features</a>
+                          <a href="/searches/GenomicFeatureSearch">Features</a>
                           <a href="/searches/ProteinSearch">Proteins</a>
                           <a href="/searches/SpecialtyGeneSearch">Specialty Genes</a>
                           <a href="/searches/PathwaySearch">Pathways</a>
@@ -132,16 +132,43 @@
       </div>
 
       <div class="navbar-right">
-          <button class="search-icon">
+          <!-- <button class="search-icon">
               <i class="fas fa-search text-[var(--maage-secondary-800)] hover:opacity-80"></i>
-          </button>
+          </button> -->
 
           <!-- <a class="profile-button" href="#">
               <span class="fa-solid fa-user fa-2x text-[var(--maage-secondary-800)] hover:opacity-80"></span>
           </a> -->
-          <a href="/register" class="login-btn">Register</a>
-          <a href="/login" class="register-btn">Login</a>
 
+
+
+
+        <div class="HideWithAuth authLinks showOnLoad dijitHidden">
+            <a class="auth-button login-btn mr-[10px]" href="/register">Register</a>
+            <a class="auth-button register-btn mr-[15px]" href="/login">Login</a>
+        </div>
+
+        <!-- <div id="mobile-search-icon">
+            <button class="search-icon" onclick="toggleSearch()">
+                <span class="icon-search fa-2x"></span>
+            </button>
+        </div> -->
+
+          <div class="showOnLoad ShowWithAuth dijitHidden">
+            <div class="showOnLoad ShowWithAuth dijitHidden topMenuButtonIcon"
+                 data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'icon-user fa-2x login-btn'">
+                <span></span>
+                <div class="warning_icon user_warning_icon icon-warning fa fa-1x"> </div>
+                <div data-dojo-type="p3/widget/TooltipDialog">
+                    <div>Signed in as <span id="signedInAs" style="font-weight:bold;"></span></div>
+                    <hr>
+                    <div><a class="userProfile">Account Settings <i class="warning_icon account-settings-warning icon-warning fa fa-1x" style="vertical-align:middle;"> </i></a></div>
+                    <div><a class="sulogin">SU Login</a></div>
+                    <div><a class="suSwitchBack" onclick="window.App.suSwitchBack()" style="display:none">SU Switch Back</a></div>
+                    <div><a class="logoutLink" onclick="window.App.logout()">Logout</a></div>
+                </div>
+            </div>
+        </div>
 
 
 
