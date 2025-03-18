@@ -143,3 +143,4 @@ src/
 
 # TEMP - TO BE REMOVED
 package-lock.json
+.qodo
