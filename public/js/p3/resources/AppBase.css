@@ -1,10 +1,8 @@
-.maage-page {
+.PanelForm {
 	overflow: auto;
-	position: relative;
-	top: 55px;
 }
 
-.maage-page .messageContainer{
+.PanelForm .messageContainer{
 	text-align: center;
 	margin: 4px auto;
 	padding: 4px;
@@ -13,20 +11,20 @@
 	width: 300px;
 }
 
-.maage-page .submittedMessage,
-.maage-page .workingMessage {
+.PanelForm .submittedMessage,
+.PanelForm .workingMessage {
 	color: green;
 	border-color: green;
 }
 
-.maage-page .errorMessage {
+.PanelForm .errorMessage {
 	color: red;
 	border-color: red;
 }
 
-.maage-page.Submitted .submittedMessage,
-.maage-page.Working .workingMessage,
-.maage-page.Error .errorMessage{
+.PanelForm.Submitted .submittedMessage,
+.PanelForm.Working .workingMessage,
+.PanelForm.Error .errorMessage{
 	display: block;
 }
 
@@ -34,13 +32,12 @@
 .formFieldsContainer {
 	text-align:center;
 }
-.maage-page .formFieldsContainer > *{
+.PanelForm .formFieldsContainer > *{
 	font-size: 1.1em;
 	margin-top: 10px;
 }
 
 .App {
-
 }
 
 .App .TitleSection {
